@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DANEA | Creator Marketing for the US Market</title>
+<meta name="description" content="DANEA helps Korean brands win in the US with creator marketing that is tested before it is scaled.">
+<meta property="og:title" content="DANEA | Creator Marketing for the US Market">
+<meta property="og:description" content="Find the hook. Prove it. Then scale it.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+/* 2026-11-18 v4: black + orange liquid glass, English, text-only draft.
+   Section order follows the reference layout: nav, hero, how it works (4 tabs), about, vision, 4 steps, why, comparison, contact, final CTA, footer. */
+:root{
+  --bg:#000000; --bg-2:#050505;
+  --o:#FF8C00; --o-2:#FF9F2E; --o-glow:rgba(255,140,0,.18);
+  --t:#F4F4F4; --t-2:#B4B4B4; --t-3:#7E7E7E;
+  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12);
+  /* liquid glass (technique from the shared glass skill: light behind, frosted surface, rim, refraction band, lift) */
+  --g-fill:rgba(255,255,255,.07); --g-fill-2:rgba(255,255,255,.12);
+  --g-blur:22px; --g-sat:180%;
+  --g-rim:rgba(255,255,255,.22);
+  --g-refract:rgba(255,255,255,.16);
+  --g-sheen:linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,.03) 30%,rgba(255,255,255,0) 56%,rgba(255,255,255,.04) 100%);
+  --g-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.10),inset 1px 0 0 rgba(255,255,255,.12),inset -1px 0 0 rgba(255,255,255,.08),0 2px 8px rgba(0,0,0,.45),0 40px 80px -40px rgba(0,0,0,.9);
+  --r-xl:32px; --r-lg:24px; --r-md:18px; --r-pill:999px;
+  --colw:1120px;
+  --f:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--t);font-family:var(--f);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;letter-spacing:-.035em;text-wrap:balance;font-weight:800}
+p{margin:0;text-wrap:pretty}
+.w{max-width:var(--colw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{position:relative;padding-block:clamp(72px,9vw,128px)}
+.center{text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--t-2);padding:7px 14px;border-radius:var(--r-pill)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--o)}
+.sec-h{font-size:clamp(30px,3.6vw,46px);line-height:1.15}
+.sec-s{margin-top:14px;font-size:clamp(15px,1.25vw,18px);color:var(--t-2);max-width:640px}
+.center .sec-s{margin-inline:auto}
+.o{color:var(--o)}
+
+/* background orbs */
+.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+/* light layer: fixed, static, directional light from the corners (no circles), center kept dark for reading */
+.orbs{background:
+  linear-gradient(140deg,rgba(255,140,0,.16) 0%,rgba(255,140,0,0) 34%),
+  linear-gradient(220deg,rgba(255,120,0,.10) 0%,rgba(255,120,0,0) 30%),
+  linear-gradient(320deg,rgba(255,150,30,.09) 0%,rgba(255,150,30,0) 36%),
+  linear-gradient(150deg,rgba(255,255,255,.20) 0%,rgba(255,255,255,0) 42%),
+  linear-gradient(210deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 36%),
+  linear-gradient(330deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),
+  linear-gradient(32deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,0) 34%),
+  linear-gradient(180deg,rgba(255,255,255,0) 60%,rgba(255,255,255,.06) 100%)}
+.orbs i{display:none}
+/* faint grid so the glass has something to refract */
+.orbs::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%)}
+
+/* glass: high transparency, background stays visible */
+.glass{position:relative;background:linear-gradient(to bottom,var(--g-refract) 0,rgba(255,255,255,0) 22px),var(--g-fill);border:1px solid var(--g-rim);border-radius:var(--r-lg);box-shadow:var(--g-shadow);-webkit-backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat));backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat));isolation:isolate}
+/* same glass edge as the buttons: bright specular rim top-left, fading, catching light again bottom-right */
+.glass{border-color:rgba(255,255,255,.06)}
+.glass::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:1;
+  background:linear-gradient(140deg,rgba(255,255,255,.85) 0%,rgba(255,255,255,.28) 14%,rgba(255,255,255,.04) 38%,rgba(255,255,255,.02) 62%,rgba(255,255,255,.18) 86%,rgba(255,255,255,.45) 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.btn.glass::after{inset:0}
+@media (prefers-reduced-transparency:reduce){.glass{background:#1A1A1A;-webkit-backdrop-filter:none;backdrop-filter:none}}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--g-sheen);pointer-events:none;z-index:-1}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(24,21,18,.92)}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:var(--r-pill);font-weight:700;font-size:15px;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s}
+/* glass buttons: thick clear edge, bright specular rim top-left, soft refraction glow at the bottom */
+.btn{position:relative;isolation:isolate;-webkit-backdrop-filter:blur(10px) saturate(180%);backdrop-filter:blur(10px) saturate(180%)}
+.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;
+  background:linear-gradient(140deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.35) 18%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 60%,rgba(255,255,255,.28) 85%,rgba(255,255,255,.6) 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.btn-o{color:#160B00;
+  background:radial-gradient(120% 140% at 30% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 42%),linear-gradient(180deg,rgba(255,166,64,.92),rgba(255,132,0,.86));
+  box-shadow:inset 0 1.5px 1px rgba(255,255,255,.75),inset 0 -3px 6px rgba(255,220,170,.35),inset 0 0 10px rgba(255,255,255,.12),0 8px 22px -8px rgba(255,140,0,.45),0 2px 6px rgba(0,0,0,.4)}
+.btn-o:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.btn-g{color:var(--t);
+  background:radial-gradient(120% 140% at 30% -10%,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 45%),linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
+  box-shadow:inset 0 1.5px 1px rgba(255,255,255,.6),inset 0 -3px 6px rgba(255,255,255,.10),inset 0 0 12px rgba(255,255,255,.07),0 8px 22px -10px rgba(0,0,0,.7)}
+.btn-g.glass{border-color:transparent}
+.btn-g:hover{transform:translateY(-1px);filter:brightness(1.15)}
+.btn:focus-visible,.tab:focus-visible,a:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+
+/* nav */
+.nav{position:sticky;top:12px;z-index:50;margin-top:12px}
+.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:var(--r-pill)}
+.logo{font-weight:900;letter-spacing:.02em;font-size:18px}
+.nav .logo{display:flex;align-items:center}
+.nav .logo img{height:32px;width:auto;display:block}
+.logo b{color:var(--o)}
+.links{display:flex;gap:4px}
+.links a{padding:8px 14px;border-radius:var(--r-pill);font-size:14px;font-weight:600;color:var(--t-2)}
+.links a:hover{color:var(--t);background:var(--g-fill-2)}
+.nav .btn{height:40px;font-size:14px;padding:0 18px}
+
+/* hero */
+.hero{padding-top:clamp(80px,12vw,150px)}
+.hero h1{font-size:clamp(44px,7.4vw,96px);line-height:1.02;margin-top:22px}
+.hero h1 .o{color:var(--o)}
+.tag{margin-top:18px;font-size:clamp(16px,1.5vw,20px);font-weight:700;letter-spacing:-.01em;color:var(--t-2)}
+.hero .lead{margin:22px auto 0;max-width:620px;font-size:clamp(16px,1.4vw,19px);color:var(--t-2)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+
+/* how it works tabs */
+.how{margin-top:48px;padding:clamp(18px,2.4vw,28px)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tab{appearance:none;border:1px solid transparent;background:transparent;color:var(--t-2);font:inherit;text-align:left;padding:16px;border-radius:var(--r-md);cursor:pointer;transition:background .25s var(--ease),border-color .25s,color .25s}
+.tab .n{display:block;font-size:13px;font-weight:700;color:var(--t-3)}
+.tab .l{display:block;margin-top:6px;font-size:17px;font-weight:700}
+.tab[aria-selected="true"]{background:var(--g-fill-2);border-color:var(--g-rim);color:var(--t)}
+.tab[aria-selected="true"] .n{color:var(--o)}
+.panel{margin-top:18px;padding:clamp(22px,3vw,40px);border-radius:var(--r-md);background:transparent;border:1px solid var(--line)}
+.panel h3{font-size:clamp(22px,2.4vw,30px);line-height:1.2}
+.panel p{margin-top:12px;color:var(--t-2);max-width:720px}
+.panel ul{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.panel li{padding:14px 16px;border-radius:14px;background:var(--g-fill);border:1px solid var(--line);font-size:14px;color:var(--t-2)}
+.panel li b{display:block;color:var(--t);font-size:15px;margin-bottom:2px}
+.panel[hidden]{display:none}
+
+/* about */
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:stretch}
+.card{padding:clamp(26px,3.4vw,44px)}
+.card h2{font-size:clamp(26px,3vw,38px);line-height:1.18}
+.card p{margin-top:14px;color:var(--t-2)}
+.principles{display:grid;gap:12px}
+.pr{padding:22px 24px}
+.pr .k{font-size:13px;font-weight:700;color:var(--o)}
+.pr h3{margin-top:6px;font-size:20px;line-height:1.25}
+.pr p{margin-top:6px;font-size:15px;color:var(--t-2)}
+
+/* vision */
+.vision{padding:clamp(36px,5vw,72px);text-align:center;overflow:hidden}
+.vision h2{font-size:clamp(28px,4vw,52px);line-height:1.12;max-width:900px;margin:14px auto 0}
+.vision p{margin:18px auto 0;max-width:620px;color:var(--t-2);font-size:clamp(15px,1.3vw,18px)}
+.vision .btn{margin-top:30px}
+.vision::after{content:"";position:absolute;left:50%;bottom:-220px;width:620px;height:320px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(255,255,255,.08),transparent);pointer-events:none;z-index:-1}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.step{padding:26px 24px}
+.step .n{font-size:14px;font-weight:800;color:var(--o)}
+.step h3{margin-top:14px;font-size:20px;line-height:1.25}
+.step p{margin-top:8px;font-size:15px;color:var(--t-2)}
+
+/* why */
+.why{max-width:860px;margin:0 auto;text-align:center}
+.why p{margin-top:18px;font-size:clamp(16px,1.4vw,19px);color:var(--t-2)}
+
+/* compare */
+.cmp{margin-top:40px;padding:8px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:16px 18px;text-align:center;font-size:15px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;color:var(--t-2)}
+thead th{font-size:14px;font-weight:700;color:var(--t)}
+thead th small{display:block;font-weight:500;color:var(--t-3);font-size:12px;margin-top:2px}
+thead th.us{color:var(--o)}
+td.us{background:rgba(255,255,255,.03)}
+tbody tr:last-child td{border-bottom:0}
+.y{color:var(--o);font-weight:800}
+.p{color:var(--t-3)}
+.x{color:#5E5750}
+.legend{margin-top:14px;font-size:13px;color:var(--t-3);text-align:center}
+
+/* contact */
+.contact{padding:clamp(30px,4vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.contact h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12}
+.contact p{margin-top:12px;color:var(--t-2)}
+.contact .side{display:grid;gap:10px}
+.contact .mail{font-size:18px;font-weight:700}
+.final{text-align:center}
+.final h2{font-size:clamp(32px,5vw,64px);line-height:1.06;max-width:900px;margin:0 auto}
+.final p{margin:18px auto 0;max-width:560px;color:var(--t-2)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:48px 0 60px;color:var(--t-3);font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.6fr repeat(2,1fr);gap:24px}
+.fgrid h4{margin:0 0 10px;font-size:14px;font-weight:700;color:var(--t-2)}
+.fgrid a{display:block;padding:4px 0}
+.fgrid a:hover{color:var(--t)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:960px){
+  .split,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .panel ul{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .links{display:none}
+  .tabs{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .steps{grid-template-columns:1fr}
+  .ctas .btn{width:100%}
+  .nav .bar{padding-left:18px}
+}
+</style>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="nav w">
+  <div class="bar glass">
+    <a class="logo" href="#top" aria-label="DANEA home"><img src="logo_white.png" alt="DANEA" width="1363" height="350"></a>
+    <nav class="links" aria-label="Primary">
+      <a href="#top">Home</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-o" href="#contact">상담 신청</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero center">
+  <div class="w">
+    <span class="eyebrow glass rv"><span class="dot"></span>For Korean brands entering the US</span>
+    <h1 class="rv">Find the hook.<br><span class="o">Then scale it.</span></h1>
+    <div class="tag rv">Test first. Spend second.</div>
+    <p class="lead rv">Most brands buy reach and hope it sells. DANEA tests real creators against a clear brief, reads the first six seconds of attention, and puts budget only behind the content that already won.</p>
+    <div class="ctas rv">
+      <a class="btn btn-o" href="#contact">Start a project</a>
+      <a class="btn btn-g glass" href="#process">See how it works</a>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="how glass rv" id="process">
+      <div class="tabs" role="tablist" aria-label="How it works">
+        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><span class="n">01</span><span class="l">Brief</span></button>
+        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="n">02</span><span class="l">Test</span></button>
+        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="n">03</span><span class="l">Prove</span></button>
+        <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><span class="n">04</span><span class="l">Scale</span></button>
+      </div>
+      <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+        <h3>One product, three angles, written before anyone films.</h3>
+        <p>We turn your product into three competing briefs. Each one gives creators a specific hook to open with, so every video is a fair test of an idea instead of a guess.</p>
+        <ul><li><b>Brand angle</b>The claim you most want the market to believe.</li><li><b>Proven angle</b>The structure already winning in your category.</li><li><b>Open angle</b>A creator-led take that may beat both.</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+        <h3>Real creators. Real products. Real first impressions.</h3>
+        <p>Vetted US creators film with the product in hand. Every draft is checked against its brief before it goes live, so the test measures the hook, not a missed instruction.</p>
+        <ul><li><b>Casting</b>Audience fit over follower count.</li><li><b>Draft review</b>Each draft matched to its brief, frame by frame.</li><li><b>On time</b>Automated reminders keep every creator on schedule.</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+        <h3>Same budget, same audience, same three days.</h3>
+        <p>The strongest videos from each angle run as creator-led ads under identical conditions. We read six-second attention, not likes, and call a winner on evidence.</p>
+        <ul><li><b>Fair test</b>Equal spend and targeting per video.</li><li><b>Signal</b>Six-second focused views and click-through.</li><li><b>Outcome</b>One winning hook and the reason it won.</li></ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+        <h3>Put the winner everywhere your buyer looks.</h3>
+        <p>The winning hook becomes the brief for larger creators, paid amplification, and the product pages where shoppers make the final decision.</p>
+        <ul><li><b>Social</b>Mid and macro creators on the proven angle.</li><li><b>Search</b>Video on the product page, where intent is highest.</li><li><b>Loop</b>Every round sharpens the next brief.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="w split">
+    <div class="card glass rv">
+      <span class="eyebrow" style="padding-left:0"><span class="dot"></span>Our approach</span>
+      <h2 style="margin-top:10px">People write the brief.<br><span class="o">Systems keep the promise.</span></h2>
+      <p>Strategy, taste, and judgment stay human. Outreach, contracts, reminders, draft checks, and reporting run on systems we built for this work, so nothing slips between the brief and the result.</p>
+      <p>That is how a small team runs campaigns with the discipline of a large one.</p>
+    </div>
+    <div class="principles">
+      <div class="pr glass rv"><div class="k">Principle 01</div><h3>Evidence before budget</h3><p>No scaling on gut feeling. Every dollar follows a result.</p></div>
+      <div class="pr glass rv"><div class="k">Principle 02</div><h3>Real hands on real products</h3><p>As AI content floods every feed, a real person using the real product is the rarest thing on the screen.</p></div>
+      <div class="pr glass rv"><div class="k">Principle 03</div><h3>Platform rules are the floor</h3><p>No paid reviews, no shortcuts that put your listing at risk. Growth that lasts is growth that stays compliant.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section>
+  <div class="w">
+    <div class="vision glass rv">
+      <span class="eyebrow" style="padding-left:0"><span class="dot"></span>Our vision</span>
+      <h2>Your competitors are buying reach.<br><span class="o">Buy evidence instead.</span></h2>
+      <p>The US market does not reward the loudest launch. It rewards the brand that learns fastest. We help Korean brands learn faster than anyone else in their category.</p>
+      <a class="btn btn-o" href="#contact">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section aria-labelledby="st-h">
+  <div class="w center">
+    <h2 class="sec-h rv" id="st-h">From first call to first winner.</h2>
+    <p class="sec-s rv">Four steps. No guesswork in between.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step glass rv"><div class="n">01</div><h3>Kickoff call</h3><p>We learn your product, your category, and what winning looks like for you.</p></div>
+      <div class="step glass rv"><div class="n">02</div><h3>Brief and casting</h3><p>Three angles written, creators matched to the audience you need to reach.</p></div>
+      <div class="step glass rv"><div class="n">03</div><h3>Live in market</h3><p>Content goes up, the test runs, and you see the numbers as they come in.</p></div>
+      <div class="step glass rv"><div class="n">04</div><h3>Read and scale</h3><p>We name the winner, explain why, and build the next round around it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section aria-labelledby="why-h">
+  <div class="w why">
+    <h2 class="sec-h rv" id="why-h">Why DANEA?</h2>
+    <p class="rv">Korean brands are arriving in the US faster than ever, and most of them are guessing. They hire whoever promises the most views, then wonder why sales do not follow. DANEA exists to replace that guess with a method: a clear brief, a fair test, a proven hook, and a plan to scale it across social and the product page.</p>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section aria-labelledby="cmp-h">
+  <div class="w center">
+    <span class="eyebrow glass rv"><span class="dot"></span>Built for how the market works now</span>
+    <h2 class="sec-h rv" id="cmp-h" style="margin-top:16px">How we are different.</h2>
+    <p class="sec-s rv">The speed of systems with the judgment of people.</p>
+    <div class="cmp glass rv">
+      <table>
+        <thead><tr><th scope="col">Capability</th><th scope="col" class="us">DANEA<small>Both, by design</small></th><th scope="col">AI tools alone<small>Fast, but shallow</small></th><th scope="col">Traditional agency<small>Thorough, but slow</small></th></tr></thead>
+        <tbody>
+          <tr><td>Strategy built around your product</td><td class="us y">✓</td><td class="x">✕</td><td class="y">✓</td></tr>
+          <tr><td>Hooks tested before budget scales</td><td class="us y">✓</td><td class="p">—</td><td class="x">✕</td></tr>
+          <tr><td>Every draft checked against its brief</td><td class="us y">✓</td><td class="x">✕</td><td class="p">—</td></tr>
+          <tr><td>Automated outreach and follow-up</td><td class="us y">✓</td><td class="y">✓</td><td class="x">✕</td></tr>
+          <tr><td>Real creators with the real product</td><td class="us y">✓</td><td class="x">✕</td><td class="y">✓</td></tr>
+          <tr><td>Platform-compliant by default</td><td class="us y">✓</td><td class="p">—</td><td class="p">—</td></tr>
+          <tr><td>Cost efficient at small scale</td><td class="us y">✓</td><td class="y">✓</td><td class="x">✕</td></tr>
+          <tr><td>A real person who owns your account</td><td class="us y">✓</td><td class="x">✕</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="legend">✓ Full support &nbsp;·&nbsp; — Partial &nbsp;·&nbsp; ✕ Not included</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="ct-h">
+  <div class="w">
+    <div class="contact glass rv">
+      <div>
+        <h2 id="ct-h">Ready to find<br>your winning hook?</h2>
+        <p>Tell us about your product and where you want to sell it. We will reply with a first view of the angles worth testing.</p>
+      </div>
+      <div class="side">
+        <a class="btn btn-o" href="mailto:contact@danea.kr">문의하기</a>
+        <a class="mail" href="mailto:contact@danea.kr">contact@danea.kr</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding-top:0">
+  <div class="w final">
+    <h2 class="rv">Stop guessing what the US wants.<br><span class="o">Test it.</span></h2>
+    <p class="rv">We handle the briefs, the creators, and the data. You see the result.</p>
+    <div class="ctas rv">
+      <a class="btn btn-o" href="mailto:contact@danea.kr">가벼운 커피챗</a>
+      <a class="btn btn-g glass" href="#process">How it works</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w fgrid">
+    <div><div class="logo" style="color:var(--t)">DANEA<b>.</b></div><p style="margin-top:10px">Creator marketing for Korean brands in the US.</p><p style="margin-top:18px">© 2026 DANEA. All rights reserved.</p></div>
+    <div><h4>Company</h4><a href="#top">Home</a><a href="#about">About</a><a href="#process">Process</a></div>
+    <div><h4>Contact</h4><a href="mailto:contact@danea.kr">contact@danea.kr</a><a href="#contact">Book a call</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function sel(t,focus){
+    tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();var n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;sel(tabs[n],true);}
+    });
+  });
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
