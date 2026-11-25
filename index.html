@@ -1,411 +1,528 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DANEA | Creator Marketing for the US Market</title>
-<meta name="description" content="DANEA helps Korean brands win in the US with creator marketing that is tested before it is scaled.">
-<meta property="og:title" content="DANEA | Creator Marketing for the US Market">
-<meta property="og:description" content="Find the hook. Prove it. Then scale it.">
+<title>DANEA | 미국 풀퍼널 크리에이터 마케팅 에이전시</title>
+<meta name="description" content="DANEA는 미국에 진출하는 한국 브랜드를 위한 크리에이터 마케팅 에이전시입니다. 아마존·틱톡샵·인스타그램 통합 퍼널 운영. 리뷰 확보와 훅 테스트로 검증된 소재에 예산을 집중합니다.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DANEA">
 <meta property="og:url" content="https://danea.kr/">
-<meta name="theme-color" content="#000000">
+<meta property="og:title" content="DANEA | 미국 풀퍼널 크리에이터 마케팅 에이전시">
+<meta property="og:description" content="아마존·틱톡샵·인스타그램 통합 퍼널 운영. 리뷰 확보와 훅 테스트로 검증된 소재에 예산을 집중합니다.">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-/* 2026-11-18 v4: black + orange liquid glass, English, text-only draft.
-   Section order follows the reference layout: nav, hero, how it works (4 tabs), about, vision, 4 steps, why, comparison, contact, final CTA, footer. */
 :root{
-  --bg:#000000; --bg-2:#050505;
-  --o:#FF8C00; --o-2:#FF9F2E; --o-glow:rgba(255,140,0,.18);
-  --t:#F4F4F4; --t-2:#B4B4B4; --t-3:#7E7E7E;
-  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12);
-  /* liquid glass (technique from the shared glass skill: light behind, frosted surface, rim, refraction band, lift) */
-  --g-fill:rgba(255,255,255,.07); --g-fill-2:rgba(255,255,255,.12);
-  --g-blur:22px; --g-sat:180%;
-  --g-rim:rgba(255,255,255,.22);
-  --g-refract:rgba(255,255,255,.16);
-  --g-sheen:linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,.03) 30%,rgba(255,255,255,0) 56%,rgba(255,255,255,.04) 100%);
-  --g-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.10),inset 1px 0 0 rgba(255,255,255,.12),inset -1px 0 0 rgba(255,255,255,.08),0 2px 8px rgba(0,0,0,.45),0 40px 80px -40px rgba(0,0,0,.9);
-  --r-xl:32px; --r-lg:24px; --r-md:18px; --r-pill:999px;
-  --colw:1120px;
-  --f:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-  --ease:cubic-bezier(.23,1,.32,1);
-  color-scheme:dark;
+  --bg:#0a0a0a; --card:#1a1a1a; --card2:#111; --ink:#f0f0f0; --mute:#888; --mute2:#555; --gray4:#99a1af;
+  --ac:#FF8C00; --ac-h:#E67E00; --ac-ink:#F59A1F;
+  --ok:#059669; --no:#f87171;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--t);font-family:var(--f);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{margin:0;letter-spacing:-.035em;text-wrap:balance;font-weight:800}
-p{margin:0;text-wrap:pretty}
-.w{max-width:var(--colw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-section{position:relative;padding-block:clamp(72px,9vw,128px)}
-.center{text-align:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--t-2);padding:7px 14px;border-radius:var(--r-pill)}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--o)}
-.sec-h{font-size:clamp(30px,3.6vw,46px);line-height:1.15}
-.sec-s{margin-top:14px;font-size:clamp(15px,1.25vw,18px);color:var(--t-2);max-width:640px}
-.center .sec-s{margin-inline:auto}
-.o{color:var(--o)}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+img{display:block}
+.wrap6{max-width:1152px;margin:0 auto}
+section{padding-left:24px;padding-right:24px;scroll-margin-top:56px}
 
-/* background orbs */
-.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-/* light layer: fixed, static, directional light from the corners (no circles), center kept dark for reading */
-.orbs{background:
-  linear-gradient(140deg,rgba(255,140,0,.16) 0%,rgba(255,140,0,0) 34%),
-  linear-gradient(220deg,rgba(255,120,0,.10) 0%,rgba(255,120,0,0) 30%),
-  linear-gradient(320deg,rgba(255,150,30,.09) 0%,rgba(255,150,30,0) 36%),
-  linear-gradient(150deg,rgba(255,255,255,.20) 0%,rgba(255,255,255,0) 42%),
-  linear-gradient(210deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 36%),
-  linear-gradient(330deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),
-  linear-gradient(32deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,0) 34%),
-  linear-gradient(180deg,rgba(255,255,255,0) 60%,rgba(255,255,255,.06) 100%)}
-.orbs i{display:none}
-/* faint grid so the glass has something to refract */
-.orbs::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%)}
+/* 버튼 */
+.btn{display:inline-block;border-radius:9999px;padding:12px 32px;font-weight:500;transition:background-color .15s,color .15s;white-space:nowrap}
+.btn-ac{background:var(--ac);color:#000}
+.btn-ac:hover{background:var(--ac-h)}
+.btn-ln{border:1px solid rgba(255,255,255,.2)}
+.btn-ln:hover{background:rgba(255,255,255,.05)}
 
-/* glass: high transparency, background stays visible */
-.glass{position:relative;background:linear-gradient(to bottom,var(--g-refract) 0,rgba(255,255,255,0) 22px),var(--g-fill);border:1px solid var(--g-rim);border-radius:var(--r-lg);box-shadow:var(--g-shadow);-webkit-backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat));backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat));isolation:isolate}
-/* same glass edge as the buttons: bright specular rim top-left, fading, catching light again bottom-right */
-.glass{border-color:rgba(255,255,255,.06)}
-.glass::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:1;
-  background:linear-gradient(140deg,rgba(255,255,255,.85) 0%,rgba(255,255,255,.28) 14%,rgba(255,255,255,.04) 38%,rgba(255,255,255,.02) 62%,rgba(255,255,255,.18) 86%,rgba(255,255,255,.45) 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
-.btn.glass::after{inset:0}
-@media (prefers-reduced-transparency:reduce){.glass{background:#1A1A1A;-webkit-backdrop-filter:none;backdrop-filter:none}}
-.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--g-sheen);pointer-events:none;z-index:-1}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(24,21,18,.92)}}
+/* 상단 메뉴 */
+nav.top{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav.top .in{height:56px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+nav.top .logo img{height:22px;width:auto}
+nav.top .menu{display:none;align-items:center;gap:32px;font-size:14px;color:var(--mute)}
+nav.top .menu a:hover{color:#fff}
+nav.top .right{display:flex;align-items:center;gap:12px}
+.lang{font-size:13px;color:var(--mute);padding:6px 10px;border-radius:9999px;border:1px solid rgba(255,255,255,.1);transition:color .15s,border-color .15s}
+.lang:hover{color:#fff;border-color:rgba(255,255,255,.25)}
+.lang b{color:#fff;font-weight:600}
+nav.top .cta{background:var(--ac);color:#000;padding:8px 20px;border-radius:9999px;font-size:14px;font-weight:500;transition:background-color .15s;white-space:nowrap}
+nav.top .cta:hover{background:var(--ac-h)}
+@media (min-width:768px){nav.top .menu{display:flex}}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:var(--r-pill);font-weight:700;font-size:15px;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s}
-/* glass buttons: thick clear edge, bright specular rim top-left, soft refraction glow at the bottom */
-.btn{position:relative;isolation:isolate;-webkit-backdrop-filter:blur(10px) saturate(180%);backdrop-filter:blur(10px) saturate(180%)}
-.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;
-  background:linear-gradient(140deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.35) 18%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 60%,rgba(255,255,255,.28) 85%,rgba(255,255,255,.6) 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
-.btn-o{color:#160B00;
-  background:radial-gradient(120% 140% at 30% -10%,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 42%),linear-gradient(180deg,rgba(255,166,64,.92),rgba(255,132,0,.86));
-  box-shadow:inset 0 1.5px 1px rgba(255,255,255,.75),inset 0 -3px 6px rgba(255,220,170,.35),inset 0 0 10px rgba(255,255,255,.12),0 8px 22px -8px rgba(255,140,0,.45),0 2px 6px rgba(0,0,0,.4)}
-.btn-o:hover{transform:translateY(-1px);filter:brightness(1.06)}
-.btn-g{color:var(--t);
-  background:radial-gradient(120% 140% at 30% -10%,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 45%),linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
-  box-shadow:inset 0 1.5px 1px rgba(255,255,255,.6),inset 0 -3px 6px rgba(255,255,255,.10),inset 0 0 12px rgba(255,255,255,.07),0 8px 22px -10px rgba(0,0,0,.7)}
-.btn-g.glass{border-color:transparent}
-.btn-g:hover{transform:translateY(-1px);filter:brightness(1.15)}
-.btn:focus-visible,.tab:focus-visible,a:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+/* 히어로 */
+#hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:56px;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;border:1px solid rgba(255,255,255,.1);font-size:14px;color:var(--mute);margin-bottom:32px}
+#hero h1{font-size:48px;font-weight:700;line-height:1.15;max-width:768px}
+#hero .it{margin-top:8px;font-size:16px;color:var(--mute);font-style:italic}
+#hero .lead{margin:24px auto 0;font-size:18px;line-height:28px;color:var(--mute);max-width:512px}
+.btns{margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+@media (min-width:768px){#hero h1{font-size:72px}}
+@media (max-width:400px){#hero h1{font-size:38px}.btn{padding:12px 26px}}
 
-/* nav */
-.nav{position:sticky;top:12px;z-index:50;margin-top:12px}
-.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:var(--r-pill)}
-.logo{font-weight:900;letter-spacing:.02em;font-size:18px}
-.nav .logo{display:flex;align-items:center}
-.nav .logo img{height:32px;width:auto;display:block}
-.logo b{color:var(--o)}
-.links{display:flex;gap:4px}
-.links a{padding:8px 14px;border-radius:var(--r-pill);font-size:14px;font-weight:600;color:var(--t-2)}
-.links a:hover{color:var(--t);background:var(--g-fill-2)}
-.nav .btn{height:40px;font-size:14px;padding:0 18px}
+/* 프로세스 탭 */
+.py24{padding-top:96px;padding-bottom:96px}
+.py20{padding-top:80px;padding-bottom:80px}
+.py16{padding-top:64px;padding-bottom:64px}
+.eyeline{text-align:center;font-size:14px;line-height:20px;color:var(--ac-ink);font-weight:500;margin-bottom:32px}
+.tabs{max-width:896px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tab{border-radius:16px;padding:20px;text-align:center;transition:all .3s;border:1px solid transparent}
+.tab:hover{background:rgba(255,255,255,.05)}
+.tab .n{font-size:12px;line-height:16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mute);transition:color .3s}
+.tab .em{font-size:24px;line-height:32px;margin-top:8px}
+.tab .t{font-size:14px;line-height:20px;font-weight:500;margin-top:8px}
+.tab.on{background:#1a1a1a;border-color:rgba(255,255,255,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);transform:scale(1.05)}
+.tab.on .n{color:var(--ac)}
+.tabtxt{max-width:672px;margin:48px auto 0;text-align:center}
+.tabtxt .h{color:var(--ac-ink);font-weight:500;margin-bottom:12px}
+.tabtxt .d{color:var(--mute);line-height:1.625}
+.tabtxt.anim .h,.tabtxt.anim .d{animation:fiu .4s ease-out}
+@keyframes fiu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:32px}
+.dot{width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,.2);transition:all .3s}
+.dot:hover{background:rgba(255,255,255,.4)}
+.dot.on{width:24px;background:var(--ac)}
+@media (max-width:480px){.tabs{gap:6px}.tab{padding:14px 4px}.tab .t{font-size:13px}}
 
-/* hero */
-.hero{padding-top:clamp(80px,12vw,150px)}
-.hero h1{font-size:clamp(44px,7.4vw,96px);line-height:1.02;margin-top:22px}
-.hero h1 .o{color:var(--o)}
-.tag{margin-top:18px;font-size:clamp(16px,1.5vw,20px);font-weight:700;letter-spacing:-.01em;color:var(--t-2)}
-.hero .lead{margin:22px auto 0;max-width:620px;font-size:clamp(16px,1.4vw,19px);color:var(--t-2)}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+/* 2단 소개 */
+.two{max-width:1024px;margin:0 auto;display:grid;gap:64px}
+@media (min-width:768px){.two{grid-template-columns:1fr 1fr}}
+.eyebrow{font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
+.h2s{font-size:30px;line-height:1.375;font-weight:700}
+@media (min-width:768px){.h2s{font-size:36px}}
+.body{margin-top:20px;color:var(--mute);line-height:1.625}
+.stats{margin-top:40px;display:flex;gap:32px;flex-wrap:wrap}
+.stats .v{font-size:30px;line-height:36px;font-weight:700}
+.stats .l{font-size:12px;line-height:16px;color:var(--mute);margin-top:4px}
+.two .btn{margin-top:24px;padding:12px 24px}
 
-/* how it works tabs */
-.how{margin-top:48px;padding:clamp(18px,2.4vw,28px)}
-.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.tab{appearance:none;border:1px solid transparent;background:transparent;color:var(--t-2);font:inherit;text-align:left;padding:16px;border-radius:var(--r-md);cursor:pointer;transition:background .25s var(--ease),border-color .25s,color .25s}
-.tab .n{display:block;font-size:13px;font-weight:700;color:var(--t-3)}
-.tab .l{display:block;margin-top:6px;font-size:17px;font-weight:700}
-.tab[aria-selected="true"]{background:var(--g-fill-2);border-color:var(--g-rim);color:var(--t)}
-.tab[aria-selected="true"] .n{color:var(--o)}
-.panel{margin-top:18px;padding:clamp(22px,3vw,40px);border-radius:var(--r-md);background:transparent;border:1px solid var(--line)}
-.panel h3{font-size:clamp(22px,2.4vw,30px);line-height:1.2}
-.panel p{margin-top:12px;color:var(--t-2);max-width:720px}
-.panel ul{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.panel li{padding:14px 16px;border-radius:14px;background:var(--g-fill);border:1px solid var(--line);font-size:14px;color:var(--t-2)}
-.panel li b{display:block;color:var(--t);font-size:15px;margin-bottom:2px}
-.panel[hidden]{display:none}
+/* 4단계 */
+.h2c{font-size:30px;line-height:36px;font-weight:700;text-align:center}
+@media (min-width:768px){.h2c.big{font-size:48px;line-height:1}.h2c.mid{font-size:36px;line-height:40px}}
+.subc{text-align:center;color:var(--mute);margin-top:12px}
+.steps{max-width:1024px;margin:56px auto 0;display:grid;gap:20px}
+@media (min-width:768px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:var(--card);border-radius:16px;padding:32px}
+.step .n{font-size:12px;line-height:16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mute)}
+.step h3{font-size:18px;line-height:28px;font-weight:700;margin-top:12px}
+.step p{font-size:14px;line-height:1.625;color:var(--mute);margin-top:8px}
 
-/* about */
-.split{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:stretch}
-.card{padding:clamp(26px,3.4vw,44px)}
-.card h2{font-size:clamp(26px,3vw,38px);line-height:1.18}
-.card p{margin-top:14px;color:var(--t-2)}
-.principles{display:grid;gap:12px}
-.pr{padding:22px 24px}
-.pr .k{font-size:13px;font-weight:700;color:var(--o)}
-.pr h3{margin-top:6px;font-size:20px;line-height:1.25}
-.pr p{margin-top:6px;font-size:15px;color:var(--t-2)}
+/* 넓은 카드 */
+.wide{max-width:1024px;margin:0 auto;background:var(--card2);border-radius:24px;padding:48px}
+.wide p.g{margin-top:16px;color:var(--gray4);line-height:1.625;max-width:672px}
+.wide .star{margin-top:24px;font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--ac)}
+.wide.final h2{font-size:30px;line-height:1.25;font-weight:700}
+.wide.final p{margin-top:16px;color:var(--gray4)}
+.wide.final .btns{justify-content:flex-start;margin-top:32px}
+@media (min-width:768px){.wide.final{padding:64px}.wide.final h2{font-size:48px}}
+@media (max-width:480px){.wide{padding:32px 24px}}
 
-/* vision */
-.vision{padding:clamp(36px,5vw,72px);text-align:center;overflow:hidden}
-.vision h2{font-size:clamp(28px,4vw,52px);line-height:1.12;max-width:900px;margin:14px auto 0}
-.vision p{margin:18px auto 0;max-width:620px;color:var(--t-2);font-size:clamp(15px,1.3vw,18px)}
-.vision .btn{margin-top:30px}
-.vision::after{content:"";position:absolute;left:50%;bottom:-220px;width:620px;height:320px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(255,255,255,.08),transparent);pointer-events:none;z-index:-1}
+/* 비교표 */
+.tblw{max-width:896px;margin:48px auto 0;overflow-x:auto}
+table{width:100%;font-size:14px;line-height:20px;border-collapse:collapse;min-width:560px}
+thead tr{border-bottom:1px solid rgba(255,255,255,.1)}
+th{padding:12px 24px;text-align:center;font-weight:400;font-size:12px;line-height:16px;color:var(--mute);vertical-align:top}
+th:first-child{text-align:left;padding-left:0;padding-right:16px}
+th .us{display:inline-block;background:#fff;color:var(--bg);padding:4px 12px;border-radius:9999px;font-size:12px;font-weight:700}
+th .s{color:var(--mute);margin-top:4px}
+th .s2{color:var(--mute2)}
+tbody tr{border-bottom:1px solid rgba(255,255,255,.05)}
+td{padding:14px 24px;text-align:center}
+td:first-child{text-align:left;padding-left:0;padding-right:16px}
+td.usc{background:rgba(255,255,255,.02)}
+.ck{color:var(--ok);font-size:18px;line-height:28px}
+.xx{color:var(--no);font-size:18px;line-height:28px}
+.pt{color:var(--mute)}
+.legend{display:flex;align-items:center;gap:24px;margin-top:16px;font-size:12px;line-height:16px;color:var(--mute);flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:4px}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
-.step{padding:26px 24px}
-.step .n{font-size:14px;font-weight:800;color:var(--o)}
-.step h3{margin-top:14px;font-size:20px;line-height:1.25}
-.step p{margin-top:8px;font-size:15px;color:var(--t-2)}
+/* 소식 받기 */
+.news{max-width:576px;margin:0 auto;text-align:center}
+.news h3{font-size:24px;line-height:32px;font-weight:700;color:#fff}
+@media (min-width:768px){.news h3{font-size:30px;line-height:36px}}
+.news p.s{color:var(--mute);margin-top:12px;font-size:14px;line-height:20px}
+.news .row{margin:32px auto 0;display:flex;gap:8px;max-width:448px}
+.news .field{flex:1;min-width:0;padding:12px 16px;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:9999px;color:#fff;font-size:14px;line-height:20px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.news .row .btn{padding:12px 24px;font-size:14px;line-height:20px}
+.news p.f{color:var(--mute2);font-size:12px;line-height:16px;margin-top:16px}
 
-/* why */
-.why{max-width:860px;margin:0 auto;text-align:center}
-.why p{margin-top:18px;font-size:clamp(16px,1.4vw,19px);color:var(--t-2)}
+/* 문의 카드 */
+.ccard{max-width:512px;margin:40px auto 0;background:var(--card2);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.1);text-align:center}
+.ccard .r{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:24px;color:var(--mute);font-size:14px}
+.ccard .go{display:block;width:100%;background:var(--ac);color:#000;padding:14px 0;border-radius:8px;font-weight:600;transition:background-color .15s}
+.ccard .go:hover{background:var(--ac-h)}
+.ccard .m{font-size:12px;line-height:16px;color:var(--mute);margin-top:16px}
+.ccard .m a{text-decoration:underline}
+.ccard .m a:hover{color:#fff}
 
-/* compare */
-.cmp{margin-top:40px;padding:8px;overflow:hidden}
-.cmp.glass::after{inset:0}
-table{width:100%;border-collapse:collapse}
-@media (max-width:640px){
-  .cmp{padding:4px}
-  table{table-layout:fixed}
-  th,td{padding:11px 5px;font-size:12.5px;line-height:1.35}
-  th:first-child,td:first-child{width:34%;padding-left:10px}
-  thead th small{display:none!important}
-  thead th{font-size:11px!important;padding-inline:3px}
-}
-th,td{padding:16px 18px;text-align:center;font-size:15px;border-bottom:1px solid var(--line)}
-th:first-child,td:first-child{text-align:left;color:var(--t-2)}
-thead th{font-size:14px;font-weight:700;color:var(--t)}
-thead th small{display:block;font-weight:500;color:var(--t-3);font-size:12px;margin-top:2px}
-thead th.us{color:var(--o)}
-td.us{background:rgba(255,255,255,.03)}
-tbody tr:last-child td{border-bottom:0}
-.y{color:var(--o);font-weight:800}
-.p{color:var(--t-3)}
-.x{color:#5E5750}
-.legend{margin-top:14px;font-size:13px;color:var(--t-3);text-align:center}
+/* 푸터 */
+footer{border-top:1px solid rgba(255,255,255,.1);padding:40px 24px}
+footer .in{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:32px}
+@media (min-width:768px){footer .in{flex-direction:row}}
+footer .logo img{height:20px;width:auto}
+footer .cr{font-size:12px;line-height:16px;color:var(--mute);margin-top:8px}
+footer .cols{display:flex;gap:48px;font-size:14px;line-height:20px;color:var(--mute);flex-wrap:wrap}
+footer .cols div>*+*{margin-top:8px}
+footer .cols .hd{font-weight:500;color:#ccc;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.05em}
+footer .cols a{display:block}
+footer .cols a:hover{color:#fff}
 
-/* contact */
-.contact{padding:clamp(30px,4vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
-.contact h2{font-size:clamp(28px,3.4vw,44px);line-height:1.12}
-.contact p{margin-top:12px;color:var(--t-2)}
-.contact .side{display:grid;gap:10px}
-.contact .mail{font-size:18px;font-weight:700}
-.final{text-align:center}
-.final h2{font-size:clamp(32px,5vw,64px);line-height:1.06;max-width:900px;margin:0 auto}
-.final p{margin:18px auto 0;max-width:560px;color:var(--t-2)}
+/* 좁은 화면 보정 */
+p{text-wrap:pretty}
+@media (max-width:400px){.stats{gap:20px}.stats .v{font-size:26px;line-height:32px}.wide .h2s{font-size:24px}}
 
-/* footer */
-footer{border-top:1px solid var(--line);padding:48px 0 60px;color:var(--t-3);font-size:14px}
-.fgrid{display:grid;grid-template-columns:1.6fr repeat(2,1fr);gap:24px}
-.fgrid h4{margin:0 0 10px;font-size:14px;font-weight:700;color:var(--t-2)}
-.fgrid a{display:block;padding:4px 0}
-.fgrid a:hover{color:var(--t)}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-
-/* responsive */
-@media (max-width:960px){
-  .split,.contact{grid-template-columns:1fr}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .panel ul{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr 1fr}
-}
-@media (max-width:720px){
-  .links{display:none}
-  .tabs{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:520px){
-  .steps{grid-template-columns:1fr}
-  .ctas .btn{width:100%}
-  .nav .bar{padding-left:18px}
-}
+/* 스크롤 등장 */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.fade.vis{opacity:1;transform:none}
+.stag>.fade:nth-child(2){transition-delay:.1s}
+.stag>.fade:nth-child(3){transition-delay:.2s}
+.stag>.fade:nth-child(4){transition-delay:.3s}
+.no-js .fade{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.tab,.dot{transition:none}.tabtxt.anim .h,.tabtxt.anim .d{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
-<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+<body class="no-js">
 
-<header class="nav w">
-  <div class="bar glass">
-    <a class="logo" href="#top" aria-label="DANEA home"><img src="logo_white.png" alt="DANEA" width="1363" height="350"></a>
-    <nav class="links" aria-label="Primary">
-      <a href="#top">Home</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn-o" href="#contact">상담 신청</a>
-  </div>
-</header>
-
-<main id="top">
-<!-- HERO -->
-<section class="hero center">
-  <div class="w">
-    <span class="eyebrow glass rv"><span class="dot"></span>For Korean brands entering the US</span>
-    <h1 class="rv">Find the hook.<br><span class="o">Then scale it.</span></h1>
-    <div class="tag rv">Test first. Spend second.</div>
-    <p class="lead rv">We test real creators against a clear brief, then scale only what wins.</p>
-    <div class="ctas rv">
-      <a class="btn btn-o" href="#contact">Start a project</a>
-      <a class="btn btn-g glass" href="#process">See how it works</a>
+<nav class="top">
+  <div class="in wrap6">
+    <a class="logo" href="#hero" aria-label="DANEA"><img src="logo_white.png" alt="DANEA" width="86" height="22"></a>
+    <div class="menu">
+      <a href="#hero" data-i="nav1">홈</a>
+      <a href="#about" data-i="nav2">소개</a>
+      <a href="#process" data-i="nav3">프로세스</a>
+      <a href="#contact" data-i="nav4">문의</a>
     </div>
+    <div class="right">
+      <button class="lang" id="lang" type="button" aria-label="Language"><b>KO</b> / EN</button>
+      <a class="cta" href="contact/" data-i="navcta">상담 신청</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- HOW IT WORKS -->
-    <div class="how glass rv" id="process">
-      <div class="tabs" role="tablist" aria-label="How it works">
-        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><span class="n">01</span><span class="l">Brief</span></button>
-        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="n">02</span><span class="l">Test</span></button>
-        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="n">03</span><span class="l">Prove</span></button>
-        <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><span class="n">04</span><span class="l">Scale</span></button>
-      </div>
-      <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
-        <h3>Three angles, written before anyone films.</h3>
-        <ul><li><b>Brand angle</b>Your strongest claim.</li><li><b>Proven angle</b>What already wins in your category.</li><li><b>Open angle</b>A creator-led take.</li></ul>
-      </div>
-      <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-        <h3>Real creators. Real products.</h3>
-        <ul><li><b>Casting</b>Audience fit over followers.</li><li><b>Draft review</b>Every draft checked against its brief.</li><li><b>On time</b>Automated reminders.</li></ul>
-      </div>
-      <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-        <h3>Same budget. Same audience. Three days.</h3>
-        <ul><li><b>Fair test</b>Equal spend per video.</li><li><b>Signal</b>Six-second attention, not likes.</li><li><b>Outcome</b>One winning hook.</li></ul>
-      </div>
-      <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
-        <h3>Put the winner everywhere your buyer looks.</h3>
-        <ul><li><b>Social</b>Bigger creators, proven angle.</li><li><b>Search</b>Video on the product page.</li><li><b>Loop</b>Each round sharpens the next.</li></ul>
-      </div>
+<section id="hero">
+  <div class="fade vis"><span class="badge" data-i="badge">✨ K뷰티 브랜드의 미국 진출 파트너</span></div>
+  <div class="fade vis"><h1 data-i="h1" data-html>미국 시장 풀퍼널<br>마케팅 에이전시.</h1></div>
+  <div class="fade vis">
+    <p class="it">Amazon · TikTok Shop · Instagram</p>
+    <p class="lead" data-i="lead">리뷰 확보, 훅 테스트, 위닝 소재 스케일업까지. 데이터로 검증된 소재에만 예산을 집중합니다.</p>
+  </div>
+  <div class="fade vis">
+    <div class="btns">
+      <a class="btn btn-ac" href="#contact" data-i="start">진단 받기</a>
+      <a class="btn btn-ln js-deck" href="contact/" data-i="deck">소개서 다운로드</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="w split">
-    <div class="card glass rv">
-      <span class="eyebrow" style="padding-left:0"><span class="dot"></span>Our approach</span>
-      <h2 style="margin-top:10px">People write the brief.<br><span class="o">Systems keep the promise.</span></h2>
-      <p>Judgment stays human. Outreach, contracts, reminders and draft checks run on our own systems.</p>
+<section id="process" class="py24">
+  <div class="fade"><p class="eyeline">How does it work?</p></div>
+  <div class="fade">
+    <div class="tabs" role="tablist">
+      <button class="tab on" role="tab" aria-selected="true" data-k="0"><span class="n">01</span><div class="em">🔍</div><div class="t" data-i="t1">진단</div></button>
+      <button class="tab" role="tab" aria-selected="false" data-k="1"><span class="n">02</span><div class="em">📦</div><div class="t" data-i="t2">볼륨 확보</div></button>
+      <button class="tab" role="tab" aria-selected="false" data-k="2"><span class="n">03</span><div class="em">🎯</div><div class="t" data-i="t3">훅 테스트</div></button>
+      <button class="tab" role="tab" aria-selected="false" data-k="3"><span class="n">04</span><div class="em">📈</div><div class="t" data-i="t4">스케일업</div></button>
     </div>
-    <div class="principles">
-      <div class="pr glass rv"><div class="k">Principle 01</div><h3>Evidence before budget</h3><p>Every dollar follows a result.</p></div>
-      <div class="pr glass rv"><div class="k">Principle 02</div><h3>Real hands on real products</h3><p>The rarest thing in an AI-filled feed.</p></div>
-      <div class="pr glass rv"><div class="k">Principle 03</div><h3>Platform rules are the floor</h3><p>No paid reviews. No shortcuts.</p></div>
+    <div class="tabtxt" id="tabtxt" aria-live="polite">
+      <p class="h" id="tabh">현황 진단 및 우선순위 수립</p>
+      <p class="d" id="tabd">리뷰·평점, 콘텐츠 볼륨, 경쟁사 현황을 분석해 착수 지점과 KPI를 정합니다.</p>
     </div>
+    <div class="dots"><button class="dot on" aria-label="1"></button><button class="dot" aria-label="2"></button><button class="dot" aria-label="3"></button><button class="dot" aria-label="4"></button></div>
   </div>
 </section>
 
-<!-- VISION -->
-<section>
-  <div class="w">
-    <div class="vision glass rv">
-      <span class="eyebrow" style="padding-left:0"><span class="dot"></span>Our vision</span>
-      <h2>Your competitors are buying reach.<br><span class="o">Buy evidence instead.</span></h2>
-      <p>The US rewards the brand that learns fastest, not the one that launches loudest.</p>
-      <a class="btn btn-o" href="#contact">Talk to us</a>
+<section id="about" class="py24">
+  <div class="two">
+    <div class="fade">
+      <p class="eyebrow" data-i="ab_e">통합 퍼널 운영</p>
+      <h2 class="h2s" data-i="ab_h">세 채널을 하나의 퍼널로 설계합니다.</h2>
+      <p class="body" data-i="ab_p">틱톡샵에서 인지를 만들고, 아마존 검색에서 구매 수요를 전환하며, 인스타그램에서 신뢰를 보강합니다. 채널별 KPI를 하나의 퍼널로 연결해 도달과 전환을 함께 관리합니다.</p>
+      <div class="stats">
+        <div><div class="v" data-i="s1v">10만+</div><div class="l" data-i="s1">누적 크리에이터</div></div>
+        <div><div class="v" data-i="s2v">300건+</div><div class="l" data-i="s2">누적 캠페인</div></div>
+        <div><div class="v" data-i="s3v">3년+</div><div class="l" data-i="s3">마케팅 경력</div></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- STEPS -->
-<section aria-labelledby="st-h">
-  <div class="w center">
-    <h2 class="sec-h rv" id="st-h">From first call to first winner.</h2>
-    <p class="sec-s rv">Four steps. No guesswork in between.</p>
-    <div class="steps" style="text-align:left">
-      <div class="step glass rv"><div class="n">01</div><h3>Kickoff call</h3><p>Your product and goals.</p></div>
-      <div class="step glass rv"><div class="n">02</div><h3>Brief and casting</h3><p>Three angles, matched creators.</p></div>
-      <div class="step glass rv"><div class="n">03</div><h3>Live in market</h3><p>Content goes up, the test runs.</p></div>
-      <div class="step glass rv"><div class="n">04</div><h3>Read and scale</h3><p>The winner, and why it won.</p></div>
+    <div class="fade">
+      <p class="eyebrow">Our Vision</p>
+      <h2 class="h2s" data-i="vi_h">미국 이커머스의 노출은 지표가 결정합니다.</h2>
+      <p class="body" data-i="vi_p">아마존은 리뷰 수, 평점, 판매 속도로, 틱톡샵은 콘텐츠 볼륨과 시청 반응으로 노출을 배분합니다. DANEA는 이 지표를 단계별로 확보해 매출 성장으로 연결합니다.</p>
+      <a class="btn btn-ac" href="#contact" data-i="vi_b">우리 브랜드 진단 받기</a>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section aria-labelledby="why-h">
-  <div class="w why">
-    <h2 class="sec-h rv" id="why-h">Why DANEA?</h2>
-    <p class="rv">Most Korean brands enter the US guessing. We replace the guess with a method: clear brief, fair test, proven hook, then scale.</p>
+<section class="py24">
+  <div class="fade">
+    <h2 class="h2c big" data-i="st_h">착수부터 월간 리포트까지.</h2>
+    <p class="subc" data-i="st_p">모든 캠페인은 같은 4단계로 운영됩니다.</p>
+  </div>
+  <div class="steps stag">
+    <div class="step fade"><span class="n">01</span><h3 data-i="c1h">킥오프</h3><p data-i="c1p">현황을 진단하고 목표, 우선순위, 액션 플랜을 정합니다.</p></div>
+    <div class="step fade"><span class="n">02</span><h3 data-i="c2h">크리에이터 선별</h3><p data-i="c2p">경쟁사 콘텐츠 참여 이력과 최근 90일 활동을 기준으로 크리에이터를 소싱합니다.</p></div>
+    <div class="step fade"><span class="n">03</span><h3 data-i="c3h">실행 &amp; 관리</h3><p data-i="c3p">업로드, 광고, 프로모션을 운영하고 주 1회 현황 시트로 공유합니다.</p></div>
+    <div class="step fade"><span class="n">04</span><h3 data-i="c4h">리포트 &amp; 다음 액션</h3><p data-i="c4p">익월 초 월간 리포트로 성과를 분석하고 다음 달 우선순위를 제안합니다.</p></div>
   </div>
 </section>
 
-<!-- COMPARE -->
-<section aria-labelledby="cmp-h">
-  <div class="w center">
-    <span class="eyebrow glass rv"><span class="dot"></span>Built for how the market works now</span>
-    <h2 class="sec-h rv" id="cmp-h" style="margin-top:16px">How we are different.</h2>
-    <p class="sec-s rv">The speed of systems with the judgment of people.</p>
-    <div class="cmp glass rv">
+<section class="py16">
+  <div class="fade">
+    <div class="wide">
+      <h2 class="h2s" data-i="why_h">왜 DANEA일까요?</h2>
+      <p class="g" data-i="why_p">DANEA는 미국에 진출하는 K뷰티 브랜드를 위한 크리에이터 마케팅 에이전시입니다. 아마존, 틱톡샵, 인스타그램에서 리뷰 축적부터 바이럴, 매출 전환까지 운영합니다.</p>
+      <p class="star" data-i="why_s">★ 리뷰 확보 · 훅 테스트 · 세일즈 전환</p>
+    </div>
+  </div>
+</section>
+
+<section class="py24">
+  <div class="fade">
+    <h2 class="h2c mid" data-i="cmp_h">어떻게 다른가요?</h2>
+    <p class="subc" data-i="cmp_p">데이터 기반 설계와 현지 크리에이터 실행을 함께 갖췄습니다.</p>
+  </div>
+  <div class="fade">
+    <div class="tblw">
       <table>
-        <thead><tr><th scope="col">Capability</th><th scope="col" class="us">DANEA<small>Both, by design</small></th><th scope="col">AI tools alone<small>Fast, but shallow</small></th><th scope="col">Traditional agency<small>Thorough, but slow</small></th></tr></thead>
+        <thead><tr>
+          <th>Feature</th>
+          <th><span class="us">DANEA</span><div class="s" data-i="th1">전략 + 현지 실행</div></th>
+          <th><span data-i="th2">AI 툴만</span><div class="s2" data-i="th2s">속도는 빠르나 실행 부재</div></th>
+          <th><span data-i="th3">기존 에이전시</span><div class="s2" data-i="th3s">높은 고정비, 느린 실행</div></th>
+        </tr></thead>
         <tbody>
-          <tr><td>Strategy built around your product</td><td class="us y">✓</td><td class="x">✕</td><td class="y">✓</td></tr>
-          <tr><td>Hooks tested before budget scales</td><td class="us y">✓</td><td class="p">—</td><td class="x">✕</td></tr>
-          <tr><td>Every draft checked against its brief</td><td class="us y">✓</td><td class="x">✕</td><td class="p">—</td></tr>
-          <tr><td>Real creators with the real product</td><td class="us y">✓</td><td class="x">✕</td><td class="y">✓</td></tr>
-          <tr><td>Cost efficient at small scale</td><td class="us y">✓</td><td class="y">✓</td><td class="x">✕</td></tr>
+          <tr><td data-i="r1">플랫폼별 퍼널 전략 설계</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td data-i="r2">예산 투입 전 USP·훅 A/B 테스트</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="xx">✕</span></td></tr>
+          <tr><td data-i="r3">경쟁사 참여 이력 기반 크리에이터 선별</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="xx">✕</span></td></tr>
+          <tr><td data-i="r4">미국 현지 실구매자·크리에이터 실행</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td data-i="r5">콘텐츠 2차 활용 권리 정리</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="pt">△</span></td></tr>
+          <tr><td data-i="r6">소규모 예산 단계별 집행</td><td class="usc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="xx">✕</span></td></tr>
+          <tr><td data-i="r7">주간 시트·월간 리포트</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td data-i="r8">플랫폼 정책 준수 운영</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="ck">✓</span></td></tr>
         </tbody>
       </table>
-    </div>
-    <p class="legend">✓ Full support &nbsp;·&nbsp; — Partial &nbsp;·&nbsp; ✕ Not included</p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" aria-labelledby="ct-h">
-  <div class="w">
-    <div class="contact glass rv">
-      <div>
-        <h2 id="ct-h">Ready to find<br>your winning hook?</h2>
-        <p>Tell us your product. We'll reply with the angles worth testing.</p>
-      </div>
-      <div class="side">
-        <a class="btn btn-o" href="mailto:contact@danea.kr">문의하기</a>
-        <a class="mail" href="mailto:contact@danea.kr">contact@danea.kr</a>
-      </div>
+      <div class="legend"><span><span class="ck">✓</span>Full support</span><span><span class="pt">△</span>Partial support</span><span><span class="xx">✕</span>Not included</span></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section style="padding-top:0">
-  <div class="w final">
-    <h2 class="rv">Stop guessing what the US wants.<br><span class="o">Test it.</span></h2>
-    <div class="ctas rv">
-      <a class="btn btn-o" href="mailto:contact@danea.kr">가벼운 커피챗</a>
-      <a class="btn btn-g glass" href="#process">How it works</a>
+<section id="newsletter" class="py20">
+  <div class="news">
+    <h3 data-i="nw_h">매주 미국 시장 인사이트를 받아보세요</h3>
+    <p class="s" data-i="nw_p">미국 K뷰티·틱톡샵·아마존의 주요 변화를 매주 카드뉴스로 정리합니다.</p>
+    <div class="row">
+      <span class="field">@danea.mag</span>
+      <a class="btn btn-ac" href="https://www.instagram.com/danea.mag/" target="_blank" rel="noopener" data-i="nw_b">팔로우하기</a>
+    </div>
+    <p class="f" data-i="nw_f">매주 금요일 발행</p>
+  </div>
+</section>
+
+<section id="contact" class="py24">
+  <h2 class="h2c mid" data-i="ct_h">지금 바로 시작하세요.</h2>
+  <p class="subc" data-i="ct_p">제품과 판매 채널을 알려 주시면, 현황 진단과 함께 실행안을 제안드립니다.</p>
+  <div class="ccard">
+    <div class="r"><span>💬</span><span data-i="ct_r">영업일 기준 하루 안에 답변</span></div>
+    <a class="go" href="contact/" data-i="ct_b">문의하기</a>
+    <p class="m"><a href="mailto:contact@danea.kr">contact@danea.kr</a></p>
+  </div>
+</section>
+
+<section class="py16">
+  <div class="fade">
+    <div class="wide final">
+      <h2 data-i="fn_h">미국 진출 마케팅, 전담 팀에 맡기세요.</h2>
+      <p data-i="fn_p">진단부터 크리에이터 운영, 성과 리포트까지 한 팀이 운영합니다.</p>
+      <div class="btns">
+        <a class="btn btn-ac" href="contact/" data-i="fn_b1">미팅 예약</a>
+        <a class="btn btn-ln js-deck" href="contact/" data-i="deck">소개서 다운로드</a>
+      </div>
     </div>
   </div>
 </section>
-</main>
 
 <footer>
-  <div class="w fgrid">
-    <div><div class="logo" style="color:var(--t)">DANEA<b>.</b></div><p style="margin-top:10px">Creator marketing for Korean brands in the US.</p><p style="margin-top:18px">© 2026 DANEA. All rights reserved.</p></div>
-    <div><h4>Company</h4><a href="#top">Home</a><a href="#about">About</a><a href="#process">Process</a></div>
-    <div><h4>Contact</h4><a href="mailto:contact@danea.kr">contact@danea.kr</a><a href="#contact">Book a call</a></div>
+  <div class="in wrap6">
+    <div>
+      <a class="logo" href="#hero"><img src="logo_white.png" alt="DANEA" width="78" height="20"></a>
+      <p class="cr">© 2026 DANEA. All rights reserved.</p>
+    </div>
+    <div class="cols">
+      <div><div class="hd">Company</div><a href="#hero">Home</a><a href="#about">About</a><a href="#process">Process</a></div>
+      <div><div class="hd">Resources</div><a class="js-deck" href="contact/" data-i="f_deck">서비스 소개서</a><a href="contact/" data-i="f_ct">문의하기</a><a href="contact/" data-i="f_mt">미팅 잡기</a></div>
+      <div><div class="hd">Legal</div><a href="privacy/" data-i="f_pv">개인정보 처리방침</a></div>
+    </div>
   </div>
 </footer>
 
 <script>
 (function(){
-  var tabs=[].slice.call(document.querySelectorAll('.tab'));
-  function sel(t,focus){
-    tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});
-    if(focus)t.focus();
+  document.body.classList.remove('no-js');
+  // 소개서 주소: 콜드메일 소개서가 나오면 여기만 바꾼다
+  var DECK_URL = 'contact/';
+  document.querySelectorAll('.js-deck').forEach(function(a){ a.href = DECK_URL; });
+
+  var TABS = {
+    "ko": [
+      [
+        "현황 진단 및 우선순위 수립",
+        "리뷰·평점, 콘텐츠 볼륨, 경쟁사 현황을 분석해 착수 지점과 KPI를 정합니다."
+      ],
+      [
+        "리뷰·콘텐츠 볼륨 확보",
+        "아마존은 실구매 기반 구매 기록과 UGC를, 틱톡샵은 알고리즘 학습에 필요한 어필리에이트 콘텐츠를 확보합니다."
+      ],
+      [
+        "USP·훅 A/B 테스트",
+        "USP별로 크리에이터를 분리 운영하고, 6초 시청률과 참여율 등 동일 지표로 위닝 훅을 도출합니다."
+      ],
+      [
+        "위닝 소재 스케일업",
+        "검증된 훅을 미드·매크로 크리에이터와 광고 소재로 확장해 GMV와 아마존 매출로 전환합니다."
+      ]
+    ],
+    "en": [
+      [
+        "Diagnosis and priorities",
+        "We analyze reviews and ratings, content volume and competitors to set the starting point and KPIs."
+      ],
+      [
+        "Review and content volume",
+        "On Amazon, purchase records and UGC from real buyers. On TikTok Shop, the affiliate content volume the algorithm needs to learn."
+      ],
+      [
+        "USP and hook A/B tests",
+        "Creators run in separate USP groups, and the winning hook is identified on the same metrics, including 6-second view rate and engagement."
+      ],
+      [
+        "Scale the winning creative",
+        "Validated hooks extend to mid and macro creators and paid creatives, converting into GMV and Amazon sales."
+      ]
+    ]
+  };
+  var EN = {
+    "nav1": "Home",
+    "nav2": "About",
+    "nav3": "Process",
+    "nav4": "Contact",
+    "navcta": "Book a call",
+    "badge": "✨ The US growth partner for K-beauty brands",
+    "h1": "Full-funnel marketing<br>for the US market.",
+    "lead": "Review building, hook testing and scaling winning creatives. Budget goes only to what the data has validated.",
+    "start": "Get a diagnosis",
+    "deck": "Download deck",
+    "t1": "Diagnose",
+    "t2": "Volume",
+    "t3": "Hook test",
+    "t4": "Scale-up",
+    "ab_e": "Integrated funnel",
+    "ab_h": "Three channels, designed as one funnel.",
+    "ab_p": "TikTok Shop builds awareness, Amazon search converts purchase intent, and Instagram reinforces trust. Channel KPIs are tied into one funnel so reach and conversion are managed together.",
+    "s1v": "100K+",
+    "s1": "Creators",
+    "s2v": "300+",
+    "s2": "Campaigns",
+    "s3v": "3+ yrs",
+    "s3": "In marketing",
+    "vi_h": "In US e-commerce, metrics decide visibility.",
+    "vi_p": "Amazon allocates exposure by review count, rating and sales velocity; TikTok Shop by content volume and viewer response. DANEA secures these metrics step by step and turns them into sales growth.",
+    "vi_b": "Get your brand diagnosed",
+    "st_h": "From kickoff to monthly report.",
+    "st_p": "Every campaign runs on the same four steps.",
+    "c1h": "Kickoff",
+    "c1p": "We diagnose where you stand and set goals, priorities and an action plan.",
+    "c2h": "Creator selection",
+    "c2p": "We source creators by competitor-content history and activity in the last 90 days.",
+    "c3h": "Execution & management",
+    "c3p": "We run uploads, ads and promotions, and share progress in a weekly sheet.",
+    "c4h": "Report & next actions",
+    "c4p": "A monthly report early each month analyzes results and sets the next month's priorities.",
+    "why_h": "Why DANEA?",
+    "why_p": "DANEA is a creator marketing agency for K-beauty brands entering the US. We run everything from review building to virality and sales conversion on Amazon, TikTok Shop and Instagram.",
+    "why_s": "★ Reviews · Hook testing · Sales conversion",
+    "cmp_h": "How we are different.",
+    "cmp_p": "Data-driven planning with on-the-ground creator execution.",
+    "th1": "Strategy + local execution",
+    "th2": "AI tools alone",
+    "th2s": "Fast, but no execution",
+    "th3": "Traditional agency",
+    "th3s": "High fixed cost, slow execution",
+    "nw_h": "Get US market insights every week",
+    "nw_p": "We sum up key changes in US K-beauty, TikTok Shop and Amazon as weekly card news.",
+    "nw_b": "Follow",
+    "nw_f": "Published every Friday, in Korean",
+    "ct_h": "Start today.",
+    "ct_p": "Share your product and sales channels. We will come back with a diagnosis and an execution plan.",
+    "ct_r": "Reply within one business day",
+    "ct_b": "Contact us",
+    "fn_h": "US market entry, run by one dedicated team.",
+    "fn_p": "From diagnosis to creator operations and performance reporting.",
+    "fn_b1": "Book a meeting",
+    "f_deck": "Service deck",
+    "f_ct": "Contact",
+    "f_mt": "Book a meeting",
+    "f_pv": "Privacy policy",
+    "r1": "Platform-by-platform funnel strategy",
+    "r2": "USP and hook A/B tests before budget",
+    "r3": "Creators picked by competitor-content history",
+    "r4": "Execution by real US buyers and creators",
+    "r5": "Secondary usage rights cleared",
+    "r6": "Staged spend from small budgets",
+    "r7": "Weekly sheet and monthly report",
+    "r8": "Runs within platform policy"
+  };
+  var KO = {};
+  var nodes = document.querySelectorAll('[data-i]');
+  nodes.forEach(function(n){ KO[n.getAttribute('data-i')] = n.hasAttribute('data-html') ? n.innerHTML : n.textContent; });
+  var META = {
+    ko:{title:document.title, desc:document.querySelector('meta[name=description]').content},
+    en:{title:'DANEA | Full-Funnel Creator Marketing for the US', desc:'DANEA is a full-funnel creator marketing agency for K-beauty brands entering the US, across Amazon, TikTok Shop and Instagram.'}
+  };
+  var lang = 'ko', cur = 0;
+  function setTab(i, anim){
+    cur = i;
+    document.querySelectorAll('.tab').forEach(function(t,k){ t.classList.toggle('on', k===i); t.setAttribute('aria-selected', k===i); });
+    document.querySelectorAll('.dot').forEach(function(d,k){ d.classList.toggle('on', k===i); });
+    var box = document.getElementById('tabtxt');
+    document.getElementById('tabh').textContent = TABS[lang][i][0];
+    document.getElementById('tabd').textContent = TABS[lang][i][1];
+    if (anim){ box.classList.remove('anim'); void box.offsetWidth; box.classList.add('anim'); }
   }
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){sel(t)});
-    t.addEventListener('keydown',function(e){
-      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();var n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;sel(tabs[n],true);}
+  function setLang(l){
+    lang = l;
+    var dict = l === 'en' ? EN : KO;
+    nodes.forEach(function(n){
+      var k = n.getAttribute('data-i'), v = dict[k];
+      if (v == null) return;
+      if (n.hasAttribute('data-html')) n.innerHTML = v; else n.textContent = v;
     });
-  });
-  var els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
-  els.forEach(function(e){io.observe(e)});
+    document.documentElement.lang = l;
+    document.title = META[l].title;
+    document.querySelector('meta[name=description]').content = META[l].desc;
+    document.getElementById('lang').innerHTML = l === 'en' ? 'KO / <b>EN</b>' : '<b>KO</b> / EN';
+    setTab(cur, false);
+    try { localStorage.setItem('danea_lang', l); } catch(e){}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('danea_lang'); } catch(e){}
+  var q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'ko') saved = q;
+  if (saved === 'en') setLang('en');
+  document.getElementById('lang').addEventListener('click', function(){ setLang(lang === 'ko' ? 'en' : 'ko'); });
+
+  // 탭: 4초마다 자동으로 넘어가고, 누르면 그 탭부터 다시 센다
+  var timer;
+  function restart(){ clearInterval(timer); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function(){ setTab((cur+1)%4, true); }, 4000); }
+  document.querySelectorAll('.tab').forEach(function(t,k){ t.addEventListener('click', function(){ setTab(k, true); restart(); }); });
+  document.querySelectorAll('.dot').forEach(function(d,k){ d.addEventListener('click', function(){ setTab(k, true); restart(); }); });
+  restart();
+
+  // 스크롤하면 아래에서 떠오른다
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } }); }, {threshold:0.1});
+    document.querySelectorAll('.fade:not(.vis)').forEach(function(el){ io.observe(el); });
+  } else document.querySelectorAll('.fade').forEach(function(el){ el.classList.add('vis'); });
 })();
 </script>
 </body>
