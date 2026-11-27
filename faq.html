@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>자주 묻는 질문 | DANEA</title>
+<meta name="description" content="DANEA와 일하기 전에 많이 묻는 결제, 계정, 콘텐츠 권리, 진행 방식 질문을 모았습니다.">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="canonical" href="https://danea.kr/faq.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DANEA">
+<meta property="og:url" content="https://danea.kr/faq.html">
+<meta property="og:title" content="자주 묻는 질문 | DANEA">
+<meta property="og:description" content="결제, 계정, 콘텐츠 권리, 진행 방식처럼 계약 전에 확인하는 내용.">
+<meta property="og:image" content="https://danea.kr/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.phero{padding-block:96px 48px}
+.crumb{font-size:14px;color:var(--mute)}
+.crumb a:hover{color:var(--ink)}
+.phero h1{margin-top:18px;font-size:min(68px,calc((100vw - 40px) / 8));line-height:1.08;font-weight:850;letter-spacing:-.05em}
+.phero .lead{margin-top:20px;font-size:19px;color:var(--ink2);max-width:640px}
+.search{margin-top:36px;max-width:560px;position:relative}
+.search input{width:100%;font:inherit;font-size:16px;padding:15px 18px 15px 48px;border-radius:14px;border:1.5px solid var(--rule2);background:var(--panel);color:var(--ink);outline:none;transition:border-color .15s}
+.search input:focus{border-color:var(--ink)}
+.search svg{position:absolute;left:17px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--mute);fill:none;stroke-width:2}
+.cats{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.cat{font-size:14px;padding:8px 15px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--rule2);color:var(--ink2)}
+.cat:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.cat.on{background:var(--ac);color:#000;box-shadow:none}
+.list{margin-top:40px}
+.grp{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:40px;border-top:2px solid var(--ink);padding-top:22px;margin-top:64px}
+.grp:first-child{margin-top:0}
+.grp h2{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.grp h2 small{display:block;font-size:14px;font-weight:500;color:var(--mute);margin-top:6px}
+details{border-bottom:1px solid var(--rule)}
+details:first-child summary{padding-top:0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:20px;font-size:18px;font-weight:700;letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg)}
+summary:hover{color:var(--ac-ink)}
+.a{padding-bottom:22px;font-size:16px;line-height:1.7;color:var(--ink2);max-width:720px}
+.a p+p{margin-top:10px}
+.a a{font-weight:600;border-bottom:1px solid var(--rule2)}
+.a a:hover{color:var(--ac-ink);border-color:var(--ac)}
+.empty{margin-top:32px;color:var(--mute)}
+@media (max-width:860px){.grp{grid-template-columns:1fr;gap:6px}summary{font-size:16.5px}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="w">
+    <a class="logo" href="index.html" aria-label="DANEA 홈"><img src="logo_white.png" alt="DANEA" width="86" height="22"></a>
+    <div class="menu"><a href="index.html#how">운영 방식</a><a href="services.html">서비스</a><a href="index.html#cases">사례</a><a class="on" href="faq.html">자주 묻는 질문</a></div>
+    <a class="btn btn-ac" href="contact/">30분 커피챗</a>
+  </div>
+  <i id="prog" aria-hidden="true"></i>
+</nav>
+
+<header class="phero"><div class="w">
+  <p class="crumb"><a href="index.html">DANEA</a> / 자주 묻는 질문</p>
+  <h1>시작 전에<br>많이 묻는 것들.</h1>
+  <p class="lead">결제, 계정, 콘텐츠 권리, 진행 방식처럼 계약 전에 확인하는 내용을 모았습니다. 여기 없는 질문은 커피챗에서 답해 드립니다.</p>
+  <div class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="궁금한 내용을 입력하세요 (예: 결제, 명의, 사용권)" aria-label="질문 검색"></div>
+  <div class="cats" id="cats"><button class="cat on" type="button" data-g="all">전체</button><button class="cat" type="button" data-g="start">시작</button><button class="cat" type="button" data-g="money">비용 · 결제</button><button class="cat" type="button" data-g="run">진행</button><button class="cat" type="button" data-g="rights">계정 · 권리</button></div>
+</div></header>
+
+<main class="w">
+  <div class="list" id="list">
+    <section class="grp" data-g="start">
+      <h2>시작<small>어디서부터</small></h2>
+      <div>
+        <details><summary>상담을 신청하면 어떻게 진행되나요?</summary><div class="a"><p>30분 커피챗에서 아마존과 틱톡샵 현황을 함께 보고, 채널별 노출 조건이 어디까지 채워졌는지 확인합니다. 그다음 먼저 할 단계와 서비스 조합, 수량별 견적을 드립니다.</p></div></details>
+        <details><summary>어떤 브랜드와 주로 일하나요?</summary><div class="a"><p>미국에 진출하는 한국 브랜드, 그중 K뷰티 브랜드가 중심입니다. 아마존, 틱톡샵, 월마트, 코스트코, 쇼피파이에서 판매하는 브랜드와 일합니다.</p></div></details>
+        <details><summary>아직 미국에서 판매를 시작하지 않았어도 되나요?</summary><div class="a"><p>됩니다. Hook Testing은 판매 채널과 상관없이 진행할 수 있어서, 판매 전에 미국에서 반응하는 소구점을 먼저 고를 수 있습니다. 판매가 열리는 달에 바로 실구매 기록을 쌓도록 준비합니다.</p></div></details>
+        <details><summary>틱톡샵이 아직 없는데 시작할 수 있나요?</summary><div class="a"><p>아마존 서비스와 Hook Testing은 바로 시작할 수 있습니다. 틱톡샵 서비스는 샵이 열린 뒤 착수합니다. 입점 절차와 필요한 서류는 커피챗에서 안내합니다.</p></div></details>
+        <details><summary>국내 마케팅 대행사와 함께 진행할 수 있나요?</summary><div class="a"><p>됩니다. 브랜드와 직접 계약하기도 하고, 국내 마케팅 대행사와 파트너로 함께 진행하기도 합니다.</p></div></details>
+      </div>
+    </section>
+
+    <section class="grp" data-g="money">
+      <h2>비용 · 결제<small>얼마나, 어떻게</small></h2>
+      <div>
+        <details><summary>가격은 어떻게 정해지나요?</summary><div class="a"><p>서비스마다 인당, 콘텐츠당, 편당, 월 단위로 정해져 있고, 제품과 수량에 따라 총액이 달라집니다. Mid · Macro와 Exper-V · Real-V는 크리에이터마다 단가가 달라 예산을 먼저 공유받고 건별로 견적을 드립니다. <a href="services.html">서비스별 진행 단위 보기</a></p></div></details>
+        <details><summary>서비스 비용 말고 따로 드는 비용이 있나요?</summary><div class="a"><p>제품비, 샘플비, 배송비, 광고비는 따로 듭니다. Store Boosting은 제품가의 10%(미국 판매세와 송금 수수료)가 더해집니다.</p></div></details>
+        <details><summary>결제는 어떻게 하나요?</summary><div class="a"><p>원화로 받습니다. 환율은 계약일 서울외국환중개 매매기준율로 고정하고, 잔금도 같은 환율을 씁니다. 착수금 50%는 계약할 때, 잔금은 게시 완료 보고나 결과물 전달 뒤에 받습니다.</p></div></details>
+        <details><summary>모집한 인원보다 적게 올라오면 어떻게 청구하나요?</summary><div class="a"><p>일반 체험단, Hook Testing, Affiliate Deep Seeding은 실제로 올린 인원과 콘텐츠만 청구합니다. 업로드율을 보수적으로 잡아 필요한 인원의 120%를 모집합니다.</p></div></details>
+        <details><summary>제품가가 바뀌면 어떻게 정산하나요?</summary><div class="a"><p>실구매 서비스에서 제품가 차액이 생기면 구매 내역 증빙과 함께 잔금에 더해 정산합니다. 착수 전에 할인 계획이 있는지 먼저 확인합니다.</p></div></details>
+      </div>
+    </section>
+
+    <section class="grp" data-g="run">
+      <h2>진행<small>무엇을, 어떻게</small></h2>
+      <div>
+        <details><summary>크리에이터는 어떻게 고르나요?</summary><div class="a"><p>경쟁 제품 콘텐츠에 참여한 이력, 최근 90일 활동, 카테고리와 팔로워 조건을 기준으로 고릅니다. Power Micro는 저장과 반응률, 촬영 감각을 함께 봅니다.</p></div></details>
+        <details><summary>보고는 얼마나 자주 받나요?</summary><div class="a"><p>주 1회 현황 시트로 업로드, 샘플, 초대 수락 현황을 공유하고, 익월 초에 월간 리포트를 드립니다. 월간 리포트에는 소구점과 크리에이터별 반응, 다음 달 예산 제안이 들어갑니다.</p></div></details>
+        <details><summary>결과가 기대만큼 나오지 않으면 어떻게 하나요?</summary><div class="a"><p>매출은 보장하지 않습니다. 대신 월간 리포트에서 반응이 낮은 소구점과 크리에이터를 걸러 내고, 다음 달 예산을 반응 좋은 쪽으로 옮깁니다.</p></div></details>
+        <details><summary>브리프나 촬영 가이드를 꼭 지켜야 하나요?</summary><div class="a"><p>체험단 가이드는 권장으로 드립니다. Hook Testing과 Mid · Macro처럼 소구점을 비교하거나 맞춤 촬영이 필요한 서비스는 초안을 검수해 가이드에 맞춰 찍게 합니다.</p></div></details>
+        <details><summary>최소 진행 수량이 있나요?</summary><div class="a"><p>있습니다. Store Boosting은 100인(두 달에 걸쳐 50인씩 가능), 일반 체험단은 50인, Hook Testing은 30인, Conversion Affiliate는 3인 · 3편부터입니다. Power Micro와 Mid · Macro는 최소 조건이 없습니다.</p></div></details>
+      </div>
+    </section>
+
+    <section class="grp" data-g="rights">
+      <h2>계정 · 권리<small>명의와 콘텐츠</small></h2>
+      <div>
+        <details><summary>판매 계정은 누구 명의로 운영하나요?</summary><div class="a"><p>아마존과 틱톡샵 계정은 브랜드 명의 그대로 둡니다. 틱톡샵 운영이 필요한 서비스는 셀러센터의 하위 사용자 권한을 받아 진행합니다.</p></div></details>
+        <details><summary>올라온 콘텐츠를 광고에 써도 되나요?</summary><div class="a"><p>Store Boosting 콘텐츠는 무기한, 전 매체, 전 지역, 편집 가능, 유료 광고 포함으로 씁니다. 원본 파일을 함께 드립니다. 다른 서비스는 크리에이터와 협의한 범위 안에서 씁니다.</p></div></details>
+        <details><summary>실구매 서비스는 어떤 방식으로 진행하나요?</summary><div class="a"><p>미국에 사는 일반 구매자가 본인 계정으로 직접 결제하고 콘텐츠를 올립니다. 구매와 업로드를 인증한 건만 제품가를 환급합니다.</p></div></details>
+      </div>
+    </section>
+  </div>
+  <p class="empty" id="empty" hidden>찾는 질문이 없습니다. 커피챗에서 바로 답해 드립니다.</p>
+
+  <div class="final" style="margin-top:96px">
+    <div><h2>여기 없는 질문이<br>있으신가요?</h2><p>30분 커피챗에서 브랜드 상황에 맞춰 답해 드립니다.</p>
+      <div class="cta"><a class="btn btn-ink" href="contact/">30분 커피챗 신청</a><a class="btn btn-ln" href="services.html">서비스 보기</a></div></div>
+    <ul><li>contact@danea.kr<span>메일</span></li><li>영업일 기준 하루 안에 답변<span>회신</span></li></ul>
+  </div>
+</main>
+
+<footer>
+  <div class="w"><div class="in">
+    <div><a class="logo" href="index.html"><img src="logo_white.png" alt="DANEA" width="78" height="20"></a><p class="cr">© 2026 DANEA. All rights reserved.</p></div>
+    <div class="cols"><div><p class="hd">DANEA</p><a href="index.html">홈</a><a href="services.html">서비스</a><a href="faq.html">자주 묻는 질문</a></div><div><p class="hd">문의</p><a href="contact/">30분 커피챗</a><span style="display:block;margin-top:6px">contact@danea.kr</span></div></div>
+  </div></div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q'), cats = document.querySelectorAll('.cat'), grps = document.querySelectorAll('.grp'), empty = document.getElementById('empty'), g = 'all';
+  function apply(){
+    var term = q.value.trim().toLowerCase(), any = false;
+    grps.forEach(function(sec){
+      var show = 0;
+      sec.querySelectorAll('details').forEach(function(d){
+        var hit = !term || d.textContent.toLowerCase().indexOf(term) > -1;
+        d.hidden = !hit; if (hit) show++;
+        if (term && hit) d.open = true;
+      });
+      sec.hidden = !(show && (g === 'all' || sec.getAttribute('data-g') === g));
+      if (!sec.hidden) any = true;
+    });
+    empty.hidden = any;
+  }
+  q.addEventListener('input', apply);
+  cats.forEach(function(c){ c.addEventListener('click', function(){ g = c.getAttribute('data-g'); cats.forEach(function(x){ x.classList.toggle('on', x === c); }); apply(); }); });
+  var bar = document.getElementById('prog');
+  addEventListener('scroll', function(){ var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0).toFixed(4) + ')'; }, {passive:true});
+})();
+</script>
+</body>
+</html>

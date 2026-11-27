@@ -3,534 +3,909 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DANEA | 미국 풀퍼널 크리에이터 마케팅 에이전시</title>
-<meta name="description" content="DANEA는 미국에 진출하는 한국 브랜드를 위한 크리에이터 마케팅 에이전시입니다. 아마존·틱톡샵·인스타그램 통합 퍼널 운영. 리뷰 확보와 훅 테스트로 검증된 소재에 예산을 집중합니다.">
+<title>DANEA | 미국 아마존·틱톡샵 크리에이터 마케팅</title>
+<meta name="description" content="DANEA는 미국에 진출하는 한국 브랜드의 아마존과 틱톡샵 크리에이터 마케팅을 운영합니다. 소구점을 먼저 검증하고, 판매 데이터와 콘텐츠를 쌓은 뒤, 검증된 소재만 확산합니다.">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DANEA">
 <meta name="google-site-verification" content="bzqD95PEOqIFjvj_FtgAFRRhG3HwiYmqV8WS4WABXEg" />
 <meta name="naver-site-verification" content="54ba859b9b1d63874a3b3093bf3c0acf559f194c" />
 <link rel="canonical" href="https://danea.kr/">
 <meta property="og:url" content="https://danea.kr/">
-<meta property="og:title" content="DANEA | 미국 풀퍼널 크리에이터 마케팅 에이전시">
-<meta property="og:description" content="아마존·틱톡샵·인스타그램 통합 퍼널 운영. 리뷰 확보와 훅 테스트로 검증된 소재에 예산을 집중합니다.">
+<meta property="og:title" content="DANEA | 미국 아마존·틱톡샵 크리에이터 마케팅">
+<meta property="og:description" content="소구점을 먼저 검증하고, 판매 데이터와 콘텐츠를 쌓은 뒤, 검증된 소재만 확산합니다.">
 <meta property="og:image" content="https://danea.kr/og/home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="DANEA 미국 시장 풀퍼널 마케팅 에이전시">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-:root{
-  --bg:#0a0a0a; --card:#1a1a1a; --card2:#111; --ink:#f0f0f0; --mute:#888; --mute2:#555; --gray4:#99a1af;
-  --ac:#FF8C00; --ac-h:#E67E00; --ac-ink:#F59A1F;
-  --ok:#059669; --no:#f87171;
+/* 히어로: 커서를 따라가는 빛, 글자 단위 등장, 스크롤 속도로 기울어지는 채널 띠 */
+.hero{position:relative;overflow:hidden;padding-block:120px 0;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%)}
+.spot{position:absolute;z-index:-1;left:0;top:0;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,140,0,.22),rgba(255,140,0,.06) 45%,rgba(255,140,0,0));pointer-events:none;transform:translate3d(70vw,260px,0);transition:opacity .6s;will-change:transform}
+.hero h1{font-size:min(104px,calc((100vw - 80px) / 10.6));line-height:1.02;font-weight:880;letter-spacing:-.055em;margin-top:26px}
+.hero h1 .ln{display:block;white-space:nowrap}
+.hero h1 .c{display:inline-block}
+.js .hero h1 .c{opacity:0;transform:translateY(.55em) rotate(4deg);filter:blur(10px);transition:opacity .7s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s}
+.js .hero.in h1 .c{opacity:1;transform:none;filter:none}
+.hero h1 .o{color:var(--ac);position:relative}
+.hero h1 .u{position:relative;display:inline-block}
+.hero h1 .u::after{content:"";position:absolute;left:0;right:.08em;bottom:.04em;height:.09em;background:var(--ac);transform:scaleX(0);transform-origin:0 50%;transition:transform .9s cubic-bezier(.7,0,.2,1) 1.25s;box-shadow:0 0 24px rgba(255,140,0,.8)}
+.hero.in h1 .u::after{transform:scaleX(1)}
+.hero .lead{margin-top:34px;font-size:21px;line-height:1.6;color:var(--ink2);max-width:620px}
+.hero .cta{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+.js .hero .lead,.js .hero .cta,.js .hero .eyebrow{opacity:0;transform:translateY(14px);transition:opacity .9s,transform .9s}
+.js .hero.in .eyebrow{opacity:1;transform:none;transition-delay:.1s}
+.js .hero.in .lead{opacity:1;transform:none;transition-delay:.9s}
+.js .hero.in .cta{opacity:1;transform:none;transition-delay:1.1s}
+.marq{margin-top:110px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden;padding-block:22px}
+.marq .tr{display:flex;width:max-content;gap:0;will-change:transform}
+.marq span{font-size:min(120px,13vw);font-weight:880;letter-spacing:-.05em;line-height:1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.4px #3a3a38;padding-right:.5em}
+.marq span:nth-child(odd){-webkit-text-stroke-color:#5a3200}
+@media (max-width:860px){.hero{padding-top:72px}.hero h1{font-size:min(52px,calc((100vw - 40px) / 7.4))}.hero h1 .ln{white-space:normal}.hero .lead{font-size:17px}.marq{margin-top:72px}}
+
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpi{padding-block:44px 40px}
+.kpi+.kpi{padding-left:36px;border-left:1px solid var(--rule)}
+.kpi .v{font-size:76px;font-weight:880;letter-spacing:-.05em;line-height:1;white-space:nowrap}
+.kpi .v em{font-style:normal;color:var(--ac)}
+.kpi .l{margin-top:12px;font-size:15px;color:var(--mute)}
+@media (max-width:640px){.kpi+.kpi{padding-left:14px}.kpi .v{font-size:31px}.kpi .l{font-size:13px}}
+
+/* 문장 채우기 */
+#principle{height:240vh;position:relative;border-top:1px solid var(--rule)}
+#principle .stick{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center}
+.fill{font-size:min(68px,calc((100vw - 80px) / 13.5));line-height:1.22;font-weight:850;letter-spacing:-.045em;max-width:1120px}
+.fill span{color:#262625;transition:color .3s,text-shadow .3s}
+.fill span.lit{color:var(--ink)}
+.fill span.k.lit{color:var(--ac);text-shadow:0 0 40px rgba(255,140,0,.45)}
+@media (max-width:760px){.fill{font-size:31px}}
+
+/* 노출 조건: 화면 고정, 가로로 흐르는 지표 */
+#lanes{position:relative;height:420vh;border-top:1px solid var(--rule)}
+#lanes .stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:4vh}
+#lanes .top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+#lanes .top h2{font-size:40px;line-height:1.15;font-weight:820;letter-spacing:-.04em}
+#lanes .top p{font-size:14px;color:var(--mute);text-align:right}
+#lanes .top p b{color:var(--ac-ink);font-weight:650}
+.lbox{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:4vh;padding-block:3vh}
+.lane{min-width:0}
+.scan{position:absolute;top:-2vh;bottom:-2vh;left:42%;width:2px;background:linear-gradient(transparent,var(--ac) 18%,var(--ac) 82%,transparent);box-shadow:0 0 24px rgba(255,140,0,.9),0 0 2px var(--ac);pointer-events:none;z-index:2}
+.scan::after{content:"";position:absolute;left:-60px;top:0;bottom:0;width:120px;background:radial-gradient(closest-side,rgba(255,140,0,.12),transparent)}
+.lane{position:relative}
+.lane .who{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--mute);margin-bottom:6px}
+.lane .who img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.track{display:flex;align-items:center;width:max-content;will-change:transform;padding-left:42vw}
+.wd{position:relative;display:flex;align-items:center}
+.wd b{font-size:min(108px,11vw);font-weight:880;letter-spacing:-.05em;line-height:1.08;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px #3d3d3b;transition:color .35s,-webkit-text-stroke-color .35s,text-shadow .35s}
+.wd.on b{color:var(--ink);-webkit-text-stroke-color:transparent}
+.wd.d.on b{color:var(--ac);text-shadow:0 0 50px rgba(255,140,0,.45)}
+.wd i{font-style:normal;position:absolute;left:.2em;top:-.6em;font-size:14px;font-weight:700;color:var(--mute2);white-space:nowrap;transition:color .3s}
+.wd.on i{color:var(--ac-ink)}
+.wd .sep{display:block;width:min(110px,9vw);height:2px;background:#2f2f2d;margin-inline:min(28px,2.4vw);position:relative}
+.wd .sep::after{content:"";position:absolute;right:-1px;top:-5px;border-left:9px solid #2f2f2d;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.wd.on .sep{background:var(--ac)}
+.wd.on .sep::after{border-left-color:var(--ac)}
+.legend{display:flex;gap:28px;font-size:14px;color:var(--mute);flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:3px;background:var(--ac)}
+.legend i.wht{background:var(--ink)}
+.legend i.ln{background:transparent;box-shadow:inset 0 0 0 1.5px #555}
+@media (max-width:860px){#lanes .top{flex-direction:column;align-items:flex-start}#lanes .top h2{font-size:26px}#lanes .top p{text-align:left}.wd i{font-size:12px}.scan{left:30%}.track{padding-left:30vw}}
+
+/* 순서가 틀리면 */
+.wrong{margin-top:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--rule2);border-radius:24px;overflow:hidden}
+.wrong>div{padding:40px}
+.wrong .bad{background:var(--bg2)}
+.wrong .good{border-left:1px solid var(--rule2);background:linear-gradient(160deg,rgba(255,140,0,.09),transparent 55%)}
+.wrong h3{font-size:15px;font-weight:700;color:var(--mute)}
+.wrong .good h3{color:var(--ac-ink)}
+.wrong ol{margin-top:22px}
+.wrong li{padding-block:20px;border-top:1px solid var(--rule2)}
+.wrong li:first-child{border-top:0;padding-top:0}
+.wrong .do{font-size:20px;font-weight:750;letter-spacing:-.025em;display:inline}
+.wrong .bad .do{color:var(--mute);background-image:linear-gradient(var(--bad),var(--bad));background-repeat:no-repeat;background-position:0 58%;background-size:0 2px;transition:background-size .8s cubic-bezier(.7,0,.2,1)}
+.wrong.in .bad .do{background-size:100% 2px}
+.wrong .bad li:nth-child(2) .do{transition-delay:.3s}
+.wrong .bad li:nth-child(3) .do{transition-delay:.6s}
+.wrong .res{margin-top:6px;font-size:15px;color:var(--mute)}
+.wrong .bad .res b{color:var(--bad);font-weight:600}
+.wrong .good .n{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#000;font-size:13px;font-weight:800;align-items:center;justify-content:center;margin-right:12px;vertical-align:2px;box-shadow:0 0 18px rgba(255,140,0,.6)}
+.wrong .good .res{padding-left:40px}
+.js .wrong .good li{opacity:0;transform:translateX(-14px);transition:opacity .6s,transform .6s}
+.js .wrong.in .good li{opacity:1;transform:none}
+.wrong .good li:nth-child(1){transition-delay:.9s!important}.wrong .good li:nth-child(2){transition-delay:1.1s!important}.wrong .good li:nth-child(3){transition-delay:1.3s!important}
+@media (max-width:860px){.wrong{grid-template-columns:1fr}.wrong>div{padding:26px 22px}.wrong .good{border-left:0;border-top:1px solid var(--rule2)}.wrong .do{font-size:17px}}
+
+/* 운영 방식 */
+.flow{margin-top:80px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:72px}
+.rail{position:sticky;top:120px;align-self:start}
+.big{font-size:220px;line-height:.8;font-weight:900;letter-spacing:-.07em;position:relative;height:.84em;overflow:hidden}
+.big span{position:absolute;left:0;top:0;color:var(--ac);text-shadow:0 0 60px rgba(255,140,0,.35);transition:transform .75s cubic-bezier(.2,.8,.15,1),opacity .4s,filter .6s;transform:translateY(105%);opacity:0;filter:blur(8px)}
+.big span.on{transform:none;opacity:1;filter:none}
+.big span.up{transform:translateY(-105%)}
+.rbar{margin-top:30px;height:2px;background:var(--rule2);position:relative;overflow:hidden}
+.rbar i{position:absolute;inset:0;background:var(--ac);transform-origin:0 50%;transform:scaleX(.25);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.rlist{margin-top:10px}
+.rlist a{display:flex;gap:14px;align-items:center;padding-block:12px;border-bottom:1px solid var(--rule);font-size:15px;color:var(--mute2);transition:color .3s,padding .3s}
+.rlist a b{font-size:12px;width:22px}
+.rlist a.on{color:var(--ink);font-weight:650;padding-left:8px}
+.rlist a.on b{color:var(--ac)}
+.rlist a.done{color:var(--mute)}
+.stepb{padding-bottom:110px;margin-bottom:110px;border-bottom:1px solid var(--rule)}
+.stepb:last-child{margin-bottom:0;border-bottom:0;padding-bottom:0}
+.stepb .k{font-size:14px;font-weight:700;color:var(--ac-ink)}
+.stepb h3{font-size:42px;line-height:1.15;font-weight:850;letter-spacing:-.045em;margin-top:10px}
+.stepb .why{margin-top:16px;font-size:18px;color:var(--ink2);max-width:620px}
+.wd2{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--rule2)}
+.wd2>div{padding:18px 24px 0 0}
+.wd2>div+div{padding-left:24px;border-left:1px solid var(--rule2)}
+.wd2 small{font-size:13px;color:var(--mute);font-weight:650}
+.wd2 p{margin-top:6px;font-size:16px;line-height:1.65;color:var(--ink2)}
+.svs{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap}
+.svs a{font-size:13px;font-weight:650;padding:7px 13px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--rule2);color:var(--ink2);transition:all .2s}
+.svs a:hover{box-shadow:inset 0 0 0 1.5px var(--ac);color:var(--ac-ink)}
+.fig{margin-top:30px;background:var(--panel);border:1px solid var(--rule);border-radius:20px;padding:28px 30px}
+.fig .ft{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;font-weight:700}
+.bars{margin-top:20px;display:grid;gap:16px}
+.bar{display:grid;grid-template-columns:150px minmax(0,1fr) 50px;gap:14px;align-items:center;font-size:14px}
+.bar .t b{display:block;font-weight:700}
+.bar .t span{color:var(--mute);font-size:13px}
+.bar .tr{height:14px;background:#1f1f1e;border-radius:7px;overflow:hidden}
+.bar .tr i{display:block;height:100%;width:0;background:#4a4a48;border-radius:7px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar.win .tr i{background:linear-gradient(90deg,#ff7a00,#ffb14a);box-shadow:0 0 20px rgba(255,140,0,.5)}
+.bar.win{font-weight:700}
+.bar.win .v{color:var(--ac)}
+.bar .v{text-align:right;font-weight:750}
+.fig.in .bar .tr i{width:var(--w)}
+.fig.in .bar:nth-child(2) .tr i{transition-delay:.15s}.fig.in .bar:nth-child(3) .tr i{transition-delay:.3s}
+.fig .cap{margin-top:16px;font-size:13px;color:var(--mute)}
+.cmp{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+.cmp th,.cmp td{padding:13px 10px;border-bottom:1px solid var(--rule2);text-align:left;vertical-align:top}
+.cmp th{font-size:13px;color:var(--mute);font-weight:650}
+.cmp td:first-child,.cmp th:first-child{padding-left:0;color:var(--mute);width:22%}
+.cmp td{color:var(--mute)}
+.cmp .us{font-weight:700;color:var(--ink)}
+.cmp th.us{color:var(--ac-ink)}
+.cmp tr:last-child td{border-bottom:0}
+.crm{margin-top:18px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.crm li{background:var(--bg);border-radius:14px;padding:16px 14px;font-size:14px;line-height:1.45;border:1px solid var(--rule2);transition:border-color .4s,transform .4s}
+.crm li b{display:block;font-size:12px;color:var(--ac-ink);margin-bottom:6px}
+.crm li span{display:block;color:var(--mute);font-size:12.5px;margin-top:4px}
+.js .fig .crm li{opacity:0;transform:translateY(12px)}
+.fig.in .crm li{opacity:1;transform:none;transition:opacity .5s,transform .5s}
+.fig.in .crm li:nth-child(2){transition-delay:.1s}.fig.in .crm li:nth-child(3){transition-delay:.2s}.fig.in .crm li:nth-child(4){transition-delay:.3s}.fig.in .crm li:nth-child(5){transition-delay:.4s}
+.tl{margin-top:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--rule2)}
+.tl::after{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--ac);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.fig.in .tl::after{transform:scaleX(1)}
+.tl li{position:relative;padding-top:32px;padding-right:16px}
+.tl li::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 2.5px var(--ink);z-index:1}
+.tl li.hot::before{background:var(--ac);box-shadow:0 0 14px rgba(255,140,0,.8)}
+.tl li small{font-size:13px;color:var(--mute);font-weight:650}
+.tl li b{display:block;margin-top:4px;font-size:17px}
+.tl li span{display:block;font-size:14px;color:var(--mute);margin-top:2px}
+@media (max-width:860px){
+  .flow{grid-template-columns:1fr;gap:28px}
+  .rail{display:none}
+  .stepb{padding-bottom:64px;margin-bottom:64px}
+  .stepb h3{font-size:29px}
+  .wd2{grid-template-columns:1fr}
+  .wd2>div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule2);margin-top:16px}
+  .fig{padding:20px 18px}
+  .bar{grid-template-columns:92px minmax(0,1fr) 42px;gap:10px}
+  .crm{grid-template-columns:1fr 1fr}
+  .tl{grid-template-columns:1fr;gap:16px}
+  .tl::before,.tl::after{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .tl::after{transform-origin:50% 0;transform:scaleY(0)}
+  .fig.in .tl::after{transform:scaleY(1)}
+  .tl li{padding:0 0 0 30px}
 }
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
-a{color:inherit;text-decoration:none}
-h1,h2,h3,p{margin:0}
-button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
-img{display:block}
-.wrap6{max-width:1152px;margin:0 auto}
-section{padding-left:24px;padding-right:24px;scroll-margin-top:56px}
 
-/* 버튼 */
-.btn{display:inline-block;border-radius:9999px;padding:12px 32px;font-weight:500;transition:background-color .15s,color .15s;white-space:nowrap}
-.btn-ac{background:var(--ac);color:#000}
-.btn-ac:hover{background:var(--ac-h)}
-.btn-ln{border:1px solid rgba(255,255,255,.2)}
-.btn-ln:hover{background:rgba(255,255,255,.05)}
+/* 상황별 서비스 표 */
+.cols{margin-top:48px;display:flex;gap:8px;flex-wrap:wrap}
+.colbtn{font-size:15px;padding:10px 18px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--rule2);color:var(--ink2);transition:all .2s}
+.colbtn:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.colbtn.on{background:var(--ac);color:#000;box-shadow:0 0 24px -4px rgba(255,140,0,.6)}
+.colnote{margin-top:16px;font-size:16px;color:var(--mute);min-height:26px}
+.mxw{margin-top:24px;border-top:1px solid var(--ink);overflow-x:auto}
+table.mx{width:100%;border-collapse:collapse;min-width:880px}
+.mx th,.mx td{padding:18px 12px;border-bottom:1px solid var(--rule);text-align:center;vertical-align:middle;transition:background-color .25s}
+.mx th{font-size:13px;font-weight:600;color:var(--mute)}
+.mx th button{color:inherit;font-weight:inherit;padding:4px 6px;border-radius:6px}
+.mx th button:hover{color:var(--ink)}
+.mx th:first-child,.mx td:first-child{text-align:left;padding-left:0;width:40%}
+.mx .sv a{font-size:16px;font-weight:700}
+.mx .sv a:hover{color:var(--ac-ink)}
+.mx .sv small{font-size:12px;color:var(--mute2);margin-left:8px;font-weight:500}
+.mx .ds{font-size:14px;color:var(--mute);margin-top:3px}
+.mx .c-on{background:rgba(255,140,0,.07)}
+.mx th.c-on{color:var(--ac-ink)}
+.dotm{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--ink);transition:background-color .25s,box-shadow .25s,transform .25s}
+.mx.pick .dotm{background:#353533}
+.mx.pick .c-on .dotm{background:var(--ac);box-shadow:0 0 14px rgba(255,140,0,.9);transform:scale(1.25)}
+.na{color:#333331}
+.slist{display:none}
+@media (max-width:860px){
+  .mxw{display:none}
+  .slist{display:grid;margin-top:20px;border-top:1px solid var(--ink)}
+  .slist a{display:block;padding-block:16px;border-bottom:1px solid var(--rule)}
+  .slist b{font-size:16px}
+  .slist small{display:block;font-size:12px;color:var(--ac-ink);font-weight:650;margin-bottom:2px}
+  .slist p{font-size:14px;color:var(--mute);margin-top:2px}
+}
 
-/* 상단 메뉴 */
-nav.top{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05)}
-nav.top .in{height:56px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-nav.top .logo img{height:22px;width:auto}
-nav.top .menu{display:none;align-items:center;gap:32px;font-size:14px;color:var(--mute)}
-nav.top .menu a:hover{color:#fff}
-nav.top .right{display:flex;align-items:center;gap:12px}
-.lang{font-size:13px;color:var(--mute);padding:6px 10px;border-radius:9999px;border:1px solid rgba(255,255,255,.1);transition:color .15s,border-color .15s}
-.lang:hover{color:#fff;border-color:rgba(255,255,255,.25)}
-.lang b{color:#fff;font-weight:600}
-nav.top .cta{background:var(--ac);color:#000;padding:8px 20px;border-radius:9999px;font-size:14px;font-weight:500;transition:background-color .15s;white-space:nowrap}
-nav.top .cta:hover{background:var(--ac-h)}
-@media (min-width:768px){nav.top .menu{display:flex}}
+/* 서비스 찾기 */
+.finder{margin-top:56px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border:1px solid var(--rule2);border-radius:24px;overflow:hidden;background:var(--bg2)}
+.fsteps{background:var(--panel);padding:30px;display:grid;gap:4px;align-content:start;border-right:1px solid var(--rule2)}
+.fs{display:flex;gap:12px;align-items:center;font-size:15px;color:var(--mute2);padding:10px 0}
+.fs i{font-style:normal;width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--rule2);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none;transition:all .3s}
+.fs.on{color:var(--ink);font-weight:650}
+.fs.on i{box-shadow:inset 0 0 0 1.5px var(--ac);color:var(--ac)}
+.fs.done{color:var(--mute)}
+.fs.done i{background:var(--ac);color:#000;box-shadow:none}
+.fbody{padding:38px 42px;min-height:460px}
+.fq{animation:fqin .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes fqin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.fq h3{font-size:28px;font-weight:820;letter-spacing:-.035em}
+.fq .sub{margin-top:8px;color:var(--mute)}
+.opts{margin-top:26px;display:grid;gap:10px}
+.opt{text-align:left;padding:18px 20px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--rule2);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:box-shadow .2s,background-color .2s,transform .2s}
+.opt:hover{box-shadow:inset 0 0 0 1.5px var(--ac);background:rgba(255,140,0,.05);transform:translateX(4px)}
+.opt b{font-weight:700}
+.opt span{color:var(--mute);font-size:14px}
+.fback{margin-top:20px;font-size:14px;color:var(--mute)}
+.fback:hover{color:var(--ink)}
+.res .st{display:inline-block;font-size:13px;font-weight:750;background:var(--ac);color:#000;border-radius:999px;padding:5px 12px;box-shadow:0 0 20px rgba(255,140,0,.5)}
+.res h3{margin-top:16px}
+.res .why{margin-top:10px;color:var(--ink2);max-width:560px}
+.res ol{margin-top:22px;border-top:1px solid var(--rule2)}
+.res li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;padding-block:14px;border-bottom:1px solid var(--rule2)}
+.res li small{font-size:13px;color:var(--ac-ink);font-weight:700;padding-top:2px}
+.res li a{font-weight:700}
+.res li a:hover{color:var(--ac-ink)}
+.res li p{font-size:14px;color:var(--mute)}
+.res .cta{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:860px){.finder{grid-template-columns:1fr}.fsteps{grid-template-columns:repeat(4,1fr);padding:16px;border-right:0;border-bottom:1px solid var(--rule2)}.fs{flex-direction:column;gap:6px;font-size:12px;text-align:center}.fbody{padding:26px 20px;min-height:0}.fq h3{font-size:22px}}
 
-/* 히어로 */
-#hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:56px;text-align:center}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;border:1px solid rgba(255,255,255,.1);font-size:14px;color:var(--mute);margin-bottom:32px}
-#hero h1{font-size:48px;font-weight:700;line-height:1.15;max-width:768px}
-#hero .it{margin-top:8px;font-size:16px;color:var(--mute);font-style:italic}
-#hero .lead{margin:24px auto 0;font-size:18px;line-height:28px;color:var(--mute);max-width:512px}
-.btns{margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-@media (min-width:768px){#hero h1{font-size:72px}}
-@media (max-width:400px){#hero h1{font-size:38px}.btn{padding:12px 26px}}
+/* 결과물 예시: 얇은 선과 숫자 위주, 오렌지는 이번 달 한 곳에만 */
+.rtabs{margin-top:48px;display:flex;border-bottom:1px solid var(--rule2)}
+.rtab{padding:12px 2px;margin-right:28px;font-size:15px;font-weight:600;color:var(--mute);border-bottom:1.5px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s}
+.rtab.on{color:var(--ink);border-bottom-color:var(--ink)}
+.doc{margin-top:24px;border:1px solid var(--rule2);border-radius:12px;background:#0d0d0d}
+.doc .bar0{display:flex;align-items:baseline;gap:16px;padding:18px 24px;border-bottom:1px solid var(--rule2);font-size:13px;color:var(--mute);flex-wrap:wrap}
+.doc .bar0 b{color:var(--ink);font-size:15px;font-weight:700}
+.doc .bar0 .ex{margin-left:auto;font-size:12px;color:var(--mute2)}
+.dk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--rule2)}
+.dk>div{padding:22px 24px 24px}
+.dk>div+div{border-left:1px solid var(--rule2)}
+.dk small{font-size:12.5px;color:var(--mute)}
+.dk .v{font-size:32px;font-weight:700;letter-spacing:-.03em;margin-top:6px;font-variant-numeric:tabular-nums;line-height:1.1}
+.dk .d{font-size:12.5px;color:var(--mute);margin-top:6px}
+.dk .d b{color:var(--ink2);font-weight:600}
+.dg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.box{padding:22px 24px 24px}
+.box+.box{border-left:1px solid var(--rule2)}
+.box h4{font-size:13px;font-weight:600;color:var(--mute);display:flex;justify-content:space-between}
+.wk{margin-top:22px;height:160px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:end;border-bottom:1px solid var(--rule2);padding-inline:4px;background-image:linear-gradient(var(--rule) 1px,transparent 1px);background-size:100% 40px;background-position:0 0}
+.wk div{display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.wk i{display:block;width:100%;max-width:40px;background:#3b3b39;border-radius:2px 2px 0 0;height:0;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.wk div:nth-child(2) i{transition-delay:.08s}.wk div:nth-child(3) i{transition-delay:.16s}.wk div:nth-child(4) i{transition-delay:.24s}
+.wk div:last-child i{background:var(--ac)}
+.wk b{font-size:12.5px;font-weight:600;color:var(--ink2);font-variant-numeric:tabular-nums}
+.doc.in .wk i{height:var(--h)}
+.wkx{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding:8px 4px 0;font-size:12px;color:var(--mute);text-align:center}
+.alloc{margin-top:10px}
+.alloc li{display:flex;justify-content:space-between;gap:10px;padding-block:13px;border-bottom:1px solid var(--rule);font-size:14px}
+.alloc li:last-child{border-bottom:0}
+.alloc li span{color:var(--mute)}
+.alloc li b{font-weight:600;color:var(--ink)}
+.sheet{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+.sheet th{font-size:12px;color:var(--mute);font-weight:500;text-align:left;padding:12px 16px;border-bottom:1px solid var(--rule2)}
+.sheet td{padding:13px 16px;border-bottom:1px solid var(--rule);color:var(--ink2)}
+.sheet tr:last-child td{border-bottom:0}
+.sheet td:first-child{color:var(--ink)}
+.sheet .st{display:inline-flex;align-items:center;gap:7px}
+.sheet .st::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mute)}
+.sheet .st.ok::before{background:var(--ink2)}
+.sheet .st.wait{color:var(--ac-ink)}
+.sheet .st.wait::before{background:var(--ac)}
+.sheet .num{text-align:right;font-variant-numeric:tabular-nums}
+.sx{overflow-x:auto}
+@media (max-width:860px){.dk{grid-template-columns:1fr 1fr}.dk>div:nth-child(3){border-left:0}.dk>div:nth-child(n+3){border-top:1px solid var(--rule2)}.dk .v{font-size:25px}.dk>div{padding:18px 16px}.dg{grid-template-columns:1fr}.box+.box{border-left:0;border-top:1px solid var(--rule2)}.box{padding:18px 16px}.doc .bar0{padding:16px}.doc .bar0 .ex{margin-left:0}}
 
-/* 프로세스 탭 */
-.py24{padding-top:96px;padding-bottom:96px}
-.py20{padding-top:80px;padding-bottom:80px}
-.py16{padding-top:64px;padding-bottom:64px}
-.eyeline{text-align:center;font-size:14px;line-height:20px;color:var(--ac-ink);font-weight:500;margin-bottom:32px}
-.tabs{max-width:896px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.tab{border-radius:16px;padding:20px;text-align:center;transition:all .3s;border:1px solid transparent}
-.tab:hover{background:rgba(255,255,255,.05)}
-.tab .n{font-size:12px;line-height:16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mute);transition:color .3s}
-.tab .em{font-size:24px;line-height:32px;margin-top:8px}
-.tab .t{font-size:14px;line-height:20px;font-weight:500;margin-top:8px}
-.tab.on{background:#1a1a1a;border-color:rgba(255,255,255,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);transform:scale(1.05)}
-.tab.on .n{color:var(--ac)}
-.tabtxt{max-width:672px;margin:48px auto 0;text-align:center}
-.tabtxt .h{color:var(--ac-ink);font-weight:500;margin-bottom:12px}
-.tabtxt .d{color:var(--mute);line-height:1.625}
-.tabtxt.anim .h,.tabtxt.anim .d{animation:fiu .4s ease-out}
-@keyframes fiu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:32px}
-.dot{width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,.2);transition:all .3s}
-.dot:hover{background:rgba(255,255,255,.4)}
-.dot.on{width:24px;background:var(--ac)}
-@media (max-width:480px){.tabs{gap:6px}.tab{padding:14px 4px}.tab .t{font-size:13px}}
+/* 사례 */
+.cases{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.case{border:1px solid var(--rule2);border-radius:24px;padding:32px;background:var(--bg2);position:relative;overflow:hidden}
+.case::before{content:"";position:absolute;right:-30%;top:-50%;width:80%;height:120%;background:radial-gradient(closest-side,rgba(255,140,0,.12),transparent);pointer-events:none}
+.case .who{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:14px;color:var(--mute);position:relative}
+.case .who b{font-size:20px;color:var(--ink)}
+.case .big2{margin-top:24px;font-size:60px;font-weight:900;letter-spacing:-.05em;line-height:1;position:relative;white-space:nowrap}
+.case .big2 s{color:var(--mute2);text-decoration:none;font-weight:750}
+.case .big2 .arr{color:var(--mute2);font-weight:500;margin-inline:.15em}
+.case .big2 em{font-style:normal;color:var(--ac);text-shadow:0 0 40px rgba(255,140,0,.4)}
+.case .cap{margin-top:10px;font-size:14px;color:var(--mute)}
+.case svg{margin-top:22px;width:100%;height:auto;display:block;overflow:visible}
+.case svg .ax{stroke:#262625;stroke-width:1}
+.case svg .ln{fill:none;stroke:var(--ac);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;filter:drop-shadow(0 0 6px rgba(255,140,0,.6))}
+.case.in svg .ln{transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .3s;stroke-dashoffset:0}
+.case svg .dotE{fill:var(--ac);opacity:0;transition:opacity .4s 2s}
+.case.in svg .dotE{opacity:1}
+.case svg .br{fill:#3a3a38;transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.case svg .br.last{fill:var(--ac)}
+.case.in svg .br{transform:scaleY(1)}
+.case svg text{font-size:12px;fill:var(--mute)}
+.case dl{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule2)}
+.case dl div{padding-top:14px}
+.case dt{font-size:13px;color:var(--mute)}
+.case dd{font-size:19px;font-weight:820;margin-top:2px;letter-spacing:-.02em}
+.case .tx{margin-top:16px;font-size:15px;color:var(--ink2)}
+@media (max-width:860px){.cases{grid-template-columns:1fr;gap:20px}.case{padding:24px 20px}.case .big2{font-size:clamp(30px,10vw,44px)}}
 
-/* 2단 소개 */
-.two{max-width:1024px;margin:0 auto;display:grid;gap:64px}
-@media (min-width:768px){.two{grid-template-columns:1fr 1fr}}
-.eyebrow{font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
-.h2s{font-size:30px;line-height:1.375;font-weight:700}
-@media (min-width:768px){.h2s{font-size:36px}}
-.body{margin-top:20px;color:var(--mute);line-height:1.625}
-.stats{margin-top:40px;display:flex;gap:32px;flex-wrap:wrap}
-.stats .v{font-size:30px;line-height:36px;font-weight:700}
-.stats .l{font-size:12px;line-height:16px;color:var(--mute);margin-top:4px}
-.two .btn{margin-top:24px;padding:12px 24px}
+/* FAQ 미리보기 */
+.faq{margin-top:48px;border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--rule2)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding-block:24px;font-size:20px;font-weight:720;letter-spacing:-.025em;transition:color .2s}
+.faq summary:hover{color:var(--ac-ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:300;line-height:1;color:var(--mute);transition:transform .3s,color .3s}
+.faq details[open] summary::after{transform:rotate(45deg);color:var(--ac)}
+.faq .a{padding:0 0 26px;font-size:16px;color:var(--ink2);max-width:760px}
+@media (max-width:860px){.faq summary{font-size:17px}}
 
-/* 4단계 */
-.h2c{font-size:30px;line-height:36px;font-weight:700;text-align:center}
-@media (min-width:768px){.h2c.big{font-size:48px;line-height:1}.h2c.mid{font-size:36px;line-height:40px}}
-.subc{text-align:center;color:var(--mute);margin-top:12px}
-.steps{max-width:1024px;margin:56px auto 0;display:grid;gap:20px}
-@media (min-width:768px){.steps{grid-template-columns:1fr 1fr}}
-.step{background:var(--card);border-radius:16px;padding:32px}
-.step .n{font-size:12px;line-height:16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mute)}
-.step h3{font-size:18px;line-height:28px;font-weight:700;margin-top:12px}
-.step p{font-size:14px;line-height:1.625;color:var(--mute);margin-top:8px}
-
-/* 넓은 카드 */
-.wide{max-width:1024px;margin:0 auto;background:var(--card2);border-radius:24px;padding:48px}
-.wide p.g{margin-top:16px;color:var(--gray4);line-height:1.625;max-width:672px}
-.wide .star{margin-top:24px;font-size:12px;line-height:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--ac)}
-.wide.final h2{font-size:30px;line-height:1.25;font-weight:700}
-.wide.final p{margin-top:16px;color:var(--gray4)}
-.wide.final .btns{justify-content:flex-start;margin-top:32px}
-@media (min-width:768px){.wide.final{padding:64px}.wide.final h2{font-size:48px}}
-@media (max-width:480px){.wide{padding:32px 24px}}
-
-/* 비교표 */
-.tblw{max-width:896px;margin:48px auto 0;overflow-x:auto}
-table{width:100%;font-size:14px;line-height:20px;border-collapse:collapse;min-width:560px}
-thead tr{border-bottom:1px solid rgba(255,255,255,.1)}
-th{padding:12px 24px;text-align:center;font-weight:400;font-size:12px;line-height:16px;color:var(--mute);vertical-align:top}
-th:first-child{text-align:left;padding-left:0;padding-right:16px}
-th .us{display:inline-block;background:#fff;color:var(--bg);padding:4px 12px;border-radius:9999px;font-size:12px;font-weight:700}
-th .s{color:var(--mute);margin-top:4px}
-th .s2{color:var(--mute2)}
-tbody tr{border-bottom:1px solid rgba(255,255,255,.05)}
-td{padding:14px 24px;text-align:center}
-td:first-child{text-align:left;padding-left:0;padding-right:16px}
-td.usc{background:rgba(255,255,255,.02)}
-.ck{color:var(--ok);font-size:18px;line-height:28px}
-.xx{color:var(--no);font-size:18px;line-height:28px}
-.pt{color:var(--mute)}
-.legend{display:flex;align-items:center;gap:24px;margin-top:16px;font-size:12px;line-height:16px;color:var(--mute);flex-wrap:wrap}
-.legend span{display:flex;align-items:center;gap:4px}
-
-/* 소식 받기 */
-.news{max-width:576px;margin:0 auto;text-align:center}
-.news h3{font-size:24px;line-height:32px;font-weight:700;color:#fff}
-@media (min-width:768px){.news h3{font-size:30px;line-height:36px}}
-.news p.s{color:var(--mute);margin-top:12px;font-size:14px;line-height:20px}
-.news .row{margin:32px auto 0;display:flex;gap:8px;max-width:448px}
-.news .field{flex:1;min-width:0;padding:12px 16px;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:9999px;color:#fff;font-size:14px;line-height:20px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.news .row .btn{padding:12px 24px;font-size:14px;line-height:20px}
-.news p.f{color:var(--mute2);font-size:12px;line-height:16px;margin-top:16px}
-
-/* 문의 카드 */
-.ccard{max-width:512px;margin:40px auto 0;background:var(--card2);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.1);text-align:center}
-.ccard .r{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:24px;color:var(--mute);font-size:14px}
-.ccard .go{display:block;width:100%;background:var(--ac);color:#000;padding:14px 0;border-radius:8px;font-weight:600;transition:background-color .15s}
-.ccard .go:hover{background:var(--ac-h)}
-.ccard .m{font-size:12px;line-height:16px;color:var(--mute);margin-top:16px}
-.ccard .m a{text-decoration:underline}
-.ccard .m a:hover{color:#fff}
-
-/* 푸터 */
-footer{border-top:1px solid rgba(255,255,255,.1);padding:40px 24px}
-footer .in{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:32px}
-@media (min-width:768px){footer .in{flex-direction:row}}
-footer .logo img{height:20px;width:auto}
-footer .cr{font-size:12px;line-height:16px;color:var(--mute);margin-top:8px}
-footer .cols{display:flex;gap:48px;font-size:14px;line-height:20px;color:var(--mute);flex-wrap:wrap}
-footer .cols div>*+*{margin-top:8px}
-footer .cols .hd{font-weight:500;color:#ccc;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.05em}
-footer .cols a{display:block}
-footer .cols a:hover{color:#fff}
-
-/* 좁은 화면 보정 */
-p{text-wrap:pretty}
-@media (max-width:400px){.stats{gap:20px}.stats .v{font-size:26px;line-height:32px}.wide .h2s{font-size:24px}}
-
-/* 스크롤 등장 */
-.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
-.fade.vis{opacity:1;transform:none}
-.stag>.fade:nth-child(2){transition-delay:.1s}
-.stag>.fade:nth-child(3){transition-delay:.2s}
-.stag>.fade:nth-child(4){transition-delay:.3s}
-.no-js .fade{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.tab,.dot{transition:none}.tabtxt.anim .h,.tabtxt.anim .d{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){
+  .js .hero h1 .c,.js .hero .lead,.js .hero .cta,.js .hero .eyebrow{opacity:1;transform:none;filter:none;transition:none}
+  .hero h1 .u::after{transform:scaleX(1);transition:none}
+  .spot{display:none}
+  .js .wrong .good li,.js .fig .crm li{opacity:1;transform:none}
+  .case svg .ln{stroke-dashoffset:0}.case svg .br{transform:none}.case svg .dotE{opacity:1}
+}
 </style>
 </head>
-<body class="no-js">
-
+<body>
 <nav class="top">
-  <div class="in wrap6">
-    <a class="logo" href="#hero" aria-label="DANEA"><img src="logo_white.png" alt="DANEA" width="86" height="22"></a>
-    <div class="menu">
-      <a href="#hero" data-i="nav1">홈</a>
-      <a href="#about" data-i="nav2">소개</a>
-      <a href="#process" data-i="nav3">프로세스</a>
-      <a href="#contact" data-i="nav4">문의</a>
-    </div>
-    <div class="right">
-      <button class="lang" id="lang" type="button" aria-label="Language"><b>KO</b> / EN</button>
-      <a class="cta" href="contact/" data-i="navcta">상담 신청</a>
-    </div>
+  <div class="w">
+    <a class="logo" href="index.html" aria-label="DANEA 홈"><img src="logo_white.png" alt="DANEA" width="86" height="22"></a>
+    <div class="menu"><a href="#how">운영 방식</a><a href="services.html">서비스</a><a href="#cases">사례</a><a href="faq.html">자주 묻는 질문</a></div>
+    <a class="btn btn-ac" href="contact/">30분 커피챗</a>
   </div>
+  <i id="prog" aria-hidden="true"></i>
 </nav>
 
-<section id="hero">
-  <div class="fade vis"><span class="badge" data-i="badge">✨ K뷰티 브랜드의 미국 진출 파트너</span></div>
-  <div class="fade vis"><h1 data-i="h1" data-html>미국 시장 풀퍼널<br>마케팅 에이전시.</h1></div>
-  <div class="fade vis">
-    <p class="it">Amazon · TikTok Shop · Instagram</p>
-    <p class="lead" data-i="lead">리뷰 확보, 훅 테스트, 위닝 소재 스케일업까지. 데이터로 검증된 소재에만 예산을 집중합니다.</p>
+<header class="hero" id="hero">
+  <div class="spot" id="spot" aria-hidden="true"></div>
+  <div class="w">
+    <p class="eyebrow">Amazon · TikTok Shop 크리에이터 마케팅</p>
+    <h1 id="h1" aria-label="미국 매출은 채널이 아니라 실행 순서에서 갈립니다."><span class="ln" data-split>미국 매출은</span><span class="ln" data-split>채널이 아니라</span><span class="ln"><span class="nw"><span class="u o" data-split>실행 순서</span><span data-split>에서</span></span> <span class="nw" data-split>갈립니다.</span></span></h1>
+    <p class="lead">DANEA는 아마존과 틱톡샵의 노출 조건을 기준으로 실행 순서를 설계하고, 크리에이터 마케팅을 매출 단계까지 운영합니다.</p>
+    <div class="cta"><a class="btn btn-ac" href="contact/">30분 커피챗 신청 <span class="ar">→</span></a><a class="btn btn-ln" href="#finder">맞는 서비스 찾기</a></div>
   </div>
-  <div class="fade vis">
-    <div class="btns">
-      <a class="btn btn-ac" href="#contact" data-i="start">진단 받기</a>
-      <a class="btn btn-ln js-deck" href="contact/" data-i="deck">소개서 다운로드</a>
+  <div class="marq" aria-hidden="true"><div class="tr" id="marq"><span>AMAZON</span><span>TIKTOK SHOP</span><span>WALMART</span><span>COSTCO</span><span>SHOPIFY</span><span>AMAZON</span><span>TIKTOK SHOP</span><span>WALMART</span><span>COSTCO</span><span>SHOPIFY</span></div></div>
+  <div class="w">
+    <div class="kpis">
+      <div class="kpi"><div class="v"><span data-to="10">0</span>만<em>+</em></div><div class="l">누적 크리에이터</div></div>
+      <div class="kpi"><div class="v"><span data-to="300">0</span>건<em>+</em></div><div class="l">누적 캠페인</div></div>
+      <div class="kpi"><div class="v"><span data-to="3">0</span>년<em>+</em></div><div class="l">미국 마케팅 경력</div></div>
     </div>
   </div>
+</header>
+
+<section id="principle" aria-label="DANEA의 원칙">
+  <div class="stick"><div class="w">
+    <p class="fill" id="fill"><span>유료</span> <span>광고는</span> <span class="k">마지막입니다.</span> <span>그</span> <span>앞에</span> <span class="k">판매</span> <span class="k">기록과</span> <span class="k">콘텐츠가</span> <span>쌓여야</span> <span>광고가</span> <span>일합니다.</span></p>
+  </div></div>
 </section>
 
-<section id="process" class="py24">
-  <div class="fade"><p class="eyeline">How does it work?</p></div>
-  <div class="fade">
-    <div class="tabs" role="tablist">
-      <button class="tab on" role="tab" aria-selected="true" data-k="0"><span class="n">01</span><div class="em">🔍</div><div class="t" data-i="t1">진단</div></button>
-      <button class="tab" role="tab" aria-selected="false" data-k="1"><span class="n">02</span><div class="em">📦</div><div class="t" data-i="t2">볼륨 확보</div></button>
-      <button class="tab" role="tab" aria-selected="false" data-k="2"><span class="n">03</span><div class="em">🎯</div><div class="t" data-i="t3">훅 테스트</div></button>
-      <button class="tab" role="tab" aria-selected="false" data-k="3"><span class="n">04</span><div class="em">📈</div><div class="t" data-i="t4">스케일업</div></button>
+<!-- 노출 조건: 스크롤하면 지표가 가로로 흘러가고, 오렌지 선을 지나며 채워진다 -->
+<section id="lanes" aria-label="두 플랫폼의 노출 조건">
+  <div class="stick">
+    <div class="w top">
+      <div><p class="eyebrow">두 플랫폼의 노출 조건</p><h2 style="margin-top:14px">먼저 필요한 데이터가<br>다릅니다.</h2></div>
+      <div class="legend"><span><i></i>DANEA가 채우는 지표</span><span><i class="wht"></i>그 결과로 따라오는 지표</span></div>
     </div>
-    <div class="tabtxt" id="tabtxt" aria-live="polite">
-      <p class="h" id="tabh">현황 진단 및 우선순위 수립</p>
-      <p class="d" id="tabd">리뷰·평점, 콘텐츠 볼륨, 경쟁사 현황을 분석해 착수 지점과 KPI를 정합니다.</p>
-    </div>
-    <div class="dots"><button class="dot on" aria-label="1"></button><button class="dot" aria-label="2"></button><button class="dot" aria-label="3"></button><button class="dot" aria-label="4"></button></div>
-  </div>
-</section>
-
-<section id="about" class="py24">
-  <div class="two">
-    <div class="fade">
-      <p class="eyebrow" data-i="ab_e">통합 퍼널 운영</p>
-      <h2 class="h2s" data-i="ab_h">세 채널을 하나의 퍼널로 설계합니다.</h2>
-      <p class="body" data-i="ab_p">틱톡샵에서 인지를 만들고, 아마존 검색에서 구매 수요를 전환하며, 인스타그램에서 신뢰를 보강합니다. 채널별 KPI를 하나의 퍼널로 연결해 도달과 전환을 함께 관리합니다.</p>
-      <div class="stats">
-        <div><div class="v" data-i="s1v">10만+</div><div class="l" data-i="s1">누적 크리에이터</div></div>
-        <div><div class="v" data-i="s2v">300건+</div><div class="l" data-i="s2">누적 캠페인</div></div>
-        <div><div class="v" data-i="s3v">3년+</div><div class="l" data-i="s3">마케팅 경력</div></div>
+    <div class="lbox">
+    <div class="scan" aria-hidden="true"></div>
+    <div class="lane">
+      <div class="w who"><img src="logos/amazon.svg" alt="Amazon">검색으로 사는 채널</div>
+      <div class="track" id="trA">
+        <div class="wd d"><i>02 판매 데이터</i><b>리뷰</b><span class="sep"></span></div>
+        <div class="wd d"><i>02 판매 데이터</i><b>평점</b><span class="sep"></span></div>
+        <div class="wd"><b>전환율</b><span class="sep"></span></div>
+        <div class="wd d"><i>04 확산</i><b>검색 순위</b><span class="sep"></span></div>
+        <div class="wd"><b>매출</b></div>
       </div>
     </div>
-    <div class="fade">
-      <p class="eyebrow">Our Vision</p>
-      <h2 class="h2s" data-i="vi_h">미국 이커머스의 노출은 지표가 결정합니다.</h2>
-      <p class="body" data-i="vi_p">아마존은 리뷰 수, 평점, 판매 속도로, 틱톡샵은 콘텐츠 볼륨과 시청 반응으로 노출을 배분합니다. DANEA는 이 지표를 단계별로 확보해 매출 성장으로 연결합니다.</p>
-      <a class="btn btn-ac" href="#contact" data-i="vi_b">우리 브랜드 진단 받기</a>
-    </div>
-  </div>
-</section>
-
-<section class="py24">
-  <div class="fade">
-    <h2 class="h2c big" data-i="st_h">착수부터 월간 리포트까지.</h2>
-    <p class="subc" data-i="st_p">모든 캠페인은 같은 4단계로 운영됩니다.</p>
-  </div>
-  <div class="steps stag">
-    <div class="step fade"><span class="n">01</span><h3 data-i="c1h">킥오프</h3><p data-i="c1p">현황을 진단하고 목표, 우선순위, 액션 플랜을 정합니다.</p></div>
-    <div class="step fade"><span class="n">02</span><h3 data-i="c2h">크리에이터 선별</h3><p data-i="c2p">경쟁사 콘텐츠 참여 이력과 최근 90일 활동을 기준으로 크리에이터를 소싱합니다.</p></div>
-    <div class="step fade"><span class="n">03</span><h3 data-i="c3h">실행 &amp; 관리</h3><p data-i="c3p">업로드, 광고, 프로모션을 운영하고 주 1회 현황 시트로 공유합니다.</p></div>
-    <div class="step fade"><span class="n">04</span><h3 data-i="c4h">리포트 &amp; 다음 액션</h3><p data-i="c4p">익월 초 월간 리포트로 성과를 분석하고 다음 달 우선순위를 제안합니다.</p></div>
-  </div>
-</section>
-
-<section class="py16">
-  <div class="fade">
-    <div class="wide">
-      <h2 class="h2s" data-i="why_h">왜 DANEA일까요?</h2>
-      <p class="g" data-i="why_p">DANEA는 미국에 진출하는 K뷰티 브랜드를 위한 크리에이터 마케팅 에이전시입니다. 아마존, 틱톡샵, 인스타그램에서 리뷰 축적부터 바이럴, 매출 전환까지 운영합니다.</p>
-      <p class="star" data-i="why_s">★ 리뷰 확보 · 훅 테스트 · 세일즈 전환</p>
-    </div>
-  </div>
-</section>
-
-<section class="py24">
-  <div class="fade">
-    <h2 class="h2c mid" data-i="cmp_h">어떻게 다른가요?</h2>
-    <p class="subc" data-i="cmp_p">데이터 기반 설계와 현지 크리에이터 실행을 함께 갖췄습니다.</p>
-  </div>
-  <div class="fade">
-    <div class="tblw">
-      <table>
-        <thead><tr>
-          <th>Feature</th>
-          <th><span class="us">DANEA</span><div class="s" data-i="th1">전략 + 현지 실행</div></th>
-          <th><span data-i="th2">AI 툴만</span><div class="s2" data-i="th2s">속도는 빠르나 실행 부재</div></th>
-          <th><span data-i="th3">기존 에이전시</span><div class="s2" data-i="th3s">높은 고정비, 느린 실행</div></th>
-        </tr></thead>
-        <tbody>
-          <tr><td data-i="r1">플랫폼별 퍼널 전략 설계</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="ck">✓</span></td></tr>
-          <tr><td data-i="r2">예산 투입 전 USP·훅 A/B 테스트</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="xx">✕</span></td></tr>
-          <tr><td data-i="r3">경쟁사 참여 이력 기반 크리에이터 선별</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="xx">✕</span></td></tr>
-          <tr><td data-i="r4">미국 현지 실구매자·크리에이터 실행</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="ck">✓</span></td></tr>
-          <tr><td data-i="r5">콘텐츠 2차 활용 권리 정리</td><td class="usc"><span class="ck">✓</span></td><td><span class="xx">✕</span></td><td><span class="pt">△</span></td></tr>
-          <tr><td data-i="r6">소규모 예산 단계별 집행</td><td class="usc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="xx">✕</span></td></tr>
-          <tr><td data-i="r7">주간 시트·월간 리포트</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="ck">✓</span></td></tr>
-          <tr><td data-i="r8">플랫폼 정책 준수 운영</td><td class="usc"><span class="ck">✓</span></td><td><span class="pt">△</span></td><td><span class="ck">✓</span></td></tr>
-        </tbody>
-      </table>
-      <div class="legend"><span><span class="ck">✓</span>Full support</span><span><span class="pt">△</span>Partial support</span><span><span class="xx">✕</span>Not included</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="newsletter" class="py20">
-  <div class="news">
-    <h3 data-i="nw_h">매주 미국 시장 인사이트를 받아보세요</h3>
-    <p class="s" data-i="nw_p">미국 K뷰티·틱톡샵·아마존의 주요 변화를 매주 카드뉴스로 정리합니다.</p>
-    <div class="row">
-      <span class="field">@danea.mag</span>
-      <a class="btn btn-ac" href="https://www.instagram.com/danea.mag/" target="_blank" rel="noopener" data-i="nw_b">팔로우하기</a>
-    </div>
-    <p class="f" data-i="nw_f">매주 금요일 발행</p>
-  </div>
-</section>
-
-<section id="contact" class="py24">
-  <h2 class="h2c mid" data-i="ct_h">지금 바로 시작하세요.</h2>
-  <p class="subc" data-i="ct_p">제품과 판매 채널을 알려 주시면, 현황 진단과 함께 실행안을 제안드립니다.</p>
-  <div class="ccard">
-    <div class="r"><span>💬</span><span data-i="ct_r">영업일 기준 하루 안에 답변</span></div>
-    <a class="go" href="contact/" data-i="ct_b">문의하기</a>
-    <p class="m"><a href="mailto:contact@danea.kr">contact@danea.kr</a></p>
-  </div>
-</section>
-
-<section class="py16">
-  <div class="fade">
-    <div class="wide final">
-      <h2 data-i="fn_h">미국 진출 마케팅, 전담 팀에 맡기세요.</h2>
-      <p data-i="fn_p">진단부터 크리에이터 운영, 성과 리포트까지 한 팀이 운영합니다.</p>
-      <div class="btns">
-        <a class="btn btn-ac" href="contact/" data-i="fn_b1">미팅 예약</a>
-        <a class="btn btn-ln js-deck" href="contact/" data-i="deck">소개서 다운로드</a>
+    <div class="lane">
+      <div class="w who"><img src="logos/tiktok.svg" alt="TikTok Shop">영상으로 사는 채널</div>
+      <div class="track" id="trT">
+        <div class="wd d"><i>03 콘텐츠</i><b>판매 이력</b><span class="sep"></span></div>
+        <div class="wd d"><i>03 콘텐츠</i><b>크리에이터 수락</b><span class="sep"></span></div>
+        <div class="wd d"><i>03 콘텐츠</i><b>콘텐츠 누적</b><span class="sep"></span></div>
+        <div class="wd d"><i>04 확산</i><b>임계치 도달</b><span class="sep"></span></div>
+        <div class="wd"><b>노출 확대</b></div>
       </div>
+    </div>
+    </div>
+    <p class="w" style="font-size:14px;color:var(--mute)">두 채널 모두 시작은 <b style="color:var(--ac-ink)">01 소구점 검증</b>입니다. 반응하는 첫 장면을 고른 뒤에 데이터를 쌓습니다.</p>
+  </div>
+</section>
+
+<section class="sec" style="border-top:0;padding-top:60px">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">순서가 틀리면</p><h2 class="h2">광고비를 써도<br>숫자가 움직이지 않습니다.</h2></div>
+      <p class="lede">두 플랫폼 모두 데이터가 쌓여야 노출됩니다. 먼저 필요한 데이터를 채우지 않으면, 광고비는 노출 조건을 대신하지 못합니다.</p>
+    </div>
+    <div class="wrong rv" id="wrong">
+      <div class="bad">
+        <h3>흔히 하는 순서</h3>
+        <ol>
+          <li><p class="do">리뷰가 12개인 리스팅에 광고부터 켭니다</p><p class="res"><b>클릭은 와도</b> 전환과 검색 순위가 오르지 않습니다.</p></li>
+          <li><p class="do">판매 0인 틱톡샵에 크리에이터 초대를 보냅니다</p><p class="res"><b>판매 이력이 없어</b> 크리에이터가 수락하지 않습니다.</p></li>
+          <li><p class="do">국내에서 통한 문구를 그대로 씁니다</p><p class="res"><b>미국에서 반응하는지</b> 모른 채 물량을 늘립니다.</p></li>
+        </ol>
+      </div>
+      <div class="good">
+        <h3>DANEA 순서</h3>
+        <ol>
+          <li><p class="do"><span class="n">01</span>소구점을 먼저 검증합니다</p><p class="res">세 갈래로 찍어 6초 시청률로 위닝 훅을 고릅니다.</p></li>
+          <li><p class="do"><span class="n">02</span>판매 데이터와 콘텐츠를 쌓습니다</p><p class="res">아마존은 실구매 기록, 틱톡샵은 첫 판매와 콘텐츠 물량.</p></li>
+          <li><p class="do"><span class="n">03</span>검증된 소재에만 광고를 붙입니다</p><p class="res">행사 구간에 Mid · Macro와 광고를 모읍니다.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">운영 방식</p><h2 class="h2">노출 조건을<br>순서대로 채웁니다.</h2></div>
+      <p class="lede">브랜드마다 시작하는 단계는 다르지만, 순서는 같습니다. 단계마다 왜 하는지, 무엇을 하는지, 무엇이 남는지를 정리했습니다.</p>
+    </div>
+    <div class="flow">
+      <div class="rail" aria-hidden="true">
+        <div class="big" id="big"><span class="on">01</span><span>02</span><span>03</span><span>04</span></div>
+        <div class="rbar"><i id="rbar"></i></div>
+        <div class="rlist" id="rlist">
+          <a href="#s1" class="on"><b>01</b>소구점 검증</a>
+          <a href="#s2"><b>02</b>Amazon 판매 데이터 축적</a>
+          <a href="#s3"><b>03</b>TikTok Shop 콘텐츠 축적</a>
+          <a href="#s4"><b>04</b>검증 소재 확산</a>
+        </div>
+      </div>
+      <div class="steps">
+        <article class="stepb" id="s1">
+          <p class="k">STEP 01</p>
+          <h3>소구점 검증</h3>
+          <p class="why">국내에서 통한 소구점이 미국에서도 반응할지는 아직 검증되지 않았습니다. 확산과 광고는 위닝 훅을 고른 다음입니다.</p>
+          <div class="wd2"><div><small>무엇을</small><p>한 제품을 소구점 세 갈래로 나눠 미국 거주 크리에이터 콘텐츠로 만들고, Spark Ads의 첫 6초 시청률로 반응을 비교합니다.</p></div><div><small>남는 것</small><p>확산과 광고 예산을 검증된 소재에만 씁니다.</p></div></div>
+          <div class="fig" data-fig>
+            <p class="ft">소구점별 첫 6초 시청률 <span class="tag gray">예시</span></p>
+            <div class="bars">
+              <div class="bar"><p class="t"><b>소구점 A</b><span>성분</span></p><div class="tr"><i style="--w:31%"></i></div><p class="v">31%</p></div>
+              <div class="bar win"><p class="t"><b>소구점 B</b><span>사용 장면</span></p><div class="tr"><i style="--w:46%"></i></div><p class="v">46%</p></div>
+              <div class="bar"><p class="t"><b>소구점 C</b><span>상황 공감</span></p><div class="tr"><i style="--w:24%"></i></div><p class="v">24%</p></div>
+            </div>
+            <p class="cap">가장 높은 소구점을 위닝 훅으로 고르고, 이후 콘텐츠 물량을 그 소구점에 모읍니다.</p>
+          </div>
+          <div class="svs"><a href="services.html#hook-testing">Hook Testing</a></div>
+        </article>
+
+        <article class="stepb" id="s2">
+          <p class="k">STEP 02</p>
+          <h3>Amazon 판매 데이터 축적</h3>
+          <p class="why">아마존은 리뷰, 평점, 전환율, 검색 순위, 매출 순으로 지표가 이어집니다. 출발점은 판매 기록입니다.</p>
+          <div class="wd2"><div><small>무엇을</small><p>미국 거주 일반 구매자가 본인 계정으로 직접 사고 콘텐츠를 올립니다. 구매와 업로드를 인증한 건만 제품가를 환급합니다.</p></div><div><small>남는 것</small><p>플랫폼 판매 기록과 구매 인증 콘텐츠가 함께 쌓이고, 원본은 광고 소재로 다시 씁니다.</p></div></div>
+          <div class="fig" data-fig>
+            <p class="ft">제품 발송형 체험단과 실구매 방식</p>
+            <table class="cmp">
+              <thead><tr><th></th><th>제품 발송형 체험단</th><th class="us">실구매 방식</th></tr></thead>
+              <tbody>
+                <tr><td>배송</td><td>한국에서 국제 배송</td><td class="us">미국 현지 재고에서 출고</td></tr>
+                <tr><td>플랫폼 기록</td><td>판매 기록에 반영되지 않음</td><td class="us">판매 기록으로 집계</td></tr>
+                <tr><td>안 올리면</td><td>제품과 배송비 손실</td><td class="us">환급하지 않고 판매로 집계</td></tr>
+                <tr><td>2차 활용</td><td>건별 재협의</td><td class="us">무기한, 전 매체, 전 지역</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="svs"><a href="services.html#store-boosting">Store Boosting</a><a href="services.html#ugc">일반 체험단</a></div>
+        </article>
+
+        <article class="stepb" id="s3">
+          <p class="k">STEP 03</p>
+          <h3>TikTok Shop 콘텐츠 축적</h3>
+          <p class="why">판매 이력이 없는 상품은 크리에이터가 수락하지 않고, 콘텐츠가 임계치를 넘어야 노출이 넓어집니다.</p>
+          <div class="wd2"><div><small>무엇을</small><p>초기 구매 데이터를 만들고, 경쟁사와 협업한 크리에이터부터 초대해 CRM 5단계 메시지로 샘플부터 업로드까지 관리합니다.</p></div><div><small>남는 것</small><p>수락률이 오르고, 콘텐츠 수와 판매가 난 영상이 달마다 늘어납니다.</p></div></div>
+          <div class="fig" data-fig>
+            <p class="ft">크리에이터 CRM 5단계 메시지</p>
+            <ol class="crm">
+              <li><b>1</b>초대<span>소구점에 맞춘 첫 제안</span></li>
+              <li><b>2</b>샘플 안내<span>배송 일정 공유</span></li>
+              <li><b>3</b>업로드 독촉<span>게시 기한 안내</span></li>
+              <li><b>4</b>추가 업로드<span>성과 낸 크리에이터</span></li>
+              <li><b>5</b>재참여<span>다음 캠페인 연결</span></li>
+            </ol>
+          </div>
+          <div class="svs"><a href="services.html#tts-launch">TTS Affiliate Launch</a><a href="services.html#tts-monthly">월 관리</a><a href="services.html#deep-seeding">Affiliate Deep Seeding</a></div>
+        </article>
+
+        <article class="stepb" id="s4">
+          <p class="k">STEP 04</p>
+          <h3>검증 소재 확산</h3>
+          <p class="why">GMV Max는 ROI 기반 광고입니다. 전환되는 소재 없이 예산만 늘리면 효율이 오르지 않습니다.</p>
+          <div class="wd2"><div><small>무엇을</small><p>검증된 소구점을 Mid · Macro와 L3 이상 크리에이터에 맞추고, 신제품 출시, Prime Day, BFCM에 모아 씁니다.</p></div><div><small>남는 것</small><p>행사 기간의 노출과 전환이 검증된 소재에 모입니다.</p></div></div>
+          <div class="fig" data-fig>
+            <p class="ft">행사 기간 운영 · Prime Day, BFCM</p>
+            <ol class="tl">
+              <li><small>행사 2주 전</small><b>릴스</b><span>인지를 만듭니다</span></li>
+              <li class="hot"><small>행사 기간</small><b>스토리</b><span>상품 링크로 구매 전환</span></li>
+              <li class="hot"><small>행사 막바지</small><b>광고 코드</b><span>파트너십 광고로 확대</span></li>
+            </ol>
+          </div>
+          <div class="svs"><a href="services.html#power-micro">Power Micro</a><a href="services.html#mid-macro">Mid · Macro</a><a href="services.html#conversion">Conversion Affiliate</a><a href="services.html#live">TikTok Shop LIVE</a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">상황별 시작점</p><h2 class="h2">브랜드 상황에 따라<br>쓰는 서비스가 다릅니다.</h2></div>
+      <p class="lede">지금 상황을 누르면 쓰는 서비스가 표시됩니다. 모든 서비스는 단건으로도 진행할 수 있고, 이름을 누르면 자세한 업무 범위로 이동합니다.</p>
+    </div>
+    <div class="cols" id="cols" role="tablist" aria-label="브랜드 상황"></div>
+    <p class="colnote" id="colnote" aria-live="polite"></p>
+    <div class="mxw"><table class="mx" id="mx"></table></div>
+    <div class="slist" id="slist"></div>
+  </div>
+</section>
+
+<section class="sec" id="finder">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">맞는 서비스 찾기</p><h2 class="h2">질문 세 개면<br>시작할 곳이 나옵니다.</h2></div>
+      <p class="lede">판매 채널, 쌓인 기록, 가장 큰 고민을 고르면 시작 단계와 서비스 순서를 보여 드립니다.</p>
+    </div>
+    <div class="finder rv">
+      <div class="fsteps" id="fsteps">
+        <div class="fs on"><i>1</i>판매 채널</div>
+        <div class="fs"><i>2</i>쌓인 기록</div>
+        <div class="fs"><i>3</i>가장 큰 고민</div>
+        <div class="fs"><i>4</i>결과</div>
+      </div>
+      <div class="fbody" id="fbody" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="report">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">받는 것</p><h2 class="h2">매출을 약속하지 않고,<br>판단할 숫자를 드립니다.</h2></div>
+      <p class="lede">매주 현황 시트를 공유하고, 익월 초 월간 리포트에서 반응 좋은 소구점과 크리에이터로 다음 달 예산을 옮깁니다.</p>
+    </div>
+    <div class="rtabs" role="tablist"><button class="rtab on" type="button" data-t="m" role="tab" aria-selected="true">월간 리포트</button><button class="rtab" type="button" data-t="w" role="tab" aria-selected="false">주간 현황 시트</button></div>
+
+    <div class="doc rv" id="docM">
+      <div class="bar0"><b>월간 리포트 · 3월</b><span>예시 브랜드 A · 스킨케어 · Amazon + TikTok Shop</span><span class="ex">예시 데이터</span></div>
+      <div class="dk">
+        <div><small>실구매 · 업로드</small><p class="v"><span data-to="50">0</span>건</p><p class="d">목표 <b>50건</b> 달성</p></div>
+        <div><small>누적 콘텐츠</small><p class="v"><span data-to="168">0</span>편</p><p class="d">전월 대비 <b>+64편</b></p></div>
+        <div><small>초대 수락률</small><p class="v"><span data-to="18.4" data-dec="1">0</span>%</p><p class="d">전월 대비 <b>+6.1%p</b></p></div>
+        <div><small>어필리에이트 GMV</small><p class="v">$<span data-to="12480" data-comma>0</span></p><p class="d">전월 대비 <b>2.3배</b></p></div>
+      </div>
+      <div class="dg">
+        <div class="box"><h4>주차별 업로드 <span>편</span></h4>
+          <div class="wk"><div><b>28</b><i style="--h:38%"></i></div><div><b>36</b><i style="--h:49%"></i></div><div><b>47</b><i style="--h:64%"></i></div><div><b>57</b><i style="--h:78%"></i></div></div>
+          <div class="wkx"><span>1주</span><span>2주</span><span>3주</span><span>4주</span></div>
+        </div>
+        <div class="box"><h4>다음 달 예산 제안</h4>
+          <ul class="alloc">
+            <li><span>소구점 B (사용 장면)</span><b>60%로 확대</b></li>
+            <li><span>소구점 A (성분)</span><b>25%로 축소</b></li>
+            <li><span>L3 이상 크리에이터</span><b>8명 추가</b></li>
+            <li><span>행사 준비</span><b>Prime Day 릴스 착수</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc" id="docW" hidden>
+      <div class="bar0"><b>주간 현황 시트 · 3월 4주</b><span>예시 브랜드 A</span><span class="ex">예시 데이터</span></div>
+      <div class="sx">
+        <table class="sheet">
+          <thead><tr><th>크리에이터</th><th>채널</th><th>서비스</th><th>샘플 · 구매</th><th>업로드</th><th class="num">조회수</th><th class="num">링크 클릭</th></tr></thead>
+          <tbody>
+            <tr><td>@em***_beauty</td><td>Instagram</td><td>Store Boosting</td><td><span class="st ok">구매 인증</span></td><td><span class="st ok">릴스 게시</span></td><td class="num">12,840</td><td class="num">-</td></tr>
+            <tr><td>@sk***care.jo</td><td>TikTok Shop</td><td>월 관리</td><td><span class="st ok">샘플 수령</span></td><td><span class="st ok">영상 게시</span></td><td class="num">48,210</td><td class="num">1,032</td></tr>
+            <tr><td>@gl***withme</td><td>TikTok Shop</td><td>월 관리</td><td><span class="st ok">샘플 수령</span></td><td><span class="st wait">독촉 2단계</span></td><td class="num">-</td><td class="num">-</td></tr>
+            <tr><td>@da***_rn</td><td>Instagram</td><td>Power Micro</td><td><span class="st ok">발송 완료</span></td><td><span class="st ok">스토리 3프레임</span></td><td class="num">31,560</td><td class="num">684</td></tr>
+            <tr><td>@ha***.mom</td><td>Instagram</td><td>Hook Testing</td><td><span class="st ok">발송 완료</span></td><td><span class="st wait">초안 검수 중</span></td><td class="num">-</td><td class="num">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="note">화면은 구성을 보여 드리기 위한 예시입니다. 실제 리포트 항목은 진행하는 서비스에 따라 달라집니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="cases">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">사례</p><h2 class="h2">같은 순서를<br>적용한 결과입니다.</h2></div>
+      <p class="lede">브랜드명은 고객사 요청에 따라 이니셜로 적습니다.</p>
+    </div>
+    <div class="cases">
+      <article class="case rv">
+        <p class="who"><b>S사</b>스킨케어 · Amazon US · 12주</p>
+        <p class="big2"><s>#2,340</s><span class="arr">→</span><em>#<span data-to="87" data-from="2340">2,340</span></em></p>
+        <p class="cap">세부 카테고리 순위</p>
+        <svg id="chS" viewBox="0 0 520 172" aria-label="세부 카테고리 순위가 12주 동안 2,340위에서 87위로 올랐습니다"></svg>
+        <dl><div><dt>리뷰 수</dt><dd>12 → 186</dd></div><div><dt>평점</dt><dd>4.1 → 4.5</dd></div><div><dt>월 상세페이지 세션</dt><dd>3.2배</dd></div></dl>
+        <p class="tx">소구점 3개를 나눠 위닝 훅을 정하고, 미국 거주 구매자의 실구매로 판매 데이터를 쌓은 뒤 Mid · Macro 협업으로 넓혔습니다. <span class="tag gray">적용 단계 01 · 02 · 04</span></p>
+      </article>
+      <article class="case rv">
+        <p class="who"><b>M사</b>메이크업 · TikTok Shop US · 90일</p>
+        <p class="big2"><s>14편</s><span class="arr">→</span><em><span data-to="1240" data-comma>14</span>편</em></p>
+        <p class="cap">누적 업로드 콘텐츠</p>
+        <svg id="chM" viewBox="0 0 520 172" aria-label="누적 업로드 콘텐츠가 13주 동안 14편에서 1,240편으로 늘었습니다"></svg>
+        <dl><div><dt>활성 어필리에이트</dt><dd>6 → 380명</dd></div><div><dt>누적 조회수</dt><dd>1,850만</dd></div><div><dt>월 GMV</dt><dd>$1.2K → $48K</dd></div></dl>
+        <p class="tx">첫 45일 동안 초기 구매 데이터와 초대 구조를 만들어 콘텐츠 모수를 확보하고, 판매가 난 훅을 L3 이상 크리에이터로 넓혔습니다. <span class="tag gray">적용 단계 03 · 04</span></p>
+      </article>
+    </div>
+    <p class="note">수치는 캠페인 시작 전과 종료 시점을 비교한 값입니다. 성과는 제품과 카테고리에 따라 다르며 보장하지 않습니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="w">
+    <div class="head rv">
+      <div><p class="eyebrow">자주 묻는 질문</p><h2 class="h2">시작 전에<br>많이 묻는 것들.</h2></div>
+      <p class="lede">결제, 계정, 콘텐츠 권리처럼 계약 전에 확인하는 내용을 모았습니다. <a class="lnk" href="faq.html">질문 전체 보기</a></p>
+    </div>
+    <div class="faq rv">
+      <details><summary>판매 계정은 누구 명의로 운영하나요?</summary><p class="a">아마존과 틱톡샵 계정은 브랜드 명의 그대로 둡니다. 틱톡샵 운영이 필요한 서비스는 셀러센터의 하위 사용자 권한을 받아 진행합니다.</p></details>
+      <details><summary>서비스 비용 말고 따로 드는 비용이 있나요?</summary><p class="a">제품비, 샘플비, 배송비, 광고비는 따로 듭니다. Store Boosting은 제품가의 10%(미국 판매세와 송금 수수료)가 더해집니다.</p></details>
+      <details><summary>결과가 기대만큼 나오지 않으면 어떻게 하나요?</summary><p class="a">매출은 보장하지 않습니다. 대신 월간 리포트에서 반응이 낮은 소구점과 크리에이터를 걸러 내고, 다음 달 예산을 반응 좋은 쪽으로 옮깁니다.</p></details>
+      <details><summary>틱톡샵이 아직 없어도 시작할 수 있나요?</summary><p class="a">아마존 서비스와 Hook Testing은 바로 시작할 수 있습니다. 틱톡샵 서비스는 샵이 열린 뒤 착수하고, 입점 절차는 커피챗에서 안내합니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="w rv">
+    <div class="final">
+      <div>
+        <h2>우리 브랜드는 어디서<br>시작해야 할까요?</h2>
+        <p>30분 커피챗에서 아마존과 틱톡샵 현황을 함께 보고, 먼저 할 단계를 제안드립니다. 지금 필요하지 않은 서비스는 권하지 않습니다.</p>
+        <div class="cta"><a class="btn btn-ink" href="contact/">30분 커피챗 신청 <span class="ar">→</span></a><a class="btn btn-ln" href="services.html">서비스 자세히 보기</a></div>
+      </div>
+      <ul>
+        <li>채널별 노출 조건 충족 현황<span>01</span></li>
+        <li>먼저 채울 지표와 실행 순서<span>02</span></li>
+        <li>비슷한 카테고리의 진행 사례<span>03</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="in wrap6">
-    <div>
-      <a class="logo" href="#hero"><img src="logo_white.png" alt="DANEA" width="78" height="20"></a>
-      <p class="cr">© 2026 DANEA. All rights reserved.</p>
+  <div class="w">
+    <div class="in">
+      <div><a class="logo" href="index.html"><img src="logo_white.png" alt="DANEA" width="78" height="20"></a><p class="cr">© 2026 DANEA. All rights reserved.</p></div>
+      <div class="cols">
+        <div><p class="hd">DANEA</p><a href="#how">운영 방식</a><a href="services.html">서비스</a><a href="#cases">사례</a><a href="faq.html">자주 묻는 질문</a></div>
+        <div><p class="hd">문의</p><a href="contact/">30분 커피챗</a><span style="display:block;margin-top:6px">contact@danea.kr</span><a href="https://www.instagram.com/danea.mag/">Instagram</a></div>
+        <div><p class="hd">약관</p><a href="privacy/">개인정보 처리방침</a></div>
+      </div>
     </div>
-    <div class="cols">
-      <div><div class="hd">Company</div><a href="#hero">Home</a><a href="#about">About</a><a href="#process">Process</a></div>
-      <div><div class="hd">Resources</div><a class="js-deck" href="contact/" data-i="f_deck">서비스 소개서</a><a href="contact/" data-i="f_ct">문의하기</a><a href="contact/" data-i="f_mt">미팅 잡기</a></div>
-      <div><div class="hd">Legal</div><a href="privacy/" data-i="f_pv">개인정보 처리방침</a></div>
-    </div>
+    <p class="tm">Amazon, TikTok, Walmart, Costco, Shopify 로고는 각 기업의 상표입니다.</p>
   </div>
 </footer>
 
 <script>
 (function(){
-  document.body.classList.remove('no-js');
-  // 소개서 주소: 콜드메일 소개서가 나오면 여기만 바꾼다
-  var DECK_URL = 'contact/';
-  document.querySelectorAll('.js-deck').forEach(function(a){ a.href = DECK_URL; });
+  document.documentElement.classList.add('js');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp = function(v,a,b){ return Math.max(a, Math.min(b, v)); };
+  function prog(el){ var r = el.getBoundingClientRect(), span = r.height - innerHeight; return span > 0 ? clamp(-r.top / span, 0, 1) : (r.top < 0 ? 1 : 0); }
 
-  var TABS = {
-    "ko": [
-      [
-        "현황 진단 및 우선순위 수립",
-        "리뷰·평점, 콘텐츠 볼륨, 경쟁사 현황을 분석해 착수 지점과 KPI를 정합니다."
-      ],
-      [
-        "리뷰·콘텐츠 볼륨 확보",
-        "아마존은 실구매 기반 구매 기록과 UGC를, 틱톡샵은 알고리즘 학습에 필요한 어필리에이트 콘텐츠를 확보합니다."
-      ],
-      [
-        "USP·훅 A/B 테스트",
-        "USP별로 크리에이터를 분리 운영하고, 6초 시청률과 참여율 등 동일 지표로 위닝 훅을 도출합니다."
-      ],
-      [
-        "위닝 소재 스케일업",
-        "검증된 훅을 미드·매크로 크리에이터와 광고 소재로 확장해 GMV와 아마존 매출로 전환합니다."
-      ]
-    ],
-    "en": [
-      [
-        "Diagnosis and priorities",
-        "We analyze reviews and ratings, content volume and competitors to set the starting point and KPIs."
-      ],
-      [
-        "Review and content volume",
-        "On Amazon, purchase records and UGC from real buyers. On TikTok Shop, the affiliate content volume the algorithm needs to learn."
-      ],
-      [
-        "USP and hook A/B tests",
-        "Creators run in separate USP groups, and the winning hook is identified on the same metrics, including 6-second view rate and engagement."
-      ],
-      [
-        "Scale the winning creative",
-        "Validated hooks extend to mid and macro creators and paid creatives, converting into GMV and Amazon sales."
-      ]
-    ]
-  };
-  var EN = {
-    "nav1": "Home",
-    "nav2": "About",
-    "nav3": "Process",
-    "nav4": "Contact",
-    "navcta": "Book a call",
-    "badge": "✨ The US growth partner for K-beauty brands",
-    "h1": "Full-funnel marketing<br>for the US market.",
-    "lead": "Review building, hook testing and scaling winning creatives. Budget goes only to what the data has validated.",
-    "start": "Get a diagnosis",
-    "deck": "Download deck",
-    "t1": "Diagnose",
-    "t2": "Volume",
-    "t3": "Hook test",
-    "t4": "Scale-up",
-    "ab_e": "Integrated funnel",
-    "ab_h": "Three channels, designed as one funnel.",
-    "ab_p": "TikTok Shop builds awareness, Amazon search converts purchase intent, and Instagram reinforces trust. Channel KPIs are tied into one funnel so reach and conversion are managed together.",
-    "s1v": "100K+",
-    "s1": "Creators",
-    "s2v": "300+",
-    "s2": "Campaigns",
-    "s3v": "3+ yrs",
-    "s3": "In marketing",
-    "vi_h": "In US e-commerce, metrics decide visibility.",
-    "vi_p": "Amazon allocates exposure by review count, rating and sales velocity; TikTok Shop by content volume and viewer response. DANEA secures these metrics step by step and turns them into sales growth.",
-    "vi_b": "Get your brand diagnosed",
-    "st_h": "From kickoff to monthly report.",
-    "st_p": "Every campaign runs on the same four steps.",
-    "c1h": "Kickoff",
-    "c1p": "We diagnose where you stand and set goals, priorities and an action plan.",
-    "c2h": "Creator selection",
-    "c2p": "We source creators by competitor-content history and activity in the last 90 days.",
-    "c3h": "Execution & management",
-    "c3p": "We run uploads, ads and promotions, and share progress in a weekly sheet.",
-    "c4h": "Report & next actions",
-    "c4p": "A monthly report early each month analyzes results and sets the next month's priorities.",
-    "why_h": "Why DANEA?",
-    "why_p": "DANEA is a creator marketing agency for K-beauty brands entering the US. We run everything from review building to virality and sales conversion on Amazon, TikTok Shop and Instagram.",
-    "why_s": "★ Reviews · Hook testing · Sales conversion",
-    "cmp_h": "How we are different.",
-    "cmp_p": "Data-driven planning with on-the-ground creator execution.",
-    "th1": "Strategy + local execution",
-    "th2": "AI tools alone",
-    "th2s": "Fast, but no execution",
-    "th3": "Traditional agency",
-    "th3s": "High fixed cost, slow execution",
-    "nw_h": "Get US market insights every week",
-    "nw_p": "We sum up key changes in US K-beauty, TikTok Shop and Amazon as weekly card news.",
-    "nw_b": "Follow",
-    "nw_f": "Published every Friday, in Korean",
-    "ct_h": "Start today.",
-    "ct_p": "Share your product and sales channels. We will come back with a diagnosis and an execution plan.",
-    "ct_r": "Reply within one business day",
-    "ct_b": "Contact us",
-    "fn_h": "US market entry, run by one dedicated team.",
-    "fn_p": "From diagnosis to creator operations and performance reporting.",
-    "fn_b1": "Book a meeting",
-    "f_deck": "Service deck",
-    "f_ct": "Contact",
-    "f_mt": "Book a meeting",
-    "f_pv": "Privacy policy",
-    "r1": "Platform-by-platform funnel strategy",
-    "r2": "USP and hook A/B tests before budget",
-    "r3": "Creators picked by competitor-content history",
-    "r4": "Execution by real US buyers and creators",
-    "r5": "Secondary usage rights cleared",
-    "r6": "Staged spend from small budgets",
-    "r7": "Weekly sheet and monthly report",
-    "r8": "Runs within platform policy"
-  };
-  var KO = {};
-  var nodes = document.querySelectorAll('[data-i]');
-  nodes.forEach(function(n){ KO[n.getAttribute('data-i')] = n.hasAttribute('data-html') ? n.innerHTML : n.textContent; });
-  var META = {
-    ko:{title:document.title, desc:document.querySelector('meta[name=description]').content},
-    en:{title:'DANEA | Full-Funnel Creator Marketing for the US', desc:'DANEA is a full-funnel creator marketing agency for K-beauty brands entering the US, across Amazon, TikTok Shop and Instagram.'}
-  };
-  var lang = 'ko', cur = 0;
-  function setTab(i, anim){
-    cur = i;
-    document.querySelectorAll('.tab').forEach(function(t,k){ t.classList.toggle('on', k===i); t.setAttribute('aria-selected', k===i); });
-    document.querySelectorAll('.dot').forEach(function(d,k){ d.classList.toggle('on', k===i); });
-    var box = document.getElementById('tabtxt');
-    document.getElementById('tabh').textContent = TABS[lang][i][0];
-    document.getElementById('tabd').textContent = TABS[lang][i][1];
-    if (anim){ box.classList.remove('anim'); void box.offsetWidth; box.classList.add('anim'); }
+  // 히어로 글자 쪼개기
+  var n = 0;
+  document.querySelectorAll('[data-split]').forEach(function(el){
+    var t = el.textContent; el.textContent = '';
+    for (var i = 0; i < t.length; i++){ var s = document.createElement('span'); s.className = 'c'; s.setAttribute('aria-hidden','true'); s.textContent = t[i] === ' ' ? ' ' : t[i]; s.style.transitionDelay = (n * 0.035) + 's'; el.appendChild(s); n++; }
+  });
+  var hero = document.getElementById('hero');
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('in'); }); });
+
+  // 커서를 따라가는 빛
+  var spot = document.getElementById('spot'), sx = innerWidth * .7, sy = 260, tx = sx, ty = sy;
+  if (!reduce && matchMedia('(pointer:fine)').matches){
+    hero.addEventListener('pointermove', function(e){ var r = hero.getBoundingClientRect(); tx = e.clientX - r.left; ty = e.clientY - r.top; });
+    (function loop(){ sx += (tx - sx) * .08; sy += (ty - sy) * .08; spot.style.transform = 'translate3d(' + sx.toFixed(1) + 'px,' + sy.toFixed(1) + 'px,0)'; requestAnimationFrame(loop); })();
   }
-  function setLang(l){
-    lang = l;
-    var dict = l === 'en' ? EN : KO;
-    nodes.forEach(function(n){
-      var k = n.getAttribute('data-i'), v = dict[k];
-      if (v == null) return;
-      if (n.hasAttribute('data-html')) n.innerHTML = v; else n.textContent = v;
-    });
-    document.documentElement.lang = l;
-    document.title = META[l].title;
-    document.querySelector('meta[name=description]').content = META[l].desc;
-    document.getElementById('lang').innerHTML = l === 'en' ? 'KO / <b>EN</b>' : '<b>KO</b> / EN';
-    setTab(cur, false);
-    try { localStorage.setItem('danea_lang', l); } catch(e){}
+
+  // 숫자 카운트업
+  function countUp(el){
+    if (el.dataset.done) return; el.dataset.done = 1;
+    var to = parseFloat(el.dataset.to), from = el.dataset.from ? parseFloat(el.dataset.from) : 0, dec = parseInt(el.dataset.dec || 0, 10), comma = el.hasAttribute('data-comma') || from >= 1000, t0 = null, dur = 1600;
+    function fmt(v){ var s = v.toFixed(dec); return comma ? Number(s).toLocaleString('en-US', {minimumFractionDigits:dec, maximumFractionDigits:dec}) : s; }
+    if (reduce){ el.textContent = fmt(to); return; }
+    function step(ts){ if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - p, 4); el.textContent = fmt(from + (to - from) * e); if (p < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
   }
-  var saved = null;
-  try { saved = localStorage.getItem('danea_lang'); } catch(e){}
-  var q = new URLSearchParams(location.search).get('lang');
-  if (q === 'en' || q === 'ko') saved = q;
-  if (saved === 'en') setLang('en');
-  document.getElementById('lang').addEventListener('click', function(){ setLang(lang === 'ko' ? 'en' : 'ko'); });
 
-  // 탭: 4초마다 자동으로 넘어가고, 누르면 그 탭부터 다시 센다
-  var timer;
-  function restart(){ clearInterval(timer); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function(){ setTab((cur+1)%4, true); }, 4000); }
-  document.querySelectorAll('.tab').forEach(function(t,k){ t.addEventListener('click', function(){ setTab(k, true); restart(); }); });
-  document.querySelectorAll('.dot').forEach(function(d,k){ d.addEventListener('click', function(){ setTab(k, true); restart(); }); });
-  restart();
+  // 등장
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (!e.isIntersecting) return; var el = e.target; el.classList.add('in'); el.querySelectorAll('[data-to]').forEach(countUp); if (el.hasAttribute('data-to')) countUp(el); io.unobserve(el); }); }, {threshold:.2}) : null;
+  document.querySelectorAll('.rv,[data-fig],.kpis,.doc').forEach(function(el){ if (io) io.observe(el); else { el.classList.add('in'); el.querySelectorAll('[data-to]').forEach(countUp); } });
 
-  // 스크롤하면 아래에서 떠오른다
-  if ('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } }); }, {threshold:0.1});
-    document.querySelectorAll('.fade:not(.vis)').forEach(function(el){ io.observe(el); });
-  } else document.querySelectorAll('.fade').forEach(function(el){ el.classList.add('vis'); });
+  // 채널 띠: 기본으로 흐르고, 스크롤 속도만큼 빨라지며 기운다
+  var marq = document.getElementById('marq'), mx0 = 0, vel = 0, lastY = scrollY;
+  function marqLoop(){
+    var dy = scrollY - lastY; lastY = scrollY; vel += (dy - vel) * .1;
+    mx0 -= .6 + Math.abs(vel) * .35; var half = marq.scrollWidth / 2; if (-mx0 > half) mx0 += half;
+    marq.style.transform = 'translate3d(' + mx0.toFixed(1) + 'px,0,0) skewX(' + clamp(-vel * .25, -14, 14).toFixed(2) + 'deg)';
+    requestAnimationFrame(marqLoop);
+  }
+  if (!reduce) marqLoop();
+
+  // 문장 채우기
+  var pr = document.getElementById('principle'), words = document.querySelectorAll('#fill span');
+  function paintFill(){ var c = reduce ? words.length : Math.round(clamp(prog(pr) / .75, 0, 1) * words.length); words.forEach(function(w,i){ w.classList.toggle('lit', i < c); }); }
+
+  // 노출 조건 가로 흐름
+  var lanes = document.getElementById('lanes'), trA = document.getElementById('trA'), trT = document.getElementById('trT'), scan = lanes.querySelector('.scan');
+  var wds = lanes.querySelectorAll('.wd');
+  function paintLanes(){
+    var p = prog(lanes), vw = innerWidth;
+    [trA, trT].forEach(function(tr){ var max = tr.scrollWidth - vw * .42 - vw * .06; tr.style.transform = 'translate3d(' + (-clamp(p * 1.08, 0, 1) * Math.max(0, max)).toFixed(1) + 'px,0,0)'; });
+    var sxp = scan.getBoundingClientRect().left;
+    wds.forEach(function(w){ var b = w.querySelector('b').getBoundingClientRect(); w.classList.toggle('on', reduce || b.left + b.width * .35 < sxp); });
+  }
+
+  // 운영 방식
+  var big = document.querySelectorAll('#big span'), rl = document.querySelectorAll('#rlist a'), steps = document.querySelectorAll('.stepb'), rbar = document.getElementById('rbar'), cur = 0;
+  function setStep(i){ if (i === cur) return; cur = i; big.forEach(function(s,k){ s.classList.toggle('on', k === i); s.classList.toggle('up', k < i); }); rl.forEach(function(a,k){ a.classList.toggle('on', k === i); a.classList.toggle('done', k < i); }); rbar.style.transform = 'scaleX(' + ((i + 1) / 4) + ')'; }
+  function paintSteps(){ var mid = innerHeight * .45, idx = 0; steps.forEach(function(s,k){ if (s.getBoundingClientRect().top < mid) idx = k; }); setStep(idx); }
+
+  var bar = document.getElementById('prog');
+  function paintBar(){ var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0).toFixed(4) + ')'; }
+  var tick = false;
+  function onScroll(){ if (tick) return; tick = true; requestAnimationFrame(function(){ paintFill(); paintLanes(); paintSteps(); paintBar(); tick = false; }); }
+  addEventListener('scroll', onScroll, {passive:true}); addEventListener('resize', onScroll); onScroll();
+
+  // 상황별 서비스 표
+  var COLS = [
+    {k:'amz', t:'아마존만', note:'리뷰와 판매 속도가 노출을 정합니다. 실구매로 기록을 먼저 쌓고, 검증한 훅으로 주문을 받습니다.'},
+    {k:'tts', t:'틱톡샵을 막 연', note:'판매가 0이면 크리에이터가 수락하지 않습니다. 첫 데이터와 초대부터 엽니다.'},
+    {k:'both', t:'아마존 + 틱톡샵', note:'두 채널을 같이 엽니다. 틱톡에서 본 사람이 아마존에서 리뷰를 확인하고 삽니다.'},
+    {k:'ret', t:'리테일 입점', note:'코스트코처럼 매장과 온라인몰을 함께 운영할 때입니다. 온라인 실구매와 행사 달 매장 방문을 묶습니다.'},
+    {k:'grow', t:'이미 잘되는', note:'필요한 서비스만 단건으로 고릅니다.'}
+  ];
+  var SV = [
+    {id:'store-boosting', n:'Store Boosting', s:'판매 기록', d:'미국 거주 구매자가 직접 결제하고 콘텐츠를 올립니다.', c:['amz','both','ret']},
+    {id:'ugc', n:'일반 체험단', s:'콘텐츠 물량', d:'카테고리에 맞는 크리에이터가 릴스로 영상 물량을 만듭니다.', c:['amz','ret','grow']},
+    {id:'hook-testing', n:'Hook Testing', s:'소구점 검증', d:'소구점을 나눠 찍고 첫 6초 시청률로 위닝 훅을 고릅니다.', c:['amz','both','ret']},
+    {id:'power-micro', n:'Power Micro', s:'전환', d:'팔로워 2만~5만 크리에이터가 위닝 훅으로 온라인 주문을 받습니다.', c:['amz','ret']},
+    {id:'mid-macro', n:'Mid · Macro', s:'확산', d:'행사 구간에 도달이 큰 크리에이터로 크게 퍼뜨립니다.', c:['amz','both','ret','grow']},
+    {id:'tts-launch', n:'TTS Affiliate Launch', s:'틱톡샵 셋업', d:'판매 0인 샵을 크리에이터가 수락하는 샵으로 만드는 45일 셋업입니다.', c:['tts','both']},
+    {id:'tts-monthly', n:'Launch 이후 월 관리', s:'상시 운영', d:'초대와 CRM 메시지를 매달 이어 가며 샘플 영상을 쌓습니다.', c:['tts']},
+    {id:'deep-seeding', n:'Affiliate Deep Seeding', s:'콘텐츠 폭', d:'L1 이상 크리에이터 여러 명이 한 편씩 올려 접점을 넓힙니다.', c:['tts']},
+    {id:'conversion', n:'Conversion Affiliate', s:'전환', d:'GMV 실적이 있는 L3 이상 크리에이터와 전환 영상을 만듭니다.', c:['tts','both','grow']},
+    {id:'live', n:'TikTok Shop LIVE', s:'전환', d:'미국 현지 호스트가 라이브로 판매합니다.', c:['tts','both','grow']},
+    {id:'outreach-db', n:'US Creator Outreach DB', s:'직접 섭외', d:'경쟁 제품에 참여한 미국 크리에이터 명단을 이메일과 함께 드립니다.', c:['grow']}
+  ];
+  var sel = null, colsEl = document.getElementById('cols'), mx = document.getElementById('mx'), slist = document.getElementById('slist'), note = document.getElementById('colnote');
+  var NOTE0 = '상황을 누르면 그 상황에 쓰는 서비스가 표시됩니다.';
+  COLS.forEach(function(c){ var b = document.createElement('button'); b.className = 'colbtn'; b.type = 'button'; b.setAttribute('role','tab'); b.dataset.k = c.k; b.textContent = c.t + ' 브랜드'; b.addEventListener('click', function(){ sel = sel === c.k ? null : c.k; paintMx(); }); colsEl.appendChild(b); });
+  function light(k){ mx.querySelectorAll('[data-c]').forEach(function(el){ el.classList.toggle('c-on', el.getAttribute('data-c') === k); }); mx.classList.toggle('pick', !!k); }
+  function paintMx(){
+    colsEl.querySelectorAll('.colbtn').forEach(function(b){ var on = b.dataset.k === sel; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    note.textContent = sel ? COLS.filter(function(c){ return c.k === sel; })[0].note : NOTE0;
+    var h = '<thead><tr><th scope="col">서비스</th>' + COLS.map(function(c){ return '<th scope="col" data-c="' + c.k + '"><button type="button" data-k="' + c.k + '">' + c.t + '</button></th>'; }).join('') + '</tr></thead><tbody>';
+    SV.forEach(function(s){ h += '<tr><td><div class="sv"><a href="services.html#' + s.id + '">' + s.n + '</a><small>' + s.s + '</small></div><p class="ds">' + s.d + '</p></td>' + COLS.map(function(c){ return '<td data-c="' + c.k + '">' + (s.c.indexOf(c.k) > -1 ? '<span class="dotm" aria-label="해당"></span>' : '<span class="na" aria-label="해당 없음">·</span>') + '</td>'; }).join('') + '</tr>'; });
+    mx.innerHTML = h + '</tbody>';
+    light(sel);
+    mx.querySelectorAll('th button').forEach(function(b){ b.addEventListener('click', function(){ sel = sel === b.dataset.k ? null : b.dataset.k; paintMx(); }); });
+    mx.querySelectorAll('[data-c]').forEach(function(el){ el.addEventListener('mouseenter', function(){ light(el.getAttribute('data-c')); }); });
+    var list = sel ? SV.filter(function(s){ return s.c.indexOf(sel) > -1; }) : SV;
+    slist.innerHTML = list.map(function(s){ return '<a href="services.html#' + s.id + '"><small>' + s.s + '</small><b>' + s.n + '</b><p>' + s.d + '</p></a>'; }).join('');
+  }
+  mx.addEventListener('mouseleave', function(){ light(sel); });
+  paintMx();
+
+  // 질문으로 찾기
+  var Q = [
+    {t:'지금 미국에서 어디서 팔고 계세요?', s:'가장 가까운 것을 고르세요.', o:[['amz','아마존','검색으로 사는 채널'],['tts','틱톡샵','영상으로 사는 채널'],['both','둘 다',''],['ret','코스트코 같은 리테일','매장과 온라인몰'],['none','아직 판매 전','입점 준비 중']]},
+    {t:'판매 기록과 콘텐츠는 얼마나 쌓였나요?', s:'아마존은 리뷰, 틱톡샵은 판매 이력과 영상 수를 떠올려 주세요.', o:[['0','거의 없음','막 시작했거나 0'],['1','쌓이는 중','있지만 노출이 약함'],['2','충분함','더 키우려는 단계']]},
+    {t:'가장 먼저 풀고 싶은 것은 무엇인가요?', s:'하나만 고르세요.', o:[['rec','판매 기록과 리뷰',''],['hook','미국에서 반응하는 소구점',''],['vol','콘텐츠 물량',''],['conv','행사 매출과 전환','']]}
+  ];
+  var S = {
+    sb:['store-boosting','Store Boosting','미국 거주 구매자의 실구매로 판매 기록을 만듭니다.'],
+    ug:['ugc','일반 체험단','카테고리에 맞는 크리에이터 릴스로 영상 물량을 쌓습니다.'],
+    ht:['hook-testing','Hook Testing','소구점을 나눠 찍고 6초 시청률로 위닝 훅을 고릅니다.'],
+    pm:['power-micro','Power Micro','위닝 훅으로 온라인 주문을 받습니다.'],
+    mm:['mid-macro','Mid · Macro','행사 구간에 크게 퍼뜨립니다.'],
+    la:['tts-launch','TTS Affiliate Launch','45일 동안 첫 판매 데이터와 초대 구조를 엽니다.'],
+    mo:['tts-monthly','Launch 이후 월 관리','초대와 CRM을 매달 이어 갑니다.'],
+    ds:['deep-seeding','Affiliate Deep Seeding','여러 크리에이터가 한 편씩 올려 접점을 넓힙니다.'],
+    ca:['conversion','Conversion Affiliate','실적 있는 크리에이터와 전환 영상을 만듭니다.'],
+    lv:['live','TikTok Shop LIVE','현지 호스트가 라이브로 판매합니다.']
+  };
+  function rec(a){
+    var ch = a[0], lv = a[1], g = a[2], r;
+    if (ch === 'none') return {st:'STEP 01', h:'판매 시작 전, 반응하는 소구점부터 찾습니다.', w:'판매 채널이 열리기 전에도 소구점 검증은 할 수 있습니다. 판매가 열리는 달에 바로 실구매 기록을 쌓을 수 있게 준비합니다.', s:['ht','sb']};
+    if (ch === 'amz' || ch === 'ret'){
+      if (lv === '0') r = {st:'STEP 02', h:'판매 기록부터 쌓습니다.', w:'리뷰와 판매 속도가 아마존 노출을 정합니다. 기록이 없을 때는 광고보다 실구매와 영상 물량이 먼저입니다.', s:['sb','ug','ht']};
+      else if (g === 'hook') r = {st:'STEP 01', h:'소구점부터 검증합니다.', w:'넓히기 전에 어떤 첫 장면이 반응하는지 같은 조건의 숫자로 고릅니다.', s:['ht','pm']};
+      else if (g === 'conv' || lv === '2') r = {st:'STEP 04', h:'검증된 소재로 전환을 키웁니다.', w:'위닝 훅으로 주문을 받고, 행사 구간에는 도달이 큰 크리에이터로 퍼뜨립니다.', s:['pm','mm','ht']};
+      else if (g === 'vol') r = {st:'STEP 02', h:'영상 물량을 먼저 늘립니다.', w:'눈에 보이는 콘텐츠가 쌓여야 검증과 광고에 쓸 소재가 생깁니다.', s:['ug','ht']};
+      else r = {st:'STEP 02', h:'판매 기록을 더 채웁니다.', w:'노출이 약하다면 리뷰와 판매 속도가 아직 부족한 경우가 많습니다.', s:['sb','ug']};
+      if (ch === 'ret' && r.s.indexOf('mm') < 0) r.s.push('mm');
+      return r;
+    }
+    if (ch === 'tts'){
+      if (lv === '0') return {st:'STEP 03', h:'첫 판매 데이터와 초대부터 엽니다.', w:'판매가 0이면 크리에이터가 수락하지 않습니다. 45일 동안 초기 구매 데이터와 초대 구조를 만듭니다.', s:['la','mo']};
+      if (lv === '1') return g === 'conv' ? {st:'STEP 04', h:'팔린 소구점을 더 크게 찍습니다.', w:'판매가 난 영상의 구성을 실적 있는 크리에이터로 다시 찍고, 라이브로 지금 살 이유를 만듭니다.', s:['ca','lv']} : {st:'STEP 03', h:'콘텐츠 모수를 키웁니다.', w:'노출은 콘텐츠가 임계치를 넘어야 넓어집니다. 초대와 CRM을 끊기지 않게 이어 갑니다.', s:['mo','ds','ca']};
+      return {st:'STEP 04', h:'전환과 행사에 집중합니다.', w:'샵이 자리를 잡았다면 실적 있는 크리에이터와 라이브로 행사 매출을 키웁니다.', s:['ca','lv','mm']};
+    }
+    if (lv === '0') return {st:'STEP 02', h:'두 채널의 기록을 같이 엽니다.', w:'틱톡에서 본 사람이 아마존에서 리뷰를 확인하고 삽니다. 아마존 실구매 기록과 틱톡샵 첫 데이터를 함께 만듭니다.', s:['sb','la','ht']};
+    if (g === 'hook') return {st:'STEP 01', h:'두 채널에 같이 쓸 훅을 고릅니다.', w:'한 번 검증한 훅이 아마존 콘텐츠와 틱톡샵 전환 영상의 첫 장면이 됩니다.', s:['ht','ca']};
+    return {st:'STEP 04', h:'검증된 소재로 두 채널을 키웁니다.', w:'틱톡샵은 실적 있는 크리에이터와 라이브로, 아마존은 행사 구간 확산으로 전환을 키웁니다.', s:['ca','lv','mm']};
+  }
+  var ans = [], fb = document.getElementById('fbody'), fs = document.querySelectorAll('#fsteps .fs');
+  function ask(i){
+    fs.forEach(function(el,k){ el.classList.toggle('on', k === i); el.classList.toggle('done', k < i); });
+    if (i === 3){
+      var r = rec(ans), lab = ['먼저','이어서','그다음'];
+      fb.innerHTML = '<div class="res fq"><span class="st">' + r.st + '에서 시작</span><h3>' + r.h + '</h3><p class="why">' + r.w + '</p><ol>' + r.s.map(function(k,m){ var v = S[k]; return '<li><small>' + lab[m] + '</small><div><a href="services.html#' + v[0] + '">' + v[1] + '</a><p>' + v[2] + '</p></div></li>'; }).join('') + '</ol><div class="cta"><a class="btn btn-ac" href="contact/">이 결과로 커피챗 신청</a><button class="btn btn-ln" type="button" id="again">처음부터 다시</button></div></div>';
+      document.getElementById('again').addEventListener('click', function(){ ans = []; ask(0); });
+      return;
+    }
+    var q = Q[i];
+    fb.innerHTML = '<div class="fq"><h3>' + q.t + '</h3><p class="sub">' + q.s + '</p><div class="opts">' + q.o.map(function(o){ return '<button class="opt" type="button" data-v="' + o[0] + '"><b>' + o[1] + '</b><span>' + o[2] + '</span></button>'; }).join('') + '</div>' + (i > 0 ? '<button class="fback" type="button" id="back">이전 질문</button>' : '') + '</div>';
+    fb.querySelectorAll('.opt').forEach(function(b){ b.addEventListener('click', function(){ ans[i] = b.dataset.v; ask(i + 1); }); });
+    var bk = document.getElementById('back'); if (bk) bk.addEventListener('click', function(){ ask(i - 1); });
+  }
+  ask(0);
+
+  // 결과물 탭
+  var docM = document.getElementById('docM'), docW = document.getElementById('docW');
+  document.querySelectorAll('.rtab').forEach(function(t){ t.addEventListener('click', function(){
+    document.querySelectorAll('.rtab').forEach(function(x){ x.classList.toggle('on', x === t); x.setAttribute('aria-selected', x === t); });
+    var m = t.dataset.t === 'm'; docM.hidden = !m; docW.hidden = m; (m ? docM : docW).classList.add('in');
+  }); });
+
+  // 사례 차트
+  (function(){
+    var d = [2340,2100,1650,1200,860,610,420,300,210,160,120,98,87], W = 520, H = 150, L = 40, R = 10, T = 8;
+    var lg = function(v){ return T + (Math.log10(v) - 1.8) / (3.5 - 1.8) * (H - T - 14); };
+    var x = function(i){ return L + i * (W - L - R) / (d.length - 1); };
+    var g = '';
+    [100,1000].forEach(function(v){ g += '<line class="ax" x1="' + L + '" x2="' + (W - R) + '" y1="' + lg(v).toFixed(1) + '" y2="' + lg(v).toFixed(1) + '"/><text x="0" y="' + (lg(v) + 4).toFixed(1) + '">#' + v.toLocaleString('en-US') + '</text>'; });
+    g += '<polyline class="ln" pathLength="1" points="' + d.map(function(v,i){ return x(i).toFixed(1) + ',' + lg(v).toFixed(1); }).join(' ') + '"/>';
+    g += '<circle class="dotE" cx="' + x(d.length - 1).toFixed(1) + '" cy="' + lg(87).toFixed(1) + '" r="6"/>';
+    g += '<text x="' + L + '" y="' + (H + 18) + '">착수</text><text x="' + (W - R) + '" y="' + (H + 18) + '" text-anchor="end">12주</text>';
+    document.getElementById('chS').innerHTML = g;
+  })();
+  (function(){
+    var d = [14,40,95,180,290,410,540,670,800,920,1040,1150,1240], W = 520, H = 150, L = 40, R = 10, T = 8, n = d.length, bw = (W - L - R) / n * .6;
+    var y = function(v){ return H - (v / 1300) * (H - T); };
+    var g = '';
+    [500,1000].forEach(function(v){ g += '<line class="ax" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v).toFixed(1) + '" y2="' + y(v).toFixed(1) + '"/><text x="0" y="' + (y(v) + 4).toFixed(1) + '">' + v.toLocaleString('en-US') + '</text>'; });
+    d.forEach(function(v,i){ var cx = L + (i + .5) * (W - L - R) / n; g += '<rect class="br' + (i === n - 1 ? ' last' : '') + '" style="transition-delay:' + (i * .06).toFixed(2) + 's" x="' + (cx - bw / 2).toFixed(1) + '" y="' + y(v).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + (H - y(v)).toFixed(1) + '" rx="2"/>'; });
+    g += '<text x="' + L + '" y="' + (H + 18) + '">1주</text><text x="' + (W - R) + '" y="' + (H + 18) + '" text-anchor="end">13주</text>';
+    document.getElementById('chM').innerHTML = g;
+  })();
 })();
 </script>
 </body>

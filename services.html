@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>서비스 | DANEA</title>
+<meta name="description" content="DANEA 서비스 11개의 하는 일, 진행 방식, 결과물, 진행 단위와 별도 비용을 정리했습니다.">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="canonical" href="https://danea.kr/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DANEA">
+<meta property="og:url" content="https://danea.kr/services.html">
+<meta property="og:title" content="서비스 | DANEA">
+<meta property="og:description" content="DANEA 서비스 11개의 하는 일, 진행 방식, 결과물, 진행 단위와 별도 비용.">
+<meta property="og:image" content="https://danea.kr/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.phero{padding-block:96px 64px;border-bottom:1px solid var(--rule)}
+.crumb{font-size:14px;color:var(--mute)}
+.crumb a:hover{color:var(--ink)}
+.phero h1{margin-top:18px;font-size:min(68px,calc((100vw - 40px) / 9));line-height:1.08;font-weight:850;letter-spacing:-.05em}
+.phero .lead{margin-top:22px;font-size:19px;color:var(--ink2);max-width:680px}
+.flowline{margin-top:48px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
+.flowline a{padding:16px 16px 0 0;display:block}
+.flowline a+a{padding-left:16px;border-left:1px solid var(--rule)}
+.flowline small{font-size:12px;font-weight:700;color:var(--ac-ink)}
+.flowline b{display:block;font-size:17px;margin-top:2px}
+.flowline span{display:block;font-size:13.5px;color:var(--mute);margin-top:4px}
+@media (max-width:860px){.flowline{grid-template-columns:1fr 1fr}.flowline a:nth-child(3){border-left:0;padding-left:0}.flowline a:nth-child(n+3){border-top:1px solid var(--rule);margin-top:12px}}
+
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px;padding-top:64px}
+.toc{position:sticky;top:96px;align-self:start;font-size:14px}
+.toc p{font-size:12px;font-weight:700;color:var(--mute2);margin:22px 0 6px}
+.toc p:first-child{margin-top:0}
+.toc a{display:block;padding:6px 0 6px 14px;color:var(--mute);border-left:2px solid var(--rule);transition:color .2s,border-color .2s}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);font-weight:600;border-left-color:var(--ac)}
+@media (max-width:960px){.layout{grid-template-columns:1fr;gap:0;padding-top:0}.toc{position:sticky;top:66px;z-index:20;background:rgba(10,10,10,.92);display:flex;gap:6px;overflow-x:auto;padding-block:12px;margin-inline:-20px;padding-inline:20px;border-bottom:1px solid var(--rule);scrollbar-width:none}.toc::-webkit-scrollbar{display:none}.toc p{display:none}.toc a{flex:none;border-left:0;padding:7px 13px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--rule2)}.toc a.on{background:var(--ac);color:#000;box-shadow:none}}
+
+.grp{padding-top:8px}
+.grp+.grp{margin-top:88px}
+.gh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+.gh h2{font-size:30px;font-weight:800;letter-spacing:-.03em}
+.gh p{font-size:14px;color:var(--mute)}
+.svc{padding-block:48px;border-bottom:1px solid var(--rule)}
+.svc .top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.svc .st{font-size:13px;font-weight:700;color:var(--ac-ink)}
+.svc h3{font-size:34px;font-weight:850;letter-spacing:-.04em;margin-top:6px;line-height:1.15}
+.svc .ds{margin-top:12px;font-size:18px;color:var(--ink2);max-width:640px}
+.ch{display:flex;gap:6px;flex-wrap:wrap;max-width:320px;justify-content:flex-end}
+.ch span{font-size:12.5px;color:var(--mute);box-shadow:inset 0 0 0 1px var(--rule2);border-radius:999px;padding:4px 11px;white-space:nowrap}
+.grid3{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr);gap:0;border-top:1px solid var(--rule)}
+.grid3>div{padding:20px 24px 0 0}
+.grid3>div+div{padding-left:24px;border-left:1px solid var(--rule)}
+.grid3 h4{font-size:13px;font-weight:700;color:var(--mute);margin-bottom:12px}
+.grid3 ul li{position:relative;padding-left:14px;font-size:15px;color:var(--ink2);line-height:1.6;margin-bottom:8px}
+.grid3 ul li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--ink)}
+.grid3 ol{counter-reset:s}
+.grid3 ol li{counter-increment:s;position:relative;padding-left:32px;margin-bottom:14px;font-size:15px;line-height:1.6;color:var(--ink2)}
+.grid3 ol li::before{content:counter(s);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#000;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.grid3 ol b{display:block;color:var(--ink);font-weight:700}
+.cond{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;background:var(--panel);border-radius:16px}
+.cond>div{padding:18px 22px}
+.cond>div+div{border-left:1px solid var(--rule2)}
+.cond small{font-size:12.5px;font-weight:700;color:var(--mute)}
+.cond p{margin-top:4px;font-size:15px;font-weight:600;line-height:1.5}
+.cond p span{display:block;font-weight:400;color:var(--mute);font-size:13.5px}
+.pair{margin-top:16px;font-size:14px;color:var(--mute)}
+.pair a{font-weight:600;color:var(--ink);border-bottom:1px solid var(--rule2)}
+.pair a:hover{color:var(--ac-ink);border-color:var(--ac)}
+@media (max-width:860px){.svc{padding-block:40px}.svc h3{font-size:27px}.ch{justify-content:flex-start}.grid3,.cond{grid-template-columns:1fr}.grid3>div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:14px}.cond>div+div{border-left:0;border-top:1px solid var(--rule2)}}
+
+.rules{margin-top:96px;border-top:2px solid var(--ink);display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.rules>div{padding:24px 24px 0 0}
+.rules>div+div{padding-left:24px;border-left:1px solid var(--rule)}
+.rules h3{font-size:18px;font-weight:800}
+.rules li{margin-top:10px;font-size:15px;color:var(--ink2);line-height:1.6;padding-left:14px;position:relative}
+.rules li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--ac)}
+@media (max-width:860px){.rules{grid-template-columns:1fr}.rules>div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:18px}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="w">
+    <a class="logo" href="index.html" aria-label="DANEA 홈"><img src="logo_white.png" alt="DANEA" width="86" height="22"></a>
+    <div class="menu"><a href="index.html#how">운영 방식</a><a class="on" href="services.html">서비스</a><a href="index.html#cases">사례</a><a href="faq.html">자주 묻는 질문</a></div>
+    <a class="btn btn-ac" href="contact/">30분 커피챗</a>
+  </div>
+  <i id="prog" aria-hidden="true"></i>
+</nav>
+
+<header class="phero"><div class="w">
+  <p class="crumb"><a href="index.html">DANEA</a> / 서비스</p>
+  <h1>서비스 11개,<br>하는 일과 받는 것.</h1>
+  <p class="lead">서비스마다 이럴 때 쓰는지, 어떻게 진행하는지, 무엇을 받는지, 어떤 단위로 진행하는지를 같은 틀로 정리했습니다. 비용은 제품과 수량에 따라 달라 커피챗에서 견적으로 안내합니다.</p>
+  <div class="flowline">
+    <a href="#hook-testing"><small>STEP 01</small><b>소구점 검증</b><span>Hook Testing</span></a>
+    <a href="#store-boosting"><small>STEP 02</small><b>Amazon 판매 데이터</b><span>Store Boosting · 일반 체험단</span></a>
+    <a href="#tts-launch"><small>STEP 03</small><b>TikTok Shop 콘텐츠</b><span>Launch · 월 관리 · Deep Seeding</span></a>
+    <a href="#power-micro"><small>STEP 04</small><b>검증 소재 확산</b><span>Power Micro · Mid · Macro · LIVE</span></a>
+  </div>
+</div></header>
+
+<div class="w layout">
+  <nav class="toc" id="toc" aria-label="서비스 목록">
+    <p>실구매 · 체험단</p><a href="#store-boosting">Store Boosting</a><a href="#ugc">일반 체험단</a>
+    <p>소구점 검증</p><a href="#hook-testing">Hook Testing</a>
+    <p>인플루언서</p><a href="#power-micro">Power Micro</a><a href="#mid-macro">Mid · Macro</a><a href="#exper-v">Exper-V · Real-V</a>
+    <p>틱톡샵</p><a href="#tts-launch">TTS Affiliate Launch</a><a href="#tts-monthly">월 관리</a><a href="#deep-seeding">Deep Seeding</a><a href="#conversion">Conversion Affiliate</a><a href="#live">TikTok Shop LIVE</a>
+    <p>리서치</p><a href="#outreach-db">Outreach DB</a>
+    <p>기준</p><a href="#rules">결제 · 별도 비용</a>
+  </nav>
+
+  <main>
+    <section class="grp">
+      <div class="gh"><h2>실구매 · 체험단</h2><p>판매 기록과 콘텐츠 물량</p></div>
+
+      <article class="svc" id="store-boosting">
+        <div class="top"><div><p class="st">STEP 02 · 판매 기록</p><h3>Store Boosting</h3><p class="ds">미국에 사는 일반 구매자가 플랫폼에서 직접 결제하고 콘텐츠를 올리는 실구매 서비스입니다.</p></div>
+          <div class="ch"><span>Amazon</span><span>TikTok Shop</span><span>Walmart</span><span>Costco</span><span>Shopify</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>리스팅은 끝났는데 판매 기록이 없어 출발을 못 할 때</li><li>신제품만 기록이 비어 있을 때</li><li>광고를 켜도 전환이 붙지 않을 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>캠페인 세팅</b>제품, 플랫폼, 인원, 성별을 정하고 참여자 안내 페이지를 만듭니다.</li><li><b>직접 구매</b>미국 거주 일반 구매자가 본인 계정으로 결제합니다.</li><li><b>인증과 보고</b>구매와 업로드를 인증한 건만 제품가를 환급하고, 원본 파일과 업로드 현황을 드립니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>실구매 수</li><li>포스팅 원본(사진 40% · 릴스 60%)</li><li>업로드 현황 보고서</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>인당<span>최소 100인, 두 달에 걸쳐 50인씩 가능</span></p></div><div><small>고를 수 있는 것</small><p>성별<span>카테고리·팔로워 조건은 일반 체험단으로</span></p></div><div><small>별도 비용</small><p>제품가와 그 10%<span>미국 판매세와 송금 수수료</span></p></div></div>
+        <p class="pair">함께 쓰면 좋은 서비스 <a href="#ugc">일반 체험단</a> · <a href="#hook-testing">Hook Testing</a></p>
+      </article>
+
+      <article class="svc" id="ugc">
+        <div class="top"><div><p class="st">STEP 02 · 콘텐츠 물량</p><h3>일반 체험단</h3><p class="ds">팔로워 3,000명 이상, 카테고리에 맞는 크리에이터가 릴스를 올려 눈에 보이는 콘텐츠 물량을 만듭니다.</p></div>
+          <div class="ch"><span>Instagram</span><span>TikTok</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>첫 달부터 브랜드 영상이 눈에 보이게 쌓여야 할 때</li><li>카테고리와 팔로워 조건을 정해 모아야 할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>카테고리 맞춤 모집</b>업로드율을 보수적으로 잡아 필요한 인원의 120%를 모집합니다.</li><li><b>배송</b>배송 정보를 전달하면 고객사가 직접 제품을 보냅니다.</li><li><b>업로드와 청구</b>가이드는 권장으로 드리고, 릴스를 올린 인원만큼 청구합니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>업로드 릴스</li><li>조회수 · 저장 수</li><li>업로드 현황 보고서</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>인당<span>최소 50인</span></p></div><div><small>청구 기준</small><p>업로드한 인원만<span>모집 인원이 아니라 게시 인원</span></p></div><div><small>별도 비용</small><p>제품과 배송<span>고객사 직접 발송</span></p></div></div>
+        <p class="pair">함께 쓰면 좋은 서비스 <a href="#store-boosting">Store Boosting</a></p>
+      </article>
+    </section>
+
+    <section class="grp">
+      <div class="gh"><h2>소구점 검증</h2><p>넓히기 전에 첫 장면을 숫자로</p></div>
+      <article class="svc" id="hook-testing">
+        <div class="top"><div><p class="st">STEP 01 · 소구점 검증</p><h3>Hook Testing</h3><p class="ds">카테고리에 맞는 크리에이터에게 소구점을 나눠 찍게 하고, 첫 6초 시청률로 위닝 훅을 고릅니다.</p></div>
+          <div class="ch"><span>Instagram</span><span>TikTok</span><span>판매 채널 무관</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>국내에서 통한 소구점이 미국에서도 통할지 모를 때</li><li>크리에이터와 광고로 넓히기 전에 첫 3초 문구를 정해야 할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>모집과 배송</b>미국 거주 크리에이터를 120% 모집하고, 고객사가 제품을 보냅니다.</li><li><b>가이드와 초안 검수</b>브랜드 가이드, 경쟁사 위닝 훅, 사용감 세 갈래로 나눠 찍게 합니다.</li><li><b>반응 비교</b>Spark Ads로 첫 6초 시청률을 뽑아 위닝 훅을 고릅니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>소구점별 첫 6초 시청률</li><li>저장 수</li><li>업로드 영상과 리포트</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>인당<span>최소 30인</span></p></div><div><small>다음 단계</small><p>위닝 훅이 첫 장면이 됩니다<span>Power Micro, Mid · Macro, 광고</span></p></div><div><small>별도 비용</small><p>Spark Ads 광고비<span>제품과 배송은 고객사 부담</span></p></div></div>
+        <p class="pair">함께 쓰면 좋은 서비스 <a href="#power-micro">Power Micro</a> · <a href="#conversion">Conversion Affiliate</a></p>
+      </article>
+    </section>
+
+    <section class="grp">
+      <div class="gh"><h2>인플루언서</h2><p>주문을 받고, 크게 퍼뜨린다</p></div>
+      <article class="svc" id="power-micro">
+        <div class="top"><div><p class="st">STEP 04 · 전환</p><h3>Power Micro</h3><p class="ds">팔로워 2만~5만 명, 저장과 반응이 높은 크리에이터가 위닝 훅을 자기 말투로 풀어 온라인 주문을 받습니다.</p></div>
+          <div class="ch"><span>Instagram</span><span>온라인 상품 페이지</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>위닝 훅은 나왔는데 주문으로 이어 줄 크리에이터가 필요할 때</li><li>행사 전후로 짧게 주문을 모아야 할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>반응률로 선별</b>저장, 반응률, 촬영 감각으로 고르고 약사, 간호사, 에스테티션 계정을 먼저 찾습니다.</li><li><b>위닝 훅 + 개인 강점</b>얼굴이 나오는 설명형으로 찍습니다.</li><li><b>구매로 연결</b>일반 릴스, 링크를 넣은 스토리 3프레임, 댓글 키워드 자동 DM 릴스 중에서 고릅니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>링크 클릭</li><li>자동 DM 발송 수</li><li>저장 수</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>인당<span>1인부터</span></p></div><div><small>형식</small><p>릴스 · 스토리 · DM 릴스<span>따로도 진행 가능</span></p></div><div><small>운영 팁</small><p>행사 한 달 전 릴스, 행사 달 스토리<span>같은 팔로워가 두 번 봅니다</span></p></div></div>
+      </article>
+
+      <article class="svc" id="mid-macro">
+        <div class="top"><div><p class="st">STEP 04 · 확산</p><h3>Mid · Macro</h3><p class="ds">행사 구간에 바이럴이 필요할 때, 도달이 큰 크리에이터로 검증된 소재를 크게 퍼뜨립니다.</p></div>
+          <div class="ch"><span>Instagram</span><span>TikTok</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>신제품 출시, Prime Day, BFCM처럼 한 번에 크게 알려야 할 때</li><li>오프라인 입점 매장의 방문 콘텐츠가 필요할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>리스트업과 분석</b>인원별 오디언스와 계정을 분석해 소구점에 맞는 인원을 고릅니다.</li><li><b>맞춤 촬영 가이드</b>후킹 포인트부터 촬영 흐름까지 인원마다 드립니다.</li><li><b>구성</b>스토리 + 릴스, 스토리만, 릴스만 중에서 고릅니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>도달</li><li>링크 클릭</li><li>자동 DM 발송 수</li></ul></div>
+        </div>
+        <div class="cond"><div><small>규모</small><p>Mid 5만~10만<span>Macro 10만~50만 팔로워</span></p></div><div><small>진행 단위</small><p>건별 견적<span>예산을 먼저 공유받습니다</span></p></div><div><small>최소 조건</small><p>없음<span>섭외와 조건 협의는 DANEA가</span></p></div></div>
+      </article>
+
+      <article class="svc" id="exper-v">
+        <div class="top"><div><p class="st">STEP 04 · 신뢰</p><h3>Exper-V · Real-V</h3><p class="ds">전문의의 설명(Exper-V)과 실제 중장년 한국 여성의 얼굴(Real-V)로 믿고 살 이유를 더합니다.</p></div>
+          <div class="ch"><span>Instagram</span><span>TikTok</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>성분과 효능에 의문이 많은 제품</li><li>실구매층이 40대 이상인 안티에이징, 탄력, 보습 라인</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>리스트업과 분석</b>전문의 또는 실제 중장년 한국 여성 계정을 분석해 고릅니다.</li><li><b>맞춤 촬영 가이드</b>브랜드 소구점에 맞춘 가이드를 드립니다.</li><li><b>구성</b>스토리 + 릴스, 스토리만, 릴스만 중에서 고릅니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>링크 클릭 · 자동 DM 발송 수</li><li>전문의 · 실사용 콘텐츠</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>건별 견적<span>예산을 먼저 공유받습니다</span></p></div><div><small>섭외</small><p>DANEA가 맡습니다<span>일정 조율 포함</span></p></div><div><small>함께 쓰면</small><p>Hook Testing 뒤<span>검증된 소구점으로 촬영</span></p></div></div>
+      </article>
+    </section>
+
+    <section class="grp">
+      <div class="gh"><h2>틱톡샵</h2><p>수락하는 샵을 만들고, 이어서 운영</p></div>
+      <article class="svc" id="tts-launch">
+        <div class="top"><div><p class="st">STEP 03 · 셋업</p><h3>TTS Affiliate Launch</h3><p class="ds">판매 0, 콘텐츠 0인 틱톡샵을 크리에이터가 수락하는 샵으로 만드는 45일 셋업입니다.</p></div>
+          <div class="ch"><span>TikTok Shop</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>틱톡샵을 막 열었는데 초대를 보내도 수락이 없을 때</li><li>샘플을 보내도 영상 없이 사라질 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>초기 구매 데이터</b>실구매 이력을 만들어 판매 0 상태에서 벗어나고 초대 한도를 엽니다.</li><li><b>리스트업과 초대</b>경쟁사 협업 크리에이터를 먼저 찾아 월 8,000명에게 초대를 보냅니다.</li><li><b>CRM과 샘플 심사</b>CRM 5단계 메시지를 돌리고, L1 이상만 샘플을 승인합니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>주차별 초대 수</li><li>유형별 · 메시지별 수락률</li><li>샘플 신청 · 승인 · 게시율</li><li>다음 달 타깃 규칙</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>45일<span>샵이 열린 뒤 착수</span></p></div><div><small>포함하지 않는 것</small><p>틱톡샵 입점<span>입점 절차는 커피챗에서 안내</span></p></div><div><small>다음 단계</small><p>월 관리<span>또는 Deep Seeding</span></p></div></div>
+      </article>
+
+      <article class="svc" id="tts-monthly">
+        <div class="top"><div><p class="st">상시 운영</p><h3>Launch 이후 월 관리</h3><p class="ds">Launch가 끝난 뒤 초대와 CRM 메시지를 매달 이어 가며 샘플 영상을 쌓습니다.</p></div>
+          <div class="ch"><span>TikTok Shop</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>Launch가 끝나 다음 달부터 운영을 이어 가야 할 때</li><li>샘플을 월 100개 이상 보낼 수 있을 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>초대</b>월 8,000명 초대를 보장합니다.</li><li><b>CRM과 샘플 심사</b>CRM 5단계 메시지를 매달 직접 돌리고 샘플 신청을 심사합니다.</li><li><b>리포트</b>초대, 샘플, 업로드, 어필리에이트 매출, 콘텐츠당 비용을 월 1회 드립니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>초대 · 샘플 · 업로드 수</li><li>어필리에이트 매출</li><li>콘텐츠당 비용</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>월 단위<span>샘플 월 100개 이상, 200개 권장</span></p></div><div><small>별도 비용</small><p>샘플과 광고비</p></div><div><small>이어지는 것</small><p>팔린 영상은 다시 찍습니다<span>Conversion Affiliate</span></p></div></div>
+      </article>
+
+      <article class="svc" id="deep-seeding">
+        <div class="top"><div><p class="st">옵션</p><h3>Affiliate Deep Seeding</h3><p class="ds">L1 이상 크리에이터 여러 명이 한 편씩 올려, 제품이 노출될 접점을 넓힙니다.</p></div>
+          <div class="ch"><span>TikTok Shop</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>샘플 출고가 월 100개 미만이라 월 관리가 맞지 않을 때</li><li>짧은 기간에 콘텐츠 폭을 넓혀야 할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>리스트업</b>최근 30일 GMV $1K 이상(L1) 크리에이터를 모읍니다.</li><li><b>브리프와 업로드</b>브리프를 만들고 제품 태그 영상 업로드를 관리합니다.</li><li><b>청구</b>업로드된 콘텐츠만 청구합니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>업로드 편수</li><li>영상별 성과</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>콘텐츠당<span>최소 100명</span></p></div><div><small>청구 기준</small><p>업로드된 콘텐츠만</p></div><div><small>별도 비용</small><p>제품비</p></div></div>
+      </article>
+
+      <article class="svc" id="conversion">
+        <div class="top"><div><p class="st">STEP 04 · 전환</p><h3>Conversion Affiliate</h3><p class="ds">GMV 실적이 검증된 L3 이상 크리에이터와 전환 영상을 협업합니다.</p></div>
+          <div class="ch"><span>TikTok Shop</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>팔린 소구점을 더 큰 크리에이터로 다시 찍어야 할 때</li><li>행사 할인 기간에 전환을 몰아야 할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>행사 할인형</b>할인 기간과 남은 수량으로 지금 살 이유를 만듭니다.</li><li><b>전환 소재 미러링형</b>매출이 난 영상의 훅과 구성을 그 사람의 말투로 다시 찍습니다.</li><li><b>맞춤 브리프형</b>신제품이나 새 소구점을 브리프로 설계합니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>영상별 GMV</li><li>ROI</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>편당<span>L3 · L4 · L5, L6 이상 협의</span></p></div><div><small>최소</small><p>3인 · 3편</p></div><div><small>포함</small><p>1차 수정</p></div></div>
+      </article>
+
+      <article class="svc" id="live">
+        <div class="top"><div><p class="st">STEP 04 · 전환</p><h3>TikTok Shop LIVE</h3><p class="ds">미국 현지 호스트가 라이브로 팔고, 시청자가 화면에서 바로 구매합니다.</p></div>
+          <div class="ch"><span>TikTok Shop</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>틱톡샵 캠페인이나 마더스데이 같은 행사 기간</li><li>초기 브랜드가 인기 브랜드 옆에서 노출이 필요할 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>세팅</b>제품 발송, 링크와 커미션 설정, 영어 셀링 포인트를 준비합니다.</li><li><b>방송</b>현지 호스트가 인기 브랜드와 함께 판매합니다.</li><li><b>리포트</b>회차별 시청자 수와 라이브 GMV를 드립니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>시청자 수</li><li>라이브 GMV</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>시간 단위<span>호스트 등급에 따라 다름</span></p></div><div><small>판매 커미션</small><p>고객사가 설정<span>틱톡샵 셀러센터에서</span></p></div><div><small>함께 쓰면</small><p>플래시 세일<span>지금 살 이유를 만듭니다</span></p></div></div>
+      </article>
+    </section>
+
+    <section class="grp">
+      <div class="gh"><h2>리서치</h2><p>직접 섭외할 때</p></div>
+      <article class="svc" id="outreach-db">
+        <div class="top"><div><p class="st">직접 섭외용</p><h3>US Creator Outreach DB</h3><p class="ds">경쟁 제품 콘텐츠에 참여한 미국 크리에이터를 이메일과 함께 1,000명 단위로 드립니다.</p></div>
+          <div class="ch"><span>전 채널</span></div></div>
+        <div class="grid3">
+          <div><h4>이럴 때 씁니다</h4><ul><li>브랜드가 직접 아웃리치를 하는데 명단이 없을 때</li><li>경쟁 제품을 다뤄 본 크리에이터부터 연락하고 싶을 때</li></ul></div>
+          <div><h4>진행 방식</h4><ol><li><b>경쟁사 정하기</b>DANEA가 아마존 데이터로 도출하거나, 브랜드가 지정합니다.</li><li><b>참여 크리에이터 수집</b>그 제품 콘텐츠에 참여한 계정을 모읍니다.</li><li><b>기준 적용</b>최근 90일 활동과 중복 제거를 거쳐 드립니다.</li></ol></div>
+          <div><h4>받는 것</h4><ul><li>핸들명, 계정 링크</li><li>팔로워 수</li><li>이메일</li></ul></div>
+        </div>
+        <div class="cond"><div><small>진행 단위</small><p>1,000명 단위<span>경쟁사 도출 포함 / 지정</span></p></div><div><small>품질 기준</small><p>최근 90일 활동, 중복 제거</p></div><div><small>보충</small><p>기준 미달분 무상 보충</p></div></div>
+      </article>
+    </section>
+
+    <section id="rules">
+      <div class="rules">
+        <div><h3>결제</h3><ul><li>원화로 받습니다.</li><li>환율은 계약일 서울외국환중개 매매기준율로 고정하고, 잔금도 같은 환율입니다.</li><li>착수금 50%는 계약할 때, 잔금은 게시 완료 보고나 결과물 전달 뒤에 받습니다.</li></ul></div>
+        <div><h3>별도 비용</h3><ul><li>제품비, 샘플비, 배송비</li><li>Spark Ads 등 광고비</li><li>Store Boosting 제품가의 10%</li><li>제품비 차액은 증빙과 함께 잔금에 더합니다.</li></ul></div>
+        <div><h3>콘텐츠와 청구</h3><ul><li>Store Boosting 콘텐츠는 무기한, 전 매체, 전 지역, 편집 가능, 유료 광고 포함으로 씁니다.</li><li>체험단, Hook Testing, Deep Seeding은 올린 만큼만 청구합니다.</li><li>브리프는 권장으로 드립니다.</li></ul></div>
+      </div>
+    </section>
+
+    <div class="final rv" style="margin-top:96px">
+      <div><h2>어떤 조합이 맞을지<br>같이 정해 보세요.</h2><p>제품과 판매 채널을 알려 주시면 순서와 견적을 함께 드립니다.</p>
+        <div class="cta"><a class="btn btn-ink" href="contact/">30분 커피챗 신청</a><a class="btn btn-ln" href="faq.html">자주 묻는 질문</a></div></div>
+      <ul><li>지금 단계 진단<span>01</span></li><li>서비스 조합과 순서<span>02</span></li><li>수량별 견적<span>03</span></li></ul>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="w"><div class="in">
+    <div><a class="logo" href="index.html"><img src="logo_white.png" alt="DANEA" width="78" height="20"></a><p class="cr">© 2026 DANEA. All rights reserved.</p></div>
+    <div class="cols"><div><p class="hd">DANEA</p><a href="index.html">홈</a><a href="services.html">서비스</a><a href="faq.html">자주 묻는 질문</a></div><div><p class="hd">문의</p><a href="contact/">30분 커피챗</a><span style="display:block;margin-top:6px">contact@danea.kr</span></div></div>
+  </div></div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.15}) : null;
+  document.querySelectorAll('.rv').forEach(function(el){ if (io) io.observe(el); else el.classList.add('in'); });
+  var links = document.querySelectorAll('#toc a'), bar = document.getElementById('prog');
+  var targets = Array.prototype.map.call(links, function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  function paint(){
+    var cur = 0; targets.forEach(function(t,i){ if (t && t.getBoundingClientRect().top < 180) cur = i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i === cur); });
+    var on = links[cur], toc = document.getElementById('toc');
+    if (innerWidth <= 960 && on) toc.scrollLeft = on.offsetLeft - 20;
+    var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0).toFixed(4) + ')';
+  }
+  var t = false; addEventListener('scroll', function(){ if (t) return; t = true; requestAnimationFrame(function(){ paint(); t = false; }); }, {passive:true}); paint();
+})();
+</script>
+</body>
+</html>
